@@ -311,7 +311,7 @@ export class MapHandler
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
                 // each line
-                await loadMap(elements, contains);
+                await loadMap(lines, elements, contains);
                 console.log("FINSIHED LOADING MAP");
 
             }
@@ -328,7 +328,7 @@ export class MapHandler
     }
 }
 
-function loadMap(elements, contains)
+function loadMap(lines, elements, contains)
 {
     var top = 0;
     var left = 0;
@@ -339,7 +339,7 @@ function loadMap(elements, contains)
     {
         setTimeout(() =>
         {
-                for(i = 0; i < lines.length; i++)
+                for(var i = 0; i < lines.length; i++)
                 {
                     var blocks = lines[i].split(",");
                     // each block
