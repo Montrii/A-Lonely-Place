@@ -238,7 +238,7 @@ export class MapHandler
     {
 
     }
-    async loadMap(map)
+    async loadMap(map, callback)
     {
         var oReq = new XMLHttpRequest(); // New request object
         oReq.onload = async function() {
@@ -301,24 +301,12 @@ export class MapHandler
                 if(contains.height / nonNullLines < 32)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                    return new Promise((resolve, reject) =>
-                    {
-                        setTimeout(() => {
-                            console.log("finished!");
-                            reject("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                        }, 0);
-                    });
+                    callback(false);
                 }
                 if(isBroken == true)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                    return new Promise((resolve, reject) =>
-                    {
-                        setTimeout(() => {
-                            console.log("finished!");
-                            reject("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                        }, 0);
-                    });
+                    callback(false);
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
@@ -396,26 +384,12 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                return new Promise((resolve, reject) =>
-                {
-                    setTimeout(() =>
-                    {
-                        console.log("finished!");
-                        resolve("yes");
-                    }, 0);
-                });
+                callback(true);
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                return new Promise((resolve, reject) =>
-                {
-                    setTimeout(() =>
-                    {
-                        console.log("no");
-                        reject("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                    }, 0);
-                });
+                callback(false);
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);

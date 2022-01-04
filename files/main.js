@@ -14,18 +14,12 @@ async function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    await mapHandler.loadMap(1);
+    await mapHandler.loadMap(1, successFul);
 }
 
-function testPromise()
+function call(successFul)
 {
-    return new Promise((resolve, reject) =>
-    {
-        setTimeout(() =>
-        {
-            console.log("waited!"); 
-        }, 2000);
-    })
+    console.log(successFul);
 }
 
 
