@@ -6,7 +6,7 @@ var player = new Player();
 var movement = new Movement();
 var mapHandler = new MapHandler();
 var animator = new Animator();
-function main()
+async function main()
 {
     player.syncPlayer();
     movement.playerMovement();
