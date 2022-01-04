@@ -13,6 +13,7 @@ function main()
     }).catch((err) => {
         console.log("Error while loading map");
     });
+    console.log("Loaded with private repository.");
        // player.syncPlayer();
        // movement.playerMovement();
         //animator.playerAnimation();
