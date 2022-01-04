@@ -301,12 +301,12 @@ export class MapHandler
                 if(contains.height / nonNullLines < 32)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                    callback(false);
+                    return await Promise.reject("no");
                 }
                 if(isBroken == true)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                    callback(false);
+                    return await Promise.reject("no");
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
@@ -384,12 +384,12 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                callback(true);
+                return await Promise.resolve("yes");
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                callback(false);
+                return await Promise.reject("no");
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);

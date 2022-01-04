@@ -6,11 +6,6 @@ var player = new Player();
 var movement = new Movement();
 var mapHandler = new MapHandler();
 var animator = new Animator();
-
-function call(successFul)
-{
-    console.log(successFul);
-}
 async function main()
 {
     player.syncPlayer();
@@ -19,10 +14,14 @@ async function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    await mapHandler.loadMap(2, call);
+    mapHandler.loadMap(1).then((value) =>
+    {
+        console.log(value);
+    }, (reason) =>
+    {
+        console.log(reason);
+    });
 }
-
-
 
 
 
