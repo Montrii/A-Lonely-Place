@@ -1,5 +1,5 @@
-import { Player, Movement, MapHandler, Animator } from "./modules/objects.js";
-$(document).ready(await main());
+import { Player, Movement, MapHandler, Animator, Callback } from "./modules/objects.js";
+$(document).ready(main);
 
 
 async function main()
@@ -8,14 +8,16 @@ async function main()
     var movement = new Movement();
     var mapHandler = new MapHandler();
     var animator = new Animator();
+    var callbacks = new Callback();
     player.syncPlayer();
     movement.playerMovement();
     animator.playerAnimation();
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    await console.log("Result: " + mapHandler.loadMap(1));
+    await mapHandler.loadMap(1, callbacks.onMapLoaded);
 }
+
 
 
 

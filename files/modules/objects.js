@@ -232,6 +232,18 @@ export class Animator
     }
 }
 
+export class Callback
+{
+    constructor()
+    {
+
+    }
+    onMapLoaded(successFul)
+    {
+        console.log("MAP FINISHED LOADING: ");
+        console.log(onMapLoaded);
+    }
+}
 export class MapHandler
 {
     constructor()
@@ -241,6 +253,7 @@ export class MapHandler
     async loadMap(map)
     {
         var oReq = new XMLHttpRequest(); // New request object
+        var callbacks = new Callback();
         oReq.onload = async function() {
             var lines = this.responseText.split("\n"); 
             // Each Line
@@ -301,12 +314,12 @@ export class MapHandler
                 if(contains.height / nonNullLines < 32)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                    return false;
+                    callbacks.onMapLoaded(false);
                 }
                 if(isBroken == true)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                    return false;
+                    callbacks.onMapLoaded(false);
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
@@ -384,13 +397,12 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                console.log("yo");
-                return true;
+                callbacks.onMapLoaded(true);
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                return false;
+                callbacks.onMapLoaded(false);
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);
