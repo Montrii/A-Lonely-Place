@@ -231,22 +231,7 @@ export class Animator
         return interval;
     }
 }
-class EventHandler
-{
-    constructor()
-    {
 
-    }
-    getMapLoaded()
-    {
-        return new CustomEvent('mapLoaded', {
-            detail:
-            {
-                finished: true
-            }
-        });
-    }
-}
 export class MapHandler
 {
     constructor()
@@ -255,7 +240,6 @@ export class MapHandler
     }
     async loadMap(map)
     {
-        var eventHandler = new EventHandler();
         var oReq = new XMLHttpRequest(); // New request object
         oReq.onload = async function() {
             var lines = this.responseText.split("\n"); 
@@ -400,14 +384,12 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                document.dispatchEvent(eventHandler.getMapEvent());
-                return true;
+                document.dispatchEvent(getMapEvent());
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                document.dispatchEvent(eventHandler.getMapEvent());
-                return false;
+                document.dispatchEvent(getMapEvent());
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);
@@ -415,6 +397,8 @@ export class MapHandler
         //                                 Don't wait until the request finishes to
         //                                 continue.
         oReq.send();
+        console.log("finished loading map!");
+        return true;
     }
 }
 

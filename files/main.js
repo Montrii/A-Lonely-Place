@@ -13,10 +13,6 @@ function main()
     animator.playerAnimation();
     mapHandler.loadMap(1);
     console.log("Loaded with private repository.");
-    Document.addEventHandler('mapLoaded', (e) =>
-    {
-        console.log("loaded map!");
-    });
 
 }
 
