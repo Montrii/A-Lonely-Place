@@ -335,7 +335,7 @@ function loadMap(elements, contains)
     var y = 0;
     var precentage = 0;
     var precentageToAdd = 100 / elements;
-    return new Promise((resolve, reject) =>
+    return await new Promise((resolve, reject) =>
     {
         setTimeout(() =>
         {
