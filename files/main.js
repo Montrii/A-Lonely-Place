@@ -22,7 +22,7 @@ function main()
         console.log(name);
         return name;
     }
-    console.log(await f());
+    await f();
 }
 
 
