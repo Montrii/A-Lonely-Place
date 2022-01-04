@@ -243,9 +243,9 @@ class Events
     onMapLoaded()
     {
         console.log("MAP FINISHED LOADING! ");
-        player.syncPlayer();
-        movement.playerMovement();
-        animator.playerAnimation();
+        this.player.syncPlayer();
+        this.movement.playerMovement();
+        this.animator.playerAnimation();
     }
     onMapFailed(reason)
     {
