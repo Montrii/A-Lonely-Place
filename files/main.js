@@ -2,12 +2,12 @@ import { Player, Movement, MapHandler, Animator } from "./modules/objects.js";
 $(document).ready(await main());
 
 
-var player = new Player();
-var movement = new Movement();
-var mapHandler = new MapHandler();
-var animator = new Animator();
 async function main()
 {
+    var player = new Player();
+    var movement = new Movement();
+    var mapHandler = new MapHandler();
+    var animator = new Animator();
     player.syncPlayer();
     movement.playerMovement();
     animator.playerAnimation();
