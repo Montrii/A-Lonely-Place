@@ -384,6 +384,7 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
+                console.log("yo");
                 return true;
             }
             else 
