@@ -1,0 +1,18 @@
+// Height, Width, Top and Left all count for the playfield position, not for anything else.
+// Each Character takes one block -> 32x32
+// Map Layout always start in Top left Corner of the Playground.
+// Game will throw errors when Height/Width isnt defined in mapX.txt!
+// Game will throw errors when map-layout is too big for set height/width!
+// Game will throw errors when other characters besides the defined ones are set!
+// Game will throw erros if Playerspawn and Exit isnt defined in Maplayout!
+
+
+// X -> Wall (Object)
+// O -> Ground
+// _ -> Space (No Ground, A Gab)
+// P -> Playerspawn (Automatically Ground)
+// E -> Exit (Steps)
+// D -> Door
+// DR -> Runed Door
+// DS -> Sealed Door
+// C -> Chest

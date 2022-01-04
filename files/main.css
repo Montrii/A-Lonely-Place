@@ -1,0 +1,97 @@
+        
+        /* Each solid Wall Object gets the attributes */
+        html
+        {
+            max-width: 100%;
+        }
+        body
+        {
+            background:
+            /* top, transparent black, faked with gradient */ 
+            linear-gradient(
+              rgba(0, 0, 0, 0.85), 
+              rgba(0, 0, 0, 0.85)
+            ),
+            /* bottom, image */
+            url("../../Images/backgrounds/ruins.jpg");
+            background-size: 2000px, 2000px;
+        }
+        #progress
+        {
+          height:7px;
+          width:0%;
+          background-color: #7BAEFF;
+          border-radius: 20px;
+        }
+        #progressbar
+        {
+            background-color: black;
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .object
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../Images/dungeon/wall/catacombs_9.png");
+            border: 1px solid red;
+        }
+        .ground
+        {
+            z-index: 0;
+            position: absolute;
+            content:url("../../Images/dungeon/wall/catacombs_0.png");
+            border: 1px solid orange;
+        }
+        .playerspawn
+        {
+            z-index: 0;
+            position: absolute;
+            content:url("../../Images/dungeon/wall/catacombs_0.png");
+            border: 1px solid purple;
+        }
+        .gap
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../Images/dungeon/traps/shaft.png");
+            border: 1px solid lightblue;
+        }
+        .exit
+        {
+            z-index: 0;
+            position: absolute;
+            content:url("../../Images/UNUSED/features/dngn_branch_stairs.png");
+            border: 1px solid yellow;
+        }
+        .door
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../Images/dc-dngn/dngn_closed_door.png");
+            border: 1px solid brown;
+        }
+        .chest
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../Images/dungeon/chest.png");
+            border: 1px solid royalblue;
+        }
+        #playground
+        {
+            position: relative;
+            border: 1px solid green;
+        }
+
+        #player
+        {
+            position: relative;
+            z-index: 10;
+            border-style: solid;
+            border: 1px solid white;
+        }
+
+        
