@@ -11,21 +11,12 @@ function main()
     player.syncPlayer();
     movement.playerMovement();
     animator.playerAnimation();
-    mapHandler.loadMap(1);
+    mapHandler.loadMap(1, mapHandler.getMapEvent());
     console.log("Loaded with private repository.");
-    var mapLoaded = new CustomEvent('mapLoaded', {
-        detail:
-        {
-            finished: true
-        }
-    });
-
-    document.getElementById("player").addEventListener('mapLoaded', (e) =>
+    document.addEventHandler('mapLoaded', function(e)
     {
-        console.log(e.detail.finished);
-    });
+        console.log("loaded map!");
+    })
 
-    document.getElementById("player").dispatchEvent(mapLoaded);
-    console.log("Map loaded.");
 }
 

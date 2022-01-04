@@ -237,6 +237,15 @@ export class MapHandler
     {
 
     }
+    getMapEvent()
+    {
+        return mapLoaded = new CustomEvent('mapLoaded', {
+            detail:
+            {
+                finished: true
+            }
+        });
+    }
     async loadMap(map)
     {
         var oReq = new XMLHttpRequest(); // New request object
@@ -383,11 +392,13 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
+                document.dispatchEvent(this.getMapEvent());
                 return true;
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
+                document.dispatchEvent(this.getMapEvent());
                 return false;
             }
         };
