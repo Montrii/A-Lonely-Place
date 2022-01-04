@@ -384,7 +384,10 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                return new Promise(resolve("yo"));
+                return new Promise((resolve, reject) =>
+                {
+                    resolve("yes");
+                });
             }
             else 
             {
