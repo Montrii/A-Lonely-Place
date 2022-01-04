@@ -232,16 +232,25 @@ export class Animator
     }
 }
 
-export class Callback
+class Events
 {
-    constructor()
+    constructor(player, animator, movement)
     {
-
+        this.player = player;
+        this.animator = animator;
+        this.movement = movement;
     }
-    onMapLoaded(successFul)
+    onMapLoaded()
     {
-        console.log("MAP FINISHED LOADING: ");
-        console.log(successFul);
+        console.log("MAP FINISHED LOADING! ");
+        player.syncPlayer();
+        movement.playerMovement();
+        animator.playerAnimation();
+    }
+    onMapFailed(reason)
+    {
+        console.log("Map failed to load.");
+        alert(reason);
     }
 }
 export class MapHandler
@@ -253,7 +262,7 @@ export class MapHandler
     async loadMap(map)
     {
         var oReq = new XMLHttpRequest(); // New request object
-        var callbacks = new Callback();
+        var callbacks = new Events(new Player(), new Animator(), new Movement());
         oReq.onload = async function() {
             var lines = this.responseText.split("\n"); 
             // Each Line
@@ -313,13 +322,11 @@ export class MapHandler
                 }
                 if(contains.height / nonNullLines < 32)
                 {
-                    alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                    callbacks.onMapLoaded(false);
+                    callbacks.onMapFailed("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
                 }
                 if(isBroken == true)
                 {
-                    alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                    callbacks.onMapLoaded(false);
+                    callbacks.onMapLoaded("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
@@ -397,12 +404,11 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                callbacks.onMapLoaded(true);
+                callbacks.onMapLoaded();
             }
             else 
             {
-                alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                callbacks.onMapLoaded(false);
+                callbacks.onMapFailed("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);
