@@ -14,13 +14,12 @@ async function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    var mapLoaded = await mapHandler.loadMap(1);
-    mapLoaded.then((value) =>
+    await mapHandler.loadMap(1).then((value) =>
     {
-        console.log(value);
+        console.log("yo");
     }, (reason) =>
     {
-        console.log(reason);
+        console.log("no");
     })
 }
 
