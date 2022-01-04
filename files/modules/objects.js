@@ -392,13 +392,13 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                document.dispatchEvent(this.getMapEvent());
+                document.dispatchEvent(getMapEvent());
                 return true;
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                document.dispatchEvent(this.getMapEvent());
+                document.dispatchEvent(getMapEvent());
                 return false;
             }
         };
