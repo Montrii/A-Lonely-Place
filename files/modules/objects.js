@@ -257,7 +257,6 @@ export class MapHandler
 {
     constructor()
     {
-
     }
     async loadMap(map)
     {
