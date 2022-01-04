@@ -163,8 +163,9 @@ export class Collsion
         var chest = new Chest();
 
         // all elements inside an array
-        var friendlyElements = [spawn.getSpawnElement(), gap.getGapElements(), exit.getStairElement(),
+        var friendlyElements = [toNodeList(spawn.getSpawnElement()), gap.getGapElements(), toNodeList(exit.getStairElement()),
         door.getDoorElements(), chest.getChestElements()];
+
         console.log(friendlyElements);
     }
     playerCollsion(keyCode)
@@ -424,7 +425,7 @@ export class MapHandler
                         else if (blocks[y] == "_")
                         {
 
-                            $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="gap" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
@@ -451,7 +452,7 @@ export class MapHandler
                         }
                         else if (blocks[y] == "C" || blocks[y] == "c")
                         {
-                            $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="chest" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
@@ -496,4 +497,12 @@ function stringContainsNumber(_string)
 function Sleep(milliseconds)
 {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+function toNodeList(elm){
+    var list;
+    elm.setAttribute('wrapNodeList','');
+    list = document.querySelectorAll('[wrapNodeList]');
+    elm.removeAttribute('wrapNodeList');
+    return list;
 }

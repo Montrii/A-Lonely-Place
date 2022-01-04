@@ -45,6 +45,12 @@
             content:url("../../Images/dungeon/wall/catacombs_0.png");
             border: 1px solid orange;
         }
+        .groundOnlyTexture
+        {
+            z-index: 0;
+            position: absolute;
+            content:url("../../Images/dungeon/wall/catacombs_0.png");
+        }
         .playerspawn
         {
             z-index: 0;
