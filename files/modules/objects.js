@@ -335,7 +335,7 @@ function loadMap(elements, contains)
     var y = 0;
     var precentage = 0;
     var precentageToAdd = 100 / elements;
-    return await new Promise((resolve, reject) =>
+    return new Promise((resolve, reject) =>
     {
         setTimeout(() =>
         {
@@ -349,13 +349,13 @@ function loadMap(elements, contains)
                         {
                             $('#playground').append(`<div class="object" style="top:${top}px;left:${left}px"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "O" || blocks[y] == "o")
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "_")
                         {
@@ -363,7 +363,7 @@ function loadMap(elements, contains)
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="gap" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
@@ -371,26 +371,26 @@ function loadMap(elements, contains)
                             document.getElementById("player").style.top = top+contains.top+32+"px";
                             document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "D" || blocks[y] == "d")
                         {
                             $('#playground').append(`<div class="door" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "E" || blocks[y] == "e")
                         {
                             $('#playground').append(`<div class="exit" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         else if (blocks[y] == "C" || blocks[y] == "c")
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="chest" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            Sleep(20);
                         }
                         if(precentage >= 100)
                         {
