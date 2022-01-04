@@ -311,11 +311,34 @@ export class MapHandler
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
                 // each line
-                var top = 0;
-                var left = 0;
-                var y = 0;
-                var precentage = 0;
-                var precentageToAdd = 100 / elements;
+                await loadMap(elements, contains);
+                console.log("FINSIHED LOADING MAP");
+
+            }
+            else 
+            {
+                alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
+            }
+        };
+        oReq.open("get", "./files/maps/map"+map+".txt", true);
+        //                               ^ Don't block the rest of the execution.
+        //                                 Don't wait until the request finishes to
+        //                                 continue.
+        oReq.send();
+    }
+}
+
+function loadMap(elements, contains)
+{
+    var top = 0;
+    var left = 0;
+    var y = 0;
+    var precentage = 0;
+    var precentageToAdd = 100 / elements;
+    return new Promise((resolve, reject) =>
+    {
+        setTimeout(() =>
+        {
                 for(i = 0; i < lines.length; i++)
                 {
                     var blocks = lines[i].split(",");
@@ -384,23 +407,12 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                document.dispatchEvent(getMapEvent());
-            }
-            else 
-            {
-                alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                document.dispatchEvent(getMapEvent());
-            }
-        };
-        oReq.open("get", "./files/maps/map"+map+".txt", true);
-        //                               ^ Don't block the rest of the execution.
-        //                                 Don't wait until the request finishes to
-        //                                 continue.
-        oReq.send();
-        console.log("finished loading map!");
-        return true;
-    }
+                console.log("finished loading the map! INSIDE LOADING MAP PROMISE");
+                resolve();
+        }, elements*20);
+    })
 }
+
 
 function stringContainsNumber(_string)
 {
