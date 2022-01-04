@@ -11,7 +11,10 @@ function main()
     player.syncPlayer();
     movement.playerMovement();
     animator.playerAnimation();
-    mapHandler.loadMap(1);
+    mapHandler.loadMap(1).then(function() 
+    {
+        console.log("promised was returned");
+    });
     console.log("Loaded with private repository.");
 
 }

@@ -301,45 +301,26 @@ export class MapHandler
                 if(contains.height / nonNullLines < 32)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
-                    return false;
+                    return new Promise(() => 
+                    {
+                    });
                 }
                 if(isBroken == true)
                 {
                     alert("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
-                    return false;
+                    return new Promise(() => 
+                    {
+                    });
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
                 // each line
-                await loadMap(lines, elements, contains);
-                console.log("FINSIHED LOADING MAP");
-
-            }
-            else 
-            {
-                alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-            }
-        };
-        oReq.open("get", "./files/maps/map"+map+".txt", true);
-        //                               ^ Don't block the rest of the execution.
-        //                                 Don't wait until the request finishes to
-        //                                 continue.
-        oReq.send();
-    }
-}
-
-function loadMap(lines, elements, contains)
-{
-    var top = 0;
-    var left = 0;
-    var y = 0;
-    var precentage = 0;
-    var precentageToAdd = 100 / elements;
-    return new Promise((resolve, reject) =>
-    {
-        setTimeout(() =>
-        {
-                for(var i = 0; i < lines.length; i++)
+                var top = 0;
+                var left = 0;
+                var y = 0;
+                var precentage = 0;
+                var precentageToAdd = 100 / elements;
+                for(i = 0; i < lines.length; i++)
                 {
                     var blocks = lines[i].split(",");
                     // each block
@@ -349,13 +330,13 @@ function loadMap(lines, elements, contains)
                         {
                             $('#playground').append(`<div class="object" style="top:${top}px;left:${left}px"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "O" || blocks[y] == "o")
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "_")
                         {
@@ -363,7 +344,7 @@ function loadMap(lines, elements, contains)
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="gap" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
@@ -371,26 +352,26 @@ function loadMap(lines, elements, contains)
                             document.getElementById("player").style.top = top+contains.top+32+"px";
                             document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "D" || blocks[y] == "d")
                         {
                             $('#playground').append(`<div class="door" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "E" || blocks[y] == "e")
                         {
                             $('#playground').append(`<div class="exit" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         else if (blocks[y] == "C" || blocks[y] == "c")
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="chest" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            Sleep(20);
+                            await Sleep(20);
                         }
                         if(precentage >= 100)
                         {
@@ -407,10 +388,24 @@ function loadMap(lines, elements, contains)
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                console.log("finished loading the map! INSIDE LOADING MAP PROMISE");
-                resolve();
-        }, elements*20);
-    })
+                return new Promise(() => 
+                {
+                });
+            }
+            else 
+            {
+                alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
+                return new Promise(() => 
+                {
+                });
+            }
+        };
+        oReq.open("get", "./files/maps/map"+map+".txt", true);
+        //                               ^ Don't block the rest of the execution.
+        //                                 Don't wait until the request finishes to
+        //                                 continue.
+        oReq.send();
+    }
 }
 
 
