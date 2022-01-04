@@ -231,13 +231,13 @@ export class Animator
         return interval;
     }
 }
-export class MapHandler
+class EventHandler
 {
     constructor()
     {
 
     }
-    getMapEvent()
+    getMapLoaded()
     {
         return new CustomEvent('mapLoaded', {
             detail:
@@ -246,8 +246,16 @@ export class MapHandler
             }
         });
     }
+}
+export class MapHandler
+{
+    constructor()
+    {
+
+    }
     async loadMap(map)
     {
+        var eventHandler = new EventHandler();
         var oReq = new XMLHttpRequest(); // New request object
         oReq.onload = async function() {
             var lines = this.responseText.split("\n"); 
@@ -392,13 +400,13 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                document.dispatchEvent(getMapEvent());
+                document.dispatchEvent(eventHandler.getMapEvent());
                 return true;
             }
             else 
             {
                 alert("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
-                document.dispatchEvent(getMapEvent());
+                document.dispatchEvent(eventHandler.getMapEvent());
                 return false;
             }
         };
