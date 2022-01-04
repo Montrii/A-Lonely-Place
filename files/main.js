@@ -1,4 +1,4 @@
-import { Player, Movement, MapHandler, Animator, Callback } from "./modules/objects.js";
+import { MapHandler } from "./modules/objects.js";
 $(document).ready(main);
 
 
