@@ -14,7 +14,7 @@ async function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    console.log(await mapHandler.loadMap(1));
+    await console.log(mapHandler.loadMap(1));
 }
 
 
