@@ -8,14 +8,24 @@ var mapHandler = new MapHandler();
 var animator = new Animator();
 function main()
 {
-    mapHandler.loadMap(1).then((resolve) => {
-        console.log("executed successfully");
-    }).catch((err) => {
-        console.log("Error while loading map");
-    });
+    player.syncPlayer();
+    movement.playerMovement();
+    animator.playerAnimation();
+    mapHandler.loadMap(1);
     console.log("Loaded with private repository.");
-       // player.syncPlayer();
-       // movement.playerMovement();
-        //animator.playerAnimation();
+    var mapLoaded = new CustomEvent('mapLoaded', {
+        detail:
+        {
+            finished: true
+        }
+    });
+
+    document.getElementById("player").addEventListener('mapLoaded', (e) =>
+    {
+        console.log(e.detail.finished);
+    });
+
+    document.getElementById("player").dispatchEvent(mapLoaded);
+    console.log("Map loaded.");
 }
 

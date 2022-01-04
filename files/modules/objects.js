@@ -383,7 +383,7 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                return await Promise.resolve(true);
+                return true;
             }
             else 
             {
