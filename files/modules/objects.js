@@ -46,6 +46,60 @@ export class Wall
     }
 }
 
+export class Stair
+{
+    constructor()
+    {}
+    getStairElement()
+    {
+        return document.getElementById("exit");
+    }
+}
+
+export class Chest
+{
+    constructor()
+    {}
+    getChestElements()
+    {
+        return document.querySelectorAll(".chest");
+    }
+}
+
+export class Spawn
+{
+    constructor()
+    {
+
+    }
+    getSpawnElement()
+    {
+        return document.getElementById("playerspawn");
+    }
+}
+
+export class Gap
+{
+    constructor()
+    {}
+    getGapElements()
+    {
+        return document.querySelectorAll(".gap");
+    }
+}
+
+export class Door
+{
+    constructor()
+    {
+
+    }
+    getDoorElements()
+    {
+        return document.querySelectorAll(".door");
+    }
+}
+
 export class Player
 {
     constructor()
@@ -99,6 +153,19 @@ export class Collsion
     constructor()
     {
 
+    }
+    friendlyPlayerCollsion()
+    {
+        var spawn = new Spawn();
+        var gap = new Gap();
+        var exit = new Stair();
+        var door = new Door();
+        var chest = new Chest();
+
+        // all elements inside an array
+        var friendlyElements = [spawn.getSpawnElement(), gap.getGapElements(), exit.getStairElement(),
+        door.getDoorElements(), chest.getChestElements()];
+        console.log(friendlyElements);
     }
     playerCollsion(keyCode)
     {
@@ -182,6 +249,7 @@ export class Movement
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
+            collsion.friendlyPlayerCollsion();
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetTop() - 10;
