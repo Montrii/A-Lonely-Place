@@ -14,15 +14,18 @@ function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    const getName = () => 
-    new Promise(resolve => setTimeout(resolve, 1000, 'xxx'));
+    await testPromise();
+}
 
-    f = async () => {
-        let name = await getName();
-        console.log(name);
-        return name;
-    }
-    await f();
+function testPromise()
+{
+    return new Promise((resolve, reject) =>
+    {
+        setTimeout(() =>
+        {
+            console.log("waited!"); 
+        }, 2000);
+    })
 }
 
 
