@@ -1,5 +1,5 @@
 import { Player, Movement, MapHandler, Animator } from "./modules/objects.js";
-$(document).ready(main);
+$(document).ready(await main);
 
 
 var player = new Player();
