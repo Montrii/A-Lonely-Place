@@ -241,7 +241,7 @@ export class Callback
     onMapLoaded(successFul)
     {
         console.log("MAP FINISHED LOADING: ");
-        console.log(onMapLoaded);
+        console.log(successFul);
     }
 }
 export class MapHandler
