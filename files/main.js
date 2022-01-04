@@ -1,5 +1,5 @@
 import { Player, Movement, MapHandler, Animator } from "./modules/objects.js";
-$(document).ready(await main);
+$(document).ready(main);
 
 
 var player = new Player();
@@ -14,13 +14,8 @@ async function main()
     //console.log(await mapHandler.loadMap(1));
 
     console.log("Loaded with private repository.");
-    mapHandler.loadMap(1).then((val) =>
-    {
-        console.log(val);
-    }, (reason) =>
-    {
-        console.log(reason);
-    })
+    const mapLoaded = await mapHandler.loadMap(1);
+    console.log(mapLoaded);
 }
 
 
