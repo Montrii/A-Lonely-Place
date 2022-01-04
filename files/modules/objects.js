@@ -36,70 +36,15 @@ export class Ground
     }
 }
 
-export class Wall
+export class FriendlyObject
 {
     constructor()
     {}
-    getWallElements()
+    getFriendlyObjects()
     {
-        return document.querySelectorAll(".object");
+        return document.querySelectorAll(".friendlyObject");
     }
 }
-
-export class Stair
-{
-    constructor()
-    {}
-    getStairElement()
-    {
-        return document.getElementById("exit");
-    }
-}
-
-export class Chest
-{
-    constructor()
-    {}
-    getChestElements()
-    {
-        return document.querySelectorAll(".chest");
-    }
-}
-
-export class Spawn
-{
-    constructor()
-    {
-
-    }
-    getSpawnElement()
-    {
-        return document.getElementById("playerspawn");
-    }
-}
-
-export class Gap
-{
-    constructor()
-    {}
-    getGapElements()
-    {
-        return document.querySelectorAll(".gap");
-    }
-}
-
-export class Door
-{
-    constructor()
-    {
-
-    }
-    getDoorElements()
-    {
-        return document.querySelectorAll(".door");
-    }
-}
-
 export class Player
 {
     constructor()
@@ -156,17 +101,7 @@ export class Collsion
     }
     friendlyPlayerCollsion()
     {
-        var spawn = new Spawn();
-        var gap = new Gap();
-        var exit = new Stair();
-        var door = new Door();
-        var chest = new Chest();
-
-        // all elements inside an array
-        var friendlyElements = [toNodeList(spawn.getSpawnElement()), gap.getGapElements(), toNodeList(exit.getStairElement()),
-        door.getDoorElements(), chest.getChestElements()];
-
-        console.log(friendlyElements);
+        console.log(new FriendlyObject().getFriendlyObjects());
     }
     playerCollsion(keyCode)
     {
@@ -426,13 +361,13 @@ export class MapHandler
                         {
 
                             $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="gap" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="gap friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
-                            $('#playground').append(`<div class="playerspawn" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="playerspawn friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             document.getElementById("player").style.top = top+contains.top+32+"px";
                             document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
@@ -446,14 +381,14 @@ export class MapHandler
                         }
                         else if (blocks[y] == "E" || blocks[y] == "e")
                         {
-                            $('#playground').append(`<div class="exit" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="exit friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
                         else if (blocks[y] == "C" || blocks[y] == "c")
                         {
                             $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="chest" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="chest friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
@@ -497,12 +432,4 @@ function stringContainsNumber(_string)
 function Sleep(milliseconds)
 {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
-function toNodeList(elm){
-    var list;
-    elm.setAttribute('wrapNodeList','');
-    list = document.querySelectorAll('[wrapNodeList]');
-    elm.removeAttribute('wrapNodeList');
-    return list;
 }
