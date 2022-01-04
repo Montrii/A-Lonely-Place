@@ -239,7 +239,7 @@ export class MapHandler
     }
     getMapEvent()
     {
-        return mapLoaded = new CustomEvent('mapLoaded', {
+        return new CustomEvent('mapLoaded', {
             detail:
             {
                 finished: true
