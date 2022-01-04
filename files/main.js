@@ -11,7 +11,7 @@ function main()
     player.syncPlayer();
     movement.playerMovement();
     animator.playerAnimation();
-    mapHandler.loadMap(1, mapHandler.getMapEvent());
+    mapHandler.loadMap(1);
     console.log("Loaded with private repository.");
     document.addEventHandler('mapLoaded', function(e)
     {
