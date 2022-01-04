@@ -36,6 +36,16 @@ export class Ground
     }
 }
 
+export class Wall
+{
+    constructor()
+    {}
+    getWallElements()
+    {
+        return document.querySelectorAll(".object");
+    }
+} 
+
 export class FriendlyObject
 {
     constructor()

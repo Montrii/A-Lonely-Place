@@ -72,7 +72,7 @@
         {
             z-index: 1;
             position: absolute;
-            content:url("../../Images/dc-dngn/dngn_closed_door.png");
+            content:attr(url("../../Images/dc-dngn/dngn_closed_door.png"));
         }
         .chest
         {
