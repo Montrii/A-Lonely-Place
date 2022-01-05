@@ -7,7 +7,6 @@ import { Events } from "./event.js";
 var wall = new Wall();
 var player = new Player();
 var friendlyObject = new FriendlyObject();
-var events = new Events();
 export class Collsion
 {
     constructor()
@@ -16,6 +15,7 @@ export class Collsion
     }
     friendlyPlayerCollsion()
     {
+        var events = new Events();
         var playerCollsion = player.getPlayerSides();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
         var foData = 0;
