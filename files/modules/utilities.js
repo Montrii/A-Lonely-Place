@@ -32,6 +32,15 @@ export function getFriendlyObjectClass(friendlyObject)
     }
     return split[0];
 }
+
+export function checkIfValidFriendlyObject(friendlyObject) 
+{
+    if(friendlyObject != "null")
+    {
+        return true;
+    }
+    return false;
+}
 export function detectBrowser()
 { 
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 

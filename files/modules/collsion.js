@@ -1,4 +1,4 @@
-import { getFriendlyObjectClass } from "./utilities.js";
+import { getFriendlyObjectClass, checkIfValidFriendlyObject } from "./utilities.js";
 import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
@@ -23,7 +23,16 @@ export class Collsion
         var playerRight = parseInt(playerCollsion.right);
         for(var i = 0; i < friendlyObjects.length; i++)
         {
-            console.log(getFriendlyObjectClass(friendlyObjects[i]));
+            foData = friendlyObjects[i].getBoundingClientRect();
+            // Konvertiere Informationen in tatsächliche ints 
+            var collsionLeft = parseInt(foData.left);
+            var collsionRight = parseInt(foData.right);
+            var collsionTop = parseInt(foData.top);
+            var collsionBottom = parseInt(foData.bottom);
+            if(checkIfValidFriendlyObject(getFriendlyObjectClass(friendlyObjects[i])) == true)
+            {
+                console.log("Object is type: " + getFriendlyObjectClass(friendlyObjects[i]));
+            }
         }
     }
     playerCollsion(keyCode)
