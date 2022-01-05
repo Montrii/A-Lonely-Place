@@ -224,11 +224,12 @@ export class Movement
 }
 export class Animator
 {
+    playerAnimationInterval = 0;
     constructor()
     {
 
     }
-    playerAnimation()
+    playerPlayAnimation()
     {
         var player = new Player();
         var id = 1;
@@ -244,7 +245,11 @@ export class Animator
                 id++;
             }
         }, 200);
-        return interval;
+        this.playerAnimationInterval = interval;
+    }
+    playerStopAnimation()
+    {
+        clearInterval(this.playerAnimationInterval);
     }
 }
 
@@ -261,7 +266,7 @@ class Events
         console.log("MAP FINISHED LOADING! ");
         this.player.syncPlayer();
         this.movement.playerMovement();
-        this.animator.playerAnimation();
+        this.animator.playerPlayAnimation();
     }
     onMapFailed(reason)
     {
