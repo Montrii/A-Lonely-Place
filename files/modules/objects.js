@@ -1,3 +1,5 @@
+import { Sleep, stringContainsNumber, detectBrowser, mobileDetection } from "./utilities.js"; 
+
 export class Ground
 {
     constructor()
@@ -277,6 +279,12 @@ export class MapHandler
         var oReq = new XMLHttpRequest(); // New request object
         var callbacks = new Events(new Player(), new Animator(), new Movement());
         oReq.onload = async function() {
+            console.log("Playing on Browser: " + detectBrowser());
+            if(mobileDetection().any())
+            {
+                callbacks.onMapFailed("Mobile players aren't supported by 'A Lonely Place'");
+                return;
+            }
             var lines = this.responseText.split("\n"); 
             // Each Line
             var contains = {height: 0, width: 0, top: 0, left: 0, matchingRows: 0};
@@ -336,10 +344,12 @@ export class MapHandler
                 if(contains.height / nonNullLines < 32)
                 {
                     callbacks.onMapFailed("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Height)!");
+                    return;
                 }
                 if(isBroken == true)
                 {
                     callbacks.onMapLoaded("Unable to load map"+map+".txt due to broken map-layout! You exceeded over your playground (Width)!");
+                    return;
                 }
                 // Generating Playground
                 $('body').append(`<div id="playground" style="height:${contains.height}px;width:${contains.width}px;top:${contains.top}px;left:${contains.left}px"></div>`);
@@ -418,10 +428,12 @@ export class MapHandler
                 }
                 document.getElementById("progressbar").style.display = "none";
                 callbacks.onMapLoaded();
+                return;
             }
             else 
             {
                 callbacks.onMapFailed("Unable to load map"+map+".txt due to damaged File! Missing Height/Width Defintion!");
+                return;
             }
         };
         oReq.open("get", "./files/maps/map"+map+".txt", true);
@@ -433,13 +445,3 @@ export class MapHandler
 }
 
 
-function stringContainsNumber(_string)
-{
-    return /\d/.test(_string);
-}
-
-
-function Sleep(milliseconds)
-{
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
