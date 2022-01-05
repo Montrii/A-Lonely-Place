@@ -15,7 +15,7 @@ export class Movement
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
-            collsion.friendlyPlayerCollsion();
+            collsion.friendlyPlayerCollsion(keyDown);
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetTop() - 10;

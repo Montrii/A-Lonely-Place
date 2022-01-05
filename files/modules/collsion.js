@@ -15,7 +15,7 @@ export class Collsion
     {
 
     }
-    friendlyPlayerCollsion()
+    friendlyPlayerCollsion(keyCode)
     {
         var events = new Events();
         var playerCollsion = player.getPlayerSides();
@@ -42,7 +42,8 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    if(playerTop+10 <= collsionBottom)
+                    if((keyCode == 87 && playerTop+10 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    )
                     {
                         events.onCollsionGapObject();
                     }
