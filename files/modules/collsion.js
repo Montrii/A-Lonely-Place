@@ -26,6 +26,10 @@ export class Collsion
         var playerBottom = parseInt(playerCollsion.bottom);
         var playerLeft = parseInt(playerCollsion.left);
         var playerRight = parseInt(playerCollsion.right);
+        var playGroundTop = parseInt(playGroundCollsion.bottom);
+        var playGroundBottom = parseInt(playGroundCollsion.top);
+        var playGroundLeft = parseInt(playGroundCollsion.left);
+        var playGroundRight = parseInt(playGroundCollsion.right);
         for(var i = 0; i < friendlyObjects.length; i++)
         {
             foData = friendlyObjects[i].getBoundingClientRect();
@@ -38,10 +42,10 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    if(playerTop <= collsionBottom+parseInt(playGroundCollsion.bottom))
-                    {
-                        events.onCollsionGapObject();
-                    }
+                    console.log(playerTop);
+                    console.log(collsionBottom);
+                    console.log(playGroundBottom);
+                    console.log(collsionBottom+playGroundBottom);
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
