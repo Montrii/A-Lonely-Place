@@ -2,10 +2,12 @@ import { getFriendlyObjectClass, checkIfValidFriendlyObject } from "./utilities.
 import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
+import { Events } from "./event.js";
 
 var wall = new Wall();
 var player = new Player();
 var friendlyObject = new FriendlyObject();
+var events = new Events();
 export class Collsion
 {
     constructor()
@@ -33,7 +35,14 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    console.log("Gap object.");
+                    if((playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    || (playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    || (playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    || (playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight)))
+                    {
+                        events.onCollsionGapObject();
+
+                    }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {

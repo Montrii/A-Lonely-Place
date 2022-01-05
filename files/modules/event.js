@@ -22,4 +22,8 @@ export class Events
         console.log("Map failed to load.");
         alert(reason);
     }
+    onCollsionGapObject()
+    {
+        console.log("hit gap object");
+    }
 }
