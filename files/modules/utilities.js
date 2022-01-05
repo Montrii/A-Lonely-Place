@@ -24,7 +24,9 @@ export function mobileDetection()
 }
 export function getFriendlyObjectClass(friendlyObject)
 {
-    return friendlyObject.className;
+    const text = friendlyObject.className;
+    var split = text.split(" ");
+    return split[0];
 }
 export function detectBrowser()
 { 
