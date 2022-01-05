@@ -42,10 +42,10 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    console.log(playerTop);
-                    console.log(collsionBottom);
-                    console.log(playGroundBottom);
-                    console.log(collsionBottom+playGroundBottom);
+                    if(playerTop+10 <= collsionBottom)
+                    {
+                        events.onCollsionGapObject();
+                    }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
