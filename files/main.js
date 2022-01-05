@@ -1,4 +1,4 @@
-import { MapHandler } from "./modules/objects.js";
+import { MapHandler } from "./modules/mapHandler.js";
 $(document).ready(main);
 
 
