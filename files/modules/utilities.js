@@ -22,6 +22,10 @@ export function mobileDetection()
     };
     return isMobile;
 }
+export function getFriendlyObjectClass(friendlyObject)
+{
+    return friendlyObject.className;
+}
 export function detectBrowser()
 { 
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 

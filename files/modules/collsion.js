@@ -1,9 +1,11 @@
+import { getFriendlyObjectClass } from "./utilities.js";
 import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
 
 var wall = new Wall();
 var player = new Player();
+var friendlyObject = new FriendlyObject();
 export class Collsion
 {
     constructor()
@@ -12,7 +14,17 @@ export class Collsion
     }
     friendlyPlayerCollsion()
     {
-        console.log(new FriendlyObject().getFriendlyObjects());
+        var playerCollsion = player.getPlayerSides();
+        var friendlyObjects = friendlyObject.getFriendlyObjects();
+        var foData = 0;
+        var playerTop = parseInt(playerCollsion.top);
+        var playerBottom = parseInt(playerCollsion.bottom);
+        var playerLeft = parseInt(playerCollsion.left);
+        var playerRight = parseInt(playerCollsion.right);
+        for(var i = 0; i < friendlyObjects.length; i++)
+        {
+            console.log(getFriendlyObjectClass(friendlyObjects[i]));
+        }
     }
     playerCollsion(keyCode)
     {
