@@ -31,7 +31,26 @@ export class Collsion
             var collsionBottom = parseInt(foData.bottom);
             if(checkIfValidFriendlyObject(getFriendlyObjectClass(friendlyObjects[i])) == true)
             {
-                console.log("Object is type: " + getFriendlyObjectClass(friendlyObjects[i]));
+                if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
+                {
+                    console.log("Gap object.");
+                }
+                else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
+                {
+                    console.log("chest object.");
+                }
+                else if(getFriendlyObjectClass(friendlyObjects[i]) == "exit")
+                {
+                    console.log("exit object.");
+                }
+                else if(getFriendlyObjectClass(friendlyObjects[i]) == "playerspawn")
+                {
+                    console.log("playerspawn object.");
+                }
+                else if(getFriendlyObjectClass(friendlyObjects[i]) == "door")
+                {
+                    console.log("door object.");
+                }
             }
         }
     }
