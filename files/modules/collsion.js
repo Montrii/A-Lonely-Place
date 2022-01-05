@@ -3,10 +3,12 @@ import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
 import { Events } from "./event.js";
+import { Playground, Playplayground } from "./playGround.js";
 
 var wall = new Wall();
 var player = new Player();
 var friendlyObject = new FriendlyObject();
+var playGround = new Playground();
 export class Collsion
 {
     constructor()
@@ -18,6 +20,7 @@ export class Collsion
         var events = new Events();
         var playerCollsion = player.getPlayerSides();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
+        var playGroundCollsion = playGround.getPlayGroundSides();
         var foData = 0;
         var playerTop = parseInt(playerCollsion.top);
         var playerBottom = parseInt(playerCollsion.bottom);
@@ -35,7 +38,7 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    if(playerTop-10 == collsionBottom)
+                    if(playerTop <= collsionBottom+parseInt(playGroundCollsion.bottom))
                     {
                         events.onCollsionGapObject();
                     }
