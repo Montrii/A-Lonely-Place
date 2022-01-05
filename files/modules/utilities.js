@@ -26,6 +26,10 @@ export function getFriendlyObjectClass(friendlyObject)
 {
     const text = friendlyObject.className;
     var split = text.split(" ");
+    if(split[0] == "" || split[0] == " " || split[0] == null || split[0] == typeof(undefined))
+    {
+        return "null";
+    }
     return split[0];
 }
 export function detectBrowser()
