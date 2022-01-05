@@ -255,11 +255,11 @@ export class Animator
 
 class Events
 {
-    constructor(player, animator, movement)
+    player = new Player();
+    movement = new Movement();
+    animator = new Animator();
+    constructor()
     {
-        this.player = player;
-        this.animator = animator;
-        this.movement = movement;
     }
     onMapLoaded()
     {
@@ -282,7 +282,7 @@ export class MapHandler
     async loadMap(map)
     {
         var oReq = new XMLHttpRequest(); // New request object
-        var callbacks = new Events(new Player(), new Animator(), new Movement());
+        var callbacks = new Events();
         oReq.onload = async function() {
             console.log("Playing on Browser: " + detectBrowser());
             if(mobileDetection().any())
