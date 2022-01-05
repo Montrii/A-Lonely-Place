@@ -46,19 +46,15 @@ export class Collsion
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
-                    console.log("chest object.");
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "exit")
                 {
-                    console.log("exit object.");
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "playerspawn")
                 {
-                    console.log("playerspawn object.");
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "door")
                 {
-                    console.log("door object.");
                 }
             }
         }
