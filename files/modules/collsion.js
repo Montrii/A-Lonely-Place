@@ -3,7 +3,7 @@ import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
 import { Events } from "./event.js";
-import { Playground, Playplayground } from "./playGround.js";
+import { Playground } from "./playGround.js";
 
 var wall = new Wall();
 var player = new Player();
