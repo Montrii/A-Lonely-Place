@@ -45,6 +45,25 @@ export class Collsion
                     if((keyCode == 87 && playerTop+10 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     )
                     {
+                        console.log("top side");
+                        events.onCollsionGapObject();
+                    }
+                    else if((keyCode == 65 && playerLeft+10 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    )
+                    {
+                        console.log("left side");
+                        events.onCollsionGapObject();
+                    }
+                    else if((keyCode == 68 && playerRight-10 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    )
+                    {
+                        console.log("right side");
+                        events.onCollsionGapObject();
+                    }
+                    else if((keyCode == 83 && playerBottom-10 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    )
+                    {
+                        console.log("bottom side");
                         events.onCollsionGapObject();
                     }
                 }
