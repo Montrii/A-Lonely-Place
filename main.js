@@ -16,7 +16,7 @@ function main()
     {
         document.getElementById("muteButton").style.boxShadow = "inset 0 0 0 0 transparent";
     });
-    var audio = new Audio("../Images/sounds/Obscura - 720.mp4");
+    var audio = new Audio("../../Assets/sounds/Obscura - 720.mp4");
     $("#muteButton").click(function()
     {
         if(document.getElementById("muteIcon").src.includes("speakerNormal.png"))
