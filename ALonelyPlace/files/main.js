@@ -1,19 +1,17 @@
-import { playerAnimation } from "./modules/animation.js";
-//import { generateWalls } from "./modules/worldGeneration.js";
-import { Player } from "./modules/objects.js";
-import { playerMovement } from "./modules/movement.js";
-import { loadMap } from "./modules/mapGeneration.js";
+import { MapHandler } from "./modules/mapHandler.js";
 $(document).ready(main);
 
 
-var player = new Player();
-function main()
+async function main()
 {
+    var mapHandler = new MapHandler();
+    //console.log(await mapHandler.loadMap(1));
 
-    player.syncPlayer();
-    playerMovement();
-    playerAnimation();
-    //generateWalls();
-    loadMap(1);
+    console.log("Version 0.2.8 BETA.");
+    await mapHandler.loadMap(1);
 }
+
+
+
+
 

@@ -13,11 +13,7 @@
               rgba(0, 0, 0, 0.85)
             ),
             /* bottom, image */
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            url("../../../../Assets/backgrounds/ruins.jpg");
-=======
             url("../../Assets/backgrounds/ruins.jpg");
->>>>>>> parent of 444227c (0.2.0):files/main.css
             background-size: 2000px, 2000px;
         }
         #progress
@@ -39,21 +35,13 @@
         {
             z-index: 1;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dungeon/wall/catacombs_9.png");
-=======
             content:url("../../Assets/dungeon/wall/catacombs_9.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
             border: 1px solid red;
         }
         .ground
         {
             z-index: 0;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dungeon/wall/catacombs_0.png");
-            border: 1px solid orange;
-=======
             content:url("../../Assets/dungeon/wall/catacombs_0.png");
         }
         .groundOnlyTexture
@@ -61,64 +49,39 @@
             z-index: 0;
             position: absolute;
             content:url("../../Assets/dungeon/wall/catacombs_0.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
         }
         .playerspawn
         {
             z-index: 0;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dungeon/wall/catacombs_0.png");
-            border: 1px solid purple;
-=======
             content:url("../../Assets/dungeon/wall/catacombs_0.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
         }
         .gap
         {
             z-index: 1;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dungeon/traps/shaft.png");
-            border: 1px solid lightblue;
-=======
             content:url("../../Assets/dungeon/traps/shaft.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
         }
         .exit
         {
             z-index: 0;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/UNUSED/features/dngn_branch_stairs.png");
-            border: 1px solid yellow;
-=======
             content:url("../../Assets/UNUSED/features/dngn_branch_stairs.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
         }
         .door
         {
             z-index: 1;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dc-dngn/dngn_closed_door.png");
-            border: 1px solid brown;
-=======
             content:url("../../Assets/dc-dngn/dngn_closed_door.png");
->>>>>>> parent of 444227c (0.2.0):files/main.css
         }
         .chest
         {
             z-index: 1;
             position: absolute;
-<<<<<<< HEAD:ALonelyPlace/files/main.css
-            content:url("../../../../Assets/dungeon/chest.png");
-=======
             content:url("../../Assets/dungeon/chest.png");
         }
         .friendlyObject
         {
->>>>>>> parent of 444227c (0.2.0):files/main.css
             border: 1px solid royalblue;
         }
         #playground
