@@ -13,7 +13,7 @@
               rgba(0, 0, 0, 0.85)
             ),
             /* bottom, image */
-            url("../../Images/backgrounds/ruins.jpg");
+            url("../../../Assets/backgrounds/ruins.jpg");
             background-size: 2000px, 2000px;
         }
         #progress
@@ -35,49 +35,49 @@
         {
             z-index: 1;
             position: absolute;
-            content:url("../../Images/dungeon/wall/catacombs_9.png");
+            content:url("../../../Assets/dungeon/wall/catacombs_9.png");
             border: 1px solid red;
         }
         .ground
         {
             z-index: 0;
             position: absolute;
-            content:url("../../Images/dungeon/wall/catacombs_0.png");
+            content:url("../../../Assets/dungeon/wall/catacombs_0.png");
             border: 1px solid orange;
         }
         .playerspawn
         {
             z-index: 0;
             position: absolute;
-            content:url("../../Images/dungeon/wall/catacombs_0.png");
+            content:url("../../../Assets/dungeon/wall/catacombs_0.png");
             border: 1px solid purple;
         }
         .gap
         {
             z-index: 1;
             position: absolute;
-            content:url("../../Images/dungeon/traps/shaft.png");
+            content:url("../../../Assets/dungeon/traps/shaft.png");
             border: 1px solid lightblue;
         }
         .exit
         {
             z-index: 0;
             position: absolute;
-            content:url("../../Images/UNUSED/features/dngn_branch_stairs.png");
+            content:url("../../../Assets/UNUSED/features/dngn_branch_stairs.png");
             border: 1px solid yellow;
         }
         .door
         {
             z-index: 1;
             position: absolute;
-            content:url("../../Images/dc-dngn/dngn_closed_door.png");
+            content:url("../../../Assets/dc-dngn/dngn_closed_door.png");
             border: 1px solid brown;
         }
         .chest
         {
             z-index: 1;
             position: absolute;
-            content:url("../../Images/dungeon/chest.png");
+            content:url("../../../Assets/dungeon/chest.png");
             border: 1px solid royalblue;
         }
         #playground

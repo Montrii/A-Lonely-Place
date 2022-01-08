@@ -7,7 +7,7 @@ export function playerAnimation()
     var id = 1;
     const interval = setInterval(function()
     {
-        player.getPlayerImage().src = "../../../Images/monsters_idle/vampire/v2/vampire_v2_"+id+"_32.png";
+        player.getPlayerImage().src = "../../../Assets/monsters_idle/vampire/v2/vampire_v2_"+id+"_32.png";
         if(id >= 4)
         {
             id = 1;
