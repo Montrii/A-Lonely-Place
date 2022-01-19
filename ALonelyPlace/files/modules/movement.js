@@ -1,6 +1,6 @@
 import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
-import { phpCommunicater, phpCommunicater } from "./phpCommunicater.js";
+import { phpCommunicater } from "./phpCommunicater.js";
 var player = new Player();
 var collsion = new Collsion();
 var phpCommunicater = new phpCommunicater();
