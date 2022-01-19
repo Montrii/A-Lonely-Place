@@ -10,6 +10,6 @@
     }
     else 
     {
-        echo "SUCCESSFULLY LOGGED IN INTO DATABASE " + $_GET['userIp'];
+        echo "SUCCESSFULLY LOGGED IN INTO DATABASE " . $_GET['userIp'];
     }
 ?>
