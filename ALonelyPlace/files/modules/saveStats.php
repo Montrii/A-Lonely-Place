@@ -1,6 +1,7 @@
 <?php
-    if($_GET['ajax'] == true)
+
+    foreach ($_GET as $key => $value) 
     {
-        echo "ajax request handled!";
+        echo $value;
     }
 ?>
