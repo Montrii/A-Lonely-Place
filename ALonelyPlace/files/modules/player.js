@@ -11,13 +11,7 @@ export class Player
     }
     playPlayerWalkSound()
     {
-        if(!this.audio.paused == true)
-        {
-            this.audio.pause();
-            this.audio.currentTime = 0;
-            this.audio.play();
-        }
-        else 
+        if(!this.audio.paused == false)
         {
             this.audio.play();
         }
