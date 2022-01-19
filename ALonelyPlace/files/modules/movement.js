@@ -14,10 +14,12 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
-        php.sendToPHP(); 
+        php.sendToPHP({
+            'ajax' : true,
+            'sword' : true,
+        }); 
         $(document).keydown(function() {
             var keyDown = event.keyCode;
-            console.log(JSON.stringify(event));
             player.getPlayerObject().scrollIntoView();
             collsion.friendlyPlayerCollsion(keyDown);
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
