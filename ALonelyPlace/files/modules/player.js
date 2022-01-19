@@ -13,13 +13,9 @@ export class Player
     {
         if(this.audio.duration > 0 && !this.audio.paused)
         {
-
-        }
-        else 
-        {
+            this.audio.stop();
             this.audio.play();
             console.log("played walk sound");
-    
         }
     }
     getPlayerObject()
