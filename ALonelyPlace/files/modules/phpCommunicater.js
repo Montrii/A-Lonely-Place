@@ -17,12 +17,15 @@ export class phpCommunicater
         return data['ip'];
         });
     }
-    sendToPHP(inventory)
+    sendToPHP(ip)
     {
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
-            data: inventory,
+            data: {
+                'userIp' : ip,
+                'ajax' : true
+            },
             success: function(data){
                 alert(data);
             }
