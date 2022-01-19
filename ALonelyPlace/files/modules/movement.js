@@ -1,8 +1,9 @@
 import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
+import { phpCommunicater, phpCommunicater } from "./phpCommunicater.js";
 var player = new Player();
 var collsion = new Collsion();
-
+var phpCommunicater = new phpCommunicater();
 export class Movement
 {
     constructor()
@@ -13,6 +14,7 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
+        phpCommunicater.sendToPHP(); 
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             console.log(JSON.stringify(event));
