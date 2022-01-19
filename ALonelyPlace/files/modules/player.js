@@ -11,8 +11,9 @@ export class Player
     }
     playPlayerWalkSound()
     {
-        console.log(this.audio.paused);
-        this.audio.stop();
+        console.log(!this.audio.paused);
+        this.audio.pause();
+        this.audio.currentTime = 0;
         this.audio.play();
         console.log("played walk sound");
     }
