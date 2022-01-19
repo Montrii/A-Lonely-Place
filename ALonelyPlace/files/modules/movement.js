@@ -12,9 +12,11 @@ export class Movement
     playerMovement()
     {
         var position = 0;
+        player.createPlayerStepSound();
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
+            player.playPlayerStepSound();
             collsion.friendlyPlayerCollsion(keyDown);
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {

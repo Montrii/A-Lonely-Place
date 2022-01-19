@@ -1,8 +1,17 @@
 export class Player
 {
+    audio = 0;
     constructor()
     {
 
+    }
+    createPlayerStepSound()
+    {
+        audio = new Audio('../../../Assets/sounds/skel_walk.wav');
+    }
+    playPlayerStepSound()
+    {
+        this.audio.play();
     }
     getPlayerObject()
     {
