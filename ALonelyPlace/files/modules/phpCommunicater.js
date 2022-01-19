@@ -13,7 +13,6 @@ export class phpCommunicater
             pair = pair.split('=');
             return obj[pair[0]] = pair[1], obj;
         }, {});
-        console.log(data['ip']);
         return data['ip'];
         });
     }

@@ -15,6 +15,7 @@ export class Movement
         var position = 0;
         player.createPlayerWalkSound();
         var ip = php.receiveIPAddressOfUser();
+        console.log(ip);
         php.sendToPHP(ip); 
         $(document).keydown(function() {
             var keyDown = event.keyCode;
