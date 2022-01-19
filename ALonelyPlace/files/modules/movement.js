@@ -20,7 +20,7 @@ export class Movement
             collsion.friendlyPlayerCollsion(keyDown);
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = player.getPlayerOffSetTop() - 10;
+                position = player.getPlayerOffSetTop() - 20;
                 //PLAYER_OBJECT.style.top = position + "px";
                 player.addToTopPosition(position);
                 player.playPlayerWalkSound();
@@ -39,7 +39,7 @@ export class Movement
             }
             else if(event.keyCode == 65 /*A*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = player.getPlayerOffSetLeft() - 10;
+                position = player.getPlayerOffSetLeft() - 20;
                 player.addToLeftPosition(position);
                 player.playPlayerWalkSound();
             }
