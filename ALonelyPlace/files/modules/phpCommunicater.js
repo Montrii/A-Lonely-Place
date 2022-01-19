@@ -6,16 +6,13 @@ export class phpCommunicater
     }
     sendToPHP()
     {
-        var objXMLHttpRequest = new XMLHttpRequest();
-        objXMLHttpRequest.onreadystatechange = function()
-        {
-            if(objXMLHttpRequest.readyState == 4 && objXMLHttpRequest.status == 200)
-            {
-                console.log(objXMLHttpRequest.status);
-                console.log(objXMLHttpRequest.statusText);
+        $.ajax({
+            type: "GET",
+            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
+            data: {webname: 'Wayne', 'ajax': true},
+            success: function(data){
+                alert(data);
             }
-        }
-        objXMLHttpRequest.open('GET', 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php');
-        objXMLHttpRequest.send();
+        });
     }
 }
