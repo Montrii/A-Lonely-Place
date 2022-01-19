@@ -1,7 +1,9 @@
-$(document).ready(main);
-
-
-function main()
+export class Enemy
 {
-    alert("loaded enemies.js!");
+    constructor()
+    {}
+    createEnemyModel()
+    {
+        
+    }
 }
