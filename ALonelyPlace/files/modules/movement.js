@@ -12,6 +12,7 @@ export class Movement
     playerMovement()
     {
         var position = 0;
+        player.createPlayerWalkSound();
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
