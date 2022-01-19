@@ -15,28 +15,31 @@ export class Movement
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
-            player.playPlayerStepSound();
             collsion.friendlyPlayerCollsion(keyDown);
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetTop() - 10;
                 //PLAYER_OBJECT.style.top = position + "px";
                 player.addToTopPosition(position);
+                player.playPlayerStepSound();
             }
             else if(event.keyCode == 83 /*S*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetTop() - 6;
                 player.addToTopPosition(position);
+                player.playPlayerStepSound();
             }
             else if(event.keyCode == 68 /*D*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetLeft() - 6;
                 player.addToLeftPosition(position);
+                player.playPlayerStepSound();
             }
             else if(event.keyCode == 65 /*A*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetLeft() - 10;
                 player.addToLeftPosition(position);
+                player.playPlayerStepSound();
             }
         });
     }
