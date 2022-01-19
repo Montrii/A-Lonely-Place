@@ -22,25 +22,25 @@ export class Movement
                 position = player.getPlayerOffSetTop() - 10;
                 //PLAYER_OBJECT.style.top = position + "px";
                 player.addToTopPosition(position);
-                player.playPlayerStepSound();
+                player.playPlayerWalkSound();
             }
             else if(event.keyCode == 83 /*S*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetTop() - 6;
                 player.addToTopPosition(position);
-                player.playPlayerStepSound();
+                player.playPlayerWalkSound();
             }
             else if(event.keyCode == 68 /*D*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetLeft() - 6;
                 player.addToLeftPosition(position);
-                player.playPlayerStepSound();
+                player.playPlayerWalkSound();
             }
             else if(event.keyCode == 65 /*A*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
                 position = player.getPlayerOffSetLeft() - 10;
                 player.addToLeftPosition(position);
-                player.playPlayerStepSound();
+                player.playPlayerWalkSound();
             }
         });
     }
