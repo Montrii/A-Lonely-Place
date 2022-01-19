@@ -14,6 +14,7 @@ export class phpCommunicater
             return obj[pair[0]] = pair[1], obj;
         }, {});
         console.log(data['ip']);
+        return data['ip'];
         });
     }
     sendToPHP(inventory)

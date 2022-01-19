@@ -16,6 +16,7 @@ export class Movement
         player.createPlayerWalkSound();
         php.sendToPHP({
             'ajax' : true,
+            'userIp' : php.receiveIPAddressOfUser(),
             'sword' : true,
         }); 
         $(document).keydown(function() {
