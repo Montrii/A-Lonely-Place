@@ -18,7 +18,7 @@ export class phpCommunicater
     }
     sendToPHP(inventory)
     {
-        receiveIPAddressOfUser();
+        this.receiveIPAddressOfUser();
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
