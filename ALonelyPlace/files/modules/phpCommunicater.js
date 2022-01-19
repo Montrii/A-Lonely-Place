@@ -4,18 +4,6 @@ export class phpCommunicater
     {
 
     }
-    sendToPHP(inventory)
-    {
-        receiveIPAddressOfUser();
-        $.ajax({
-            type: "GET",
-            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
-            data: inventory,
-            success: function(data){
-                alert(data);
-            }
-        });
-    }
     receiveIPAddressOfUser()
     {
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
@@ -26,6 +14,18 @@ export class phpCommunicater
             return obj[pair[0]] = pair[1], obj;
         }, {});
         console.log(data);
+        });
+    }
+    sendToPHP(inventory)
+    {
+        receiveIPAddressOfUser();
+        $.ajax({
+            type: "GET",
+            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
+            data: inventory,
+            success: function(data){
+                alert(data);
+            }
         });
     }
 }
