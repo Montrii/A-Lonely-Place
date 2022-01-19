@@ -1,3 +1,11 @@
 <?php
-    echo "RECEIVED DATA FROM AJAX REQUEST";
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    }
+    debug_to_console($_GET['ajax']);
+    debug_to_console($_GET['receivedItem']);
 ?>
