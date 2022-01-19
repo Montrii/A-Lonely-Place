@@ -1,6 +1,3 @@
 <?php
-    if($_GET['ajax'])
-    {
-        echo "SUCCESSFULLY RECEIVED DATA FROM PHP";
-    }
+    echo "RECEIVED DATA FROM AJAX REQUEST";
 ?>
