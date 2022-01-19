@@ -11,10 +11,17 @@ export class Player
     }
     playPlayerWalkSound()
     {
-        if(!this.audio.paused == false)
+        if(!this.audio.paused == true)
+        {
+            this.audio.pause();
+            this.audio.currentTime = 0;
+            this.audio.play();
+        }
+        else 
         {
             this.audio.play();
         }
+
         console.log("played walk sound");
     }
     getPlayerObject()
