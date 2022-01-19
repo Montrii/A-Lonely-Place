@@ -4,7 +4,7 @@ export class phpCommunicater
     {
 
     }
-    receiveIPAddressOfUser()
+    sendToPHP()
     {
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         // Convert key-value pairs to JSON
@@ -13,21 +13,17 @@ export class phpCommunicater
             pair = pair.split('=');
             return obj[pair[0]] = pair[1], obj;
         }, {});
-        return data['ip'];
-        });
-    }
-    sendToPHP(ip)
-    {
-        $.ajax({
-            type: "GET",
-            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
-            data: {
-                'userIp' : ip,
-                'ajax' : true
-            },
-            success: function(data){
-                alert(data);
-            }
+            $.ajax({
+                type: "GET",
+                url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
+                data: {
+                    'userIp' : data['ip'],
+                    'ajax' : true
+                },
+                success: function(data){
+                    alert(data);
+                }
+            });
         });
     }
 }
