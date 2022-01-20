@@ -26,5 +26,5 @@
         // if no entry was made in database -> new account should be created
         echo "NO USER IN DATABASE FOUND";
     }
-    $getUserData->close();
+    $connection->close();
 ?>
