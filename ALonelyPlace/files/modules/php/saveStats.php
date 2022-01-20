@@ -12,18 +12,5 @@
     echo $_GET['ip'];
 
 
-    $sqlStatement = "SELECT * FROM inventory";
-    $sqlResult = mysql_query($sqlStatement);
-
-    if(!$sqlResult)
-    {
-        $message  = 'Ungültige Abfrage: ' . mysql_error() . "\n";
-        $message .= 'Gesamte Abfrage: ' . $query;
-        echo $message;
-    }
-    else 
-    {
-        echo "works!"; 
-    }
     $connection->close();
 ?>
