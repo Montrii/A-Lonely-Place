@@ -9,7 +9,11 @@
     {
         echo false;
     }
-    echo $_GET['ip'];
+    if($result = $connection -> query("SELECT * FROM inventory"))
+    {
+        echo "Returned rows are: " . $result -> num_rows;
+        $result -> free_result();
+    }
 
 
     $connection->close();
