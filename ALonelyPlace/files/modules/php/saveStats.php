@@ -9,7 +9,7 @@
     {
         echo false;
     }
-    $result = $connection->query("SELECT user_name FROM inventory");
-    echo "SELECT RETURNED " . $result->num_rows . " rows!";
+    $result = mysqli_query($connection, "SELECT user_name FROM inventory");
+    printf("Select returned %d rows.\n", mysqli_num_rows($result));
     $connection->close();
 ?>
