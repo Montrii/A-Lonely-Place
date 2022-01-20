@@ -4,7 +4,7 @@ export class phpCommunicater
     {
 
     }
-    sendToPHP()
+    saveStats()
     {
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         // Convert key-value pairs to JSON

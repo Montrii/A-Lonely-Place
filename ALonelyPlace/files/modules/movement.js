@@ -14,7 +14,7 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
-        php.sendToPHP(); 
+        php.saveStats();
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
