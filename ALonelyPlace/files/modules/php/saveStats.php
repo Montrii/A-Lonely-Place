@@ -11,8 +11,7 @@
     }
     if($result = $connection -> query("SELECT * FROM inventory WHERE user_name = '". $_GET['ip'] . "'"))
     {
-        echo "Returned rows are: " . print_r($result);
-        $result -> free_result();
+        echo "HI";
     }
 
 
