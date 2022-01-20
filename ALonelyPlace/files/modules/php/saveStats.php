@@ -1,4 +1,4 @@
 <?php
 
-    echo $_GET['health'];
+    echo true;
 ?>

@@ -18,8 +18,16 @@ export class phpCommunicater
                 type: "GET",
                 url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/saveStats.php',
                 data: information,
-                success: function(userData){
-                    alert(userData);
+                success: function(userData)
+                {
+                    if(userData == false)
+                    {
+                        alert("Error: Unable to store information into Database!");
+                    }
+                    else 
+                    {
+                        alert("Successfully stored information into Database!");
+                    }
                 }
             });
         });
