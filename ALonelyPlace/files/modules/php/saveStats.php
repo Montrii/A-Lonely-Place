@@ -1,15 +1,14 @@
 <?php
     $servername = "locahost";
     $database = "u867191320_ALonelyPlace";
-    $user_db = "u867191320_montri";
+    $user_db = "u867191320_montriii";
     $password_db = "JrUtMK12.";
 
-    $connection = new mysqli($servername, $user_db, $password_db, $database);
-    if ($connection -> connect_errno) 
+    $conn = mysqli_connect($servername, $user_db, $password_db, $database);
+
+    // Check Connection
+    if(!$conn)
     {
-        echo false;
+        echo 'Connection error: ' . mysqli_connect_error();
     }
-    $result = mysqli_query($connection, "SELECT * FROM inventory");
-    printf("Select returned %d rows.\n", mysqli_num_rows($result));
-    $connection->close();
 ?>
