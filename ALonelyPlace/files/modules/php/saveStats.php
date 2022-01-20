@@ -11,9 +11,9 @@
     }
     if($result = $connection -> query("SELECT * FROM inventory WHERE user_name = '". $_GET['ip'] . "'"))
     {
-        echo "HI";
+        
     }
-
+    echo "HI";
 
     $connection->close();
 ?>
