@@ -32,4 +32,13 @@ I will not post a guide on how to create an API key for an API nor how to connec
 
 Thanks for allowing me to publicly use your assets! [Official Assets Download](https://pixel-poem.itch.io/dungeon-assetpuck)
 
+- [Chris Hamons](https://opengameart.org/content/dungeon-crawl-32x32-tiles)
 
+Thank you aswell for letting me publicly use your awesome assets! [Official Download](https://opengameart.org/content/dungeon-crawl-32x32-tiles)
+
+- [Montri](https://github.com/Montrii)
+
+
+## License
+
+Licensed under [MIT](./LICENSE)
