@@ -9,8 +9,8 @@
     {
         echo false;
     }
-
-    $getUserData = "select * from inventory where ip = '" . $_GET['ip'] . "'";
+    echo $_GET['ip'];
+    $getUserData = "select * from inventory";
     $getUserData_result = $connection->query($getUserData);
 
     if($getUserData_result->num_rows > 0)
