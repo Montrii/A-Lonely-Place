@@ -10,5 +10,20 @@
         echo false;
     }
     echo $_GET['ip'];
+
+
+    $sqlStatement = sprintf("SELECT * FROM inventory WHERE ip = '%s'", mysql_real_escape_string($_GET['ip']));
+    $sqlResult = mysql_query($sqlStatement);
+
+    if(!$sqlResult)
+    {
+        $message  = 'Ungültige Abfrage: ' . mysql_error() . "\n";
+        $message .= 'Gesamte Abfrage: ' . $query;
+        echo $message;
+    }
+    else 
+    {
+        echo "works!";
+    }
     $connection->close();
 ?>
