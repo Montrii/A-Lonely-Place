@@ -11,4 +11,15 @@
     {
         echo 'Connection error: ' . mysqli_connect_error();
     }
+
+    // query for all inventorys
+    $sql = 'SELECT * FROM inventory';
+
+    // make query and get result
+    $result = mysqli_query($conn, $sql);
+
+    //fetch the resulting rows
+
+    $inventories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo print_r($inventories);
 ?>
