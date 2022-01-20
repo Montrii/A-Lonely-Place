@@ -9,11 +9,7 @@
     {
         echo false;
     }
-    if($result = $connection -> query("SELECT * FROM inventory WHERE user_name = '". $_GET['ip'] . "'"))
-    {
-        
-    }
-    echo "HI";
-
+    $result = $connection->query("SELECT * FROM inventory");
+    echo "SELECT RETURNED " . $result->num_rows . " rows!";
     $connection->close();
 ?>
