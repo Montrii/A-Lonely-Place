@@ -9,7 +9,7 @@
     {
         echo false;
     }
-    $result = $connection->query("SELECT * FROM inventory");
+    $result = $connection->query("SELECT user_name FROM inventory");
     echo "SELECT RETURNED " . $result->num_rows . " rows!";
     $connection->close();
 ?>
