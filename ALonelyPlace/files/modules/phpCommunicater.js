@@ -20,14 +20,7 @@ export class phpCommunicater
                 data: information,
                 success: function(userData)
                 {
-                    if(userData == false)
-                    {
-                        alert("Error: Unable to store information into Database!");
-                    }
-                    else 
-                    {
-                        alert("Successfully stored information into Database!");
-                    }
+                    console.log(userData);
                 }
             });
         });
