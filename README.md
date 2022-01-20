@@ -26,4 +26,9 @@ You can simply download the entire repository and throw it onto your local webse
 In order to avoid that, please read the used elements documentation on how to receive the required information.
 I will not post a guide on how to create an API key for an API nor how to connect to a MYSQL Database with PHP.
 
+## Credits
+
+- [Pixel_Poem](https://twitter.com/pixel_poem)
+Thanks for allowing me to publicly use your assets! [Official Assets Download](https://pixel-poem.itch.io/dungeon-assetpuck)
+
 
