@@ -1,5 +1,5 @@
 *.html linguist-language=HTML
 *.css linguist-language=CSS
+phpCommunicater.js linguist-language=PHP
 *.js linguist-language=JavaScript
-*.php linguist-language=PHP
 *.php linguist-language=SQL
