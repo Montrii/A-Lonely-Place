@@ -13,7 +13,7 @@
     }
 
     // query for all inventorys
-    $sql = 'SELECT * FROM inventory WHERE user_name = "' . $_GET['ip'] . '"';
+    $sql = "SELECT * FROM inventory WHERE user_name = '" . $_GET['ip'] . "'";
 
     // make query and get result
     $result = mysqli_query($conn, $sql);
