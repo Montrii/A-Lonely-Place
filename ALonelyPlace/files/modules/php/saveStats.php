@@ -9,7 +9,7 @@
     {
         echo false;
     }
-    if($result = $connection -> query("SELECT * FROM inventory"))
+    if($result = $connection -> query("SELECT * FROM inventory WHERE user_name = '". $_GET['ip'] . "'"))
     {
         echo "Returned rows are: " . $result -> num_rows;
         $result -> free_result();
