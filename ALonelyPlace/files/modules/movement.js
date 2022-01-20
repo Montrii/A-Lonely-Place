@@ -14,7 +14,11 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
-        php.saveStats();
+        php.saveStats({
+            health: 3,
+            armor: 0,
+            sword: 'default'
+        });
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();

@@ -4,24 +4,22 @@ export class phpCommunicater
     {
 
     }
-    saveStats()
+    saveStats(inventory)
     {
-        $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+        $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
         // Convert key-value pairs to JSON
         // https://stackoverflow.com/a/39284735/452587
-        data = data.trim().split('\n').reduce(function(obj, pair) {
+        userData = userData.trim().split('\n').reduce(function(obj, pair) {
             pair = pair.split('=');
             return obj[pair[0]] = pair[1], obj;
         }, {});
+        const information = Object.assign(userData, inventory)
             $.ajax({
                 type: "GET",
-                url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/saveStats.php',
-                data: {
-                    'userIp' : data['ip'],
-                    'ajax' : true
-                },
-                success: function(data){
-                    alert(data);
+                url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/saveStats.php',
+                data: information,
+                success: function(userData){
+                    alert(userData);
                 }
             });
         });
