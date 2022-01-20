@@ -1,6 +1,5 @@
 # A Lonely Place
 
-[![sampctl](https://img.shields.io/badge/sampctl-a--lonely--place-2f2f2f.svg?style=for-the-badge)](https://github.com/Montrii/A-Lonely-Place)
 
 If you wish to read the official documentation in another language, feel free to click on your desired country.
 
