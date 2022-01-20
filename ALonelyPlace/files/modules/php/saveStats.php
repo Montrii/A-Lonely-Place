@@ -13,7 +13,6 @@
 
 
     $sqlStatement = sprintf("SELECT * FROM inventory WHERE ip = '%s'", $_GET['ip']);
-    $sqlResult = mysql_query($sqlStatement);
 
     $connection->close();
 ?>
