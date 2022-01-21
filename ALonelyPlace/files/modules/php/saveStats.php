@@ -12,9 +12,9 @@
         echo 'Connection error: ' . mysqli_connect_error();
     }
 
-    $SWORD_ID = intval($_GET['sword']);
+
     // Get Sword slot
-    $sql = sprintf("SELECT * FROM items WHERE id = %i", $SWORD_ID);
+    $sql = "SELECT * FROM items";
     $result = mysqli_query($conn, $sql);
     $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
     echo print_r($sword);
