@@ -19,12 +19,12 @@
     $sql = "SELECT * FROM items";
     $result = mysqli_query($conn, $sql);
     $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    $matchsword = false 
+    $matchsword = false;
     foreach ($item as $key => $value)
     {
         if($item['id'] == $ITEM_ID)
         {
-            $matchsword = true 
+            $matchsword = true; 
         }
     }
     if(!$matchsword)
