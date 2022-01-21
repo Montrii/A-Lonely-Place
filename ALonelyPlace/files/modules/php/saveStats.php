@@ -44,7 +44,30 @@
             {
                 // update inventory
                 echo "USER DATA EXISTS - OVERWRITING\n";
-                echo $userInfo[0]['item1'];
+                $item2 = intval($userInfo[0]['item2']);
+                $item3 = intval($userInfo[0]['item3']);
+                $item4 = intval($userInfo[0]['item4']);
+                if($item2 == 0)
+                {
+                    $result = mysqli_query($conn, "UPDATE inventory SET item2 = " . $ITEM_ID . " WHERE user = '" . $_GET['ip'] . "'");
+                    echo $result;
+                }
+                else if($item3 == 0)
+                {
+                    $result = mysqli_query($conn, "UPDATE inventory SET item3 = " . $ITEM_ID . " WHERE user = '" . $_GET['ip'] . "'");
+                    echo $result;
+                }
+                else if($item4 == 0)
+                {
+                    $result = mysqli_query($conn, "UPDATE inventory SET item4 = " . $ITEM_ID . " WHERE user = '" . $_GET['ip'] . "'");
+                    echo $result;
+                }
+                else 
+                {
+                    $result = mysqli_query($conn, "UPDATE inventory SET item5 = " . $ITEM_ID . " WHERE user = '" . $_GET['ip'] . "'");
+                    echo $result;
+                }
+                echo "SUCCESSFULLY UPDATED USER DATA IN DATABASE!";
             }
         }
     }
