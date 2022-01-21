@@ -1,19 +1,17 @@
-import { Player } from "./player.js";
-
-var player = new Player();
 export class Animator
 {
     playerAnimationInterval = 0;
-    constructor()
+    player = 0;
+    constructor(playerObject)
     {
-
+        this.player = playerObject;
     }
     playerPlayAnimation()
     {
         var id = 1;
         const interval = setInterval(function()
         {
-            player.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
+            this.player.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
             if(id >= 4)
             {
                 id = 1;
