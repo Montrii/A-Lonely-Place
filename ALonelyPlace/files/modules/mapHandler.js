@@ -1,18 +1,14 @@
-import { Sleep, stringContainsNumber, detectBrowser, mobileDetection, getFriendlyObjectClass } from "./utilities.js"; 
+import { Sleep, stringContainsNumber, detectBrowser, mobileDetection } from "./utilities.js"; 
 import { Events } from "./event.js";
-import { Player } from "./player.js";
-import { Movement } from "./movement.js";
-import { Animator } from "./animator.js";
-import { Collsion } from "./collsion.js";
-import { FriendlyObject } from "./friendlyObject.js";
-import { Playground } from "./playGround.js";
-import { Wall } from "./wall.js";
 
 
 
 
 var callbacks = new Events();
+<<<<<<< HEAD
 let player = new Player();
+=======
+>>>>>>> parent of 1deece7 (0.6.2)
 export class MapHandler
 {
     constructor()
@@ -132,8 +128,8 @@ export class MapHandler
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
                             $('#playground').append(`<div class="playerspawn friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
-                            player.addToTopPosition(top+contains.top+32);
-                            player.addToLeftPosition(left+contains.left);
+                            document.getElementById("player").style.top = top+contains.top+32+"px";
+                            document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
@@ -171,7 +167,7 @@ export class MapHandler
 
                 }
                 document.getElementById("progressbar").style.display = "none";
-                callbacks.onMapLoaded(player, new Movement(player, new Collsion(player, new FriendlyObject(), new Playground(), new Wall(), callbacks)), new Animator(player));
+                callbacks.onMapLoaded();
                 return;
             }
             else 

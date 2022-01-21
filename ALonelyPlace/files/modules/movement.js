@@ -1,44 +1,50 @@
+import { Player } from "./player.js";
+import { Collsion } from "./collsion.js";
+import { phpCommunicater } from "./phpCommunicater.js";
+var player = new Player();
+var collsion = new Collsion();
+var php = new phpCommunicater();
 export class Movement
 {
-    player = 0;
-    collsionObject = 0;
-    constructor(playerObject, collsionObject)
+    constructor()
     {
-        this.player = playerObject;
-        this.collsion = collsionObject;
+
     }
     playerMovement()
     {
         var position = 0;
-        this.player.createPlayerWalkSound();
+        player.createPlayerWalkSound();
+        php.saveStats({
+            item: 2
+        });
         $(document).keydown(function() {
             var keyDown = event.keyCode;
-            this.player.getPlayerObject().scrollIntoView();
-            this.collsion.friendlyPlayerCollsion(keyDown);
-            if(event.keyCode == 87 /*W*/ && event.keyCode != this.collsion.playerCollsion(keyDown))
+            player.getPlayerObject().scrollIntoView();
+            collsion.friendlyPlayerCollsion(keyDown);
+            if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = this.player.getPlayerOffSetTop() - 10;
+                position = player.getPlayerOffSetTop() - 10;
                 //PLAYER_OBJECT.style.top = position + "px";
-                this.player.addToTopPosition(position);
-                this.player.playPlayerWalkSound();
+                player.addToTopPosition(position);
+                player.playPlayerWalkSound();
             }
-            else if(event.keyCode == 83 /*S*/&& event.keyCode != this.collsion.playerCollsion(keyDown))
+            else if(event.keyCode == 83 /*S*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = this.player.getPlayerOffSetTop() - 6;
-                this.player.addToTopPosition(position);
-                this.player.playPlayerWalkSound();
+                position = player.getPlayerOffSetTop() - 6;
+                player.addToTopPosition(position);
+                player.playPlayerWalkSound();
             }
-            else if(event.keyCode == 68 /*D*/&& event.keyCode != this.collsion.playerCollsion(keyDown))
+            else if(event.keyCode == 68 /*D*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = this.player.getPlayerOffSetLeft() - 6;
-                this.player.addToLeftPosition(position);
-                this.player.playPlayerWalkSound();
+                position = player.getPlayerOffSetLeft() - 6;
+                player.addToLeftPosition(position);
+                player.playPlayerWalkSound();
             }
-            else if(event.keyCode == 65 /*A*/&& event.keyCode != this.collsion.playerCollsion(keyDown))
+            else if(event.keyCode == 65 /*A*/&& event.keyCode != collsion.playerCollsion(keyDown))
             {
-                position = this.player.getPlayerOffSetLeft() - 10;
-                this.player.addToLeftPosition(position);
-                this.player.playPlayerWalkSound();
+                position = player.getPlayerOffSetLeft() - 10;
+                player.addToLeftPosition(position);
+                player.playPlayerWalkSound();
             }
         });
     }

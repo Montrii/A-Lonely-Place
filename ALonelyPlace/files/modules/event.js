@@ -1,14 +1,24 @@
+import { Player } from "./player.js";
+import { Movement } from "./movement.js";
+import { Animator } from "./animator.js";
+import { ItemGenerator } from "./itemGenerator.js";
+
+
 export class Events
 {
+    player = new Player();
+    movement = new Movement();
+    animator = new Animator();
+    itemGenerator = new ItemGenerator();
     constructor()
     {
     }
-    onMapLoaded(player, movement, animator)
+    onMapLoaded()
     {
         console.log("MAP FINISHED LOADING! ");
-        player.syncPlayer();
-        movement.playerMovement();
-        animator.playerPlayAnimation();
+        this.player.syncPlayer();
+        this.movement.playerMovement();
+        this.animator.playerPlayAnimation();
     }
     onMapFailed(reason)
     {
@@ -19,12 +29,12 @@ export class Events
     {
         console.log("hit gap object");
     }
-    onChestOpened(itemCount, itemGenerator)
+    onChestOpened(itemCount)
     {
         // Once Chest is opened, generate content
-        var item_ID = itemGenerator.determineItem(itemCount);
-        var rareity = itemGenerator.defineRareityLevel();
-        return itemGenerator.buildItem(item_ID, rareity);
+        var item_ID = this.itemGenerator.determineItem(itemCount);
+        var rareity = this.itemGenerator.defineRareityLevel();
+        return this.itemGenerator.buildItem(item_ID, rareity);
     }
     onDoorOpened()
     {

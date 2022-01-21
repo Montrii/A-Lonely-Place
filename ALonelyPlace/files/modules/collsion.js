@@ -1,25 +1,26 @@
 import { getFriendlyObjectClass, checkIfValidFriendlyObject } from "./utilities.js";
+import { Player } from "./player.js";
+import { FriendlyObject } from "./friendlyObject.js";
+import { Wall } from "./wall.js";
+import { Events } from "./event.js";
+import { Playground } from "./playGround.js";
 
+var wall = new Wall();
+var player = new Player();
+var friendlyObject = new FriendlyObject();
+var playGround = new Playground();
 export class Collsion
 {
-    player = 0;
-    friendlyObject = 0;
-    playGround = 0;
-    wall = 0;
-    events = 0;
-    constructor(playerObject, friendlyObjectt, playGroundd, walll, eventss)
+    constructor()
     {
-        this.player = playerObject;
-        this.friendlyObject = friendlyObjectt;
-        this.playGround = playGroundd;
-        this.wall = walll;
-        this.events = eventss;
+
     }
     friendlyPlayerCollsion(keyCode)
     {
-        var playerCollsion = this.player.getPlayerSides();
+        var events = new Events();
+        var playerCollsion = player.getPlayerSides();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
-        var playGroundCollsion = this.playGround.getPlayGroundSides();
+        var playGroundCollsion = playGround.getPlayGroundSides();
         var foData = 0;
         var playerTop = parseInt(playerCollsion.top);
         var playerBottom = parseInt(playerCollsion.bottom);
@@ -45,7 +46,7 @@ export class Collsion
                     )
                     {
                         console.log("top side");
-                        this.events.onCollsionGapObject();
+                        events.onCollsionGapObject();
                     }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
@@ -66,9 +67,9 @@ export class Collsion
     playerCollsion(keyCode)
     {
         // Erhalte Informationen über top, bottom, right and left Koordinaten des Spielers.
-        var playerCollsion = this.player.getPlayerSides();
+        var playerCollsion = player.getPlayerSides();
         // Ziehe jedes Elements von Klasse "object" aus HTML Dokument
-        var elements = this.wall.getWallElements();
+        var elements = wall.getWallElements();
 
         // Variablen zur Initialisierung
         var blockingKey = 0;
