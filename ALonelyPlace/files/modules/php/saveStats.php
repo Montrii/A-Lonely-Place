@@ -20,7 +20,14 @@
         $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($item);
+        if(count($item) < 1)
+        {
+            echo "THIS ITEM DOES NOT EXIST IN OUR DATABASE!";
+        }
+        else 
+        {
+            echo "ITEM FOUND IN DATABASE!";
+        }
     }
 
 
