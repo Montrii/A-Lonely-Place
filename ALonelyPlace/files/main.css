@@ -84,6 +84,53 @@
         {
             border: 1px solid royalblue;
         }
+
+        /* WEAPON SLOTS AND RAREITES */
+        .legendary
+        {
+            /* RAREITY: 4 */
+            border: 2px solid #fca420;
+        }
+        .ultra
+        {
+            /* RAREITY: 3 */
+            border: 2px solid rgb(153, 4, 4);
+        }
+        .epic
+        {
+            /* RAREITY: 2 */
+            border: 2px solid #a335ee;
+        }
+        .rare
+        {
+            /*RAREITY: 1 */
+            border: 2px solid #0070dd;
+        }
+        .common
+        {
+            /* RAREITY: 0 */
+            border: 2px solid rgb(160, 157, 157);
+        }
+
+        .sword
+        {
+            /* WEAPON SLOT: 0 */
+            z-index: 1;
+            position: absolute;
+            content:url("../../../Assets/item/weapon/orcish_long_sword.png");
+        }
+        .armor
+        {
+            /* WEAPON SLOT: 1 */
+            z-index: 1;
+            position: absolute;
+            content:url("../../../Assets/item/weapon/shield_of_reflection.png");
+        }
+
+
+
+
+
         #playground
         {
             position: relative;
