@@ -15,7 +15,7 @@ export class Movement
         var position = 0;
         player.createPlayerWalkSound();
         php.saveStats({
-            item: 0
+            item: 2
         });
         $(document).keydown(function() {
             var keyDown = event.keyCode;
