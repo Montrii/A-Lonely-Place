@@ -12,7 +12,7 @@ import { Wall } from "./wall.js";
 
 
 var callbacks = new Events();
-var player = new Player();
+let player = new Player();
 export class MapHandler
 {
     constructor()

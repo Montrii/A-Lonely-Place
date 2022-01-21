@@ -4,7 +4,7 @@ export class Animator
     player = 0;
     constructor(playerObject)
     {
-        this.player = playerObject;
+        playerObject.createPlayerWalkSound();
     }
     playerPlayAnimation()
     {
