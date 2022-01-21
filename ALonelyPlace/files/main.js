@@ -7,7 +7,7 @@ async function main()
     var mapHandler = new MapHandler();
     //console.log(await mapHandler.loadMap(1));
 
-    console.log("Version 0.3.0 BETA.");
+    console.log("Version 0.6.0 BETA.");
     await mapHandler.loadMap(1);
 }
 
