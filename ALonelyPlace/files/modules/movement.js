@@ -15,9 +15,7 @@ export class Movement
         var position = 0;
         player.createPlayerWalkSound();
         php.saveStats({
-            health: 3,
-            armor: 0,
-            sword: 'default'
+            sword: 3
         });
         $(document).keydown(function() {
             var keyDown = event.keyCode;
