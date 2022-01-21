@@ -44,7 +44,7 @@
             {
                 // update inventory
                 echo "USER DATA EXISTS - OVERWRITING\n";
-                echo print_r($userInfo);
+                echo $userInfo['item1'];
             }
         }
     }
