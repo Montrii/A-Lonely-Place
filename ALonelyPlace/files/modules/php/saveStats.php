@@ -26,19 +26,19 @@
         }
         else 
         {
-            echo "ITEM FOUND IN DATABASE!";
+            echo "ITEM FOUND IN DATABASE!\n";
             $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
             $result = mysqli_query($conn, $sqlUser);
             $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
             if(count($item) < 1)
             {
                 // insert new data into database
-                echo "USER DATA DOES NOT EXIST";
+                echo "USER DATA DOES NOT EXIST\n";
             }
             else
             {
                 // update inventory
-                echo "USER DATA EXISTS - OVERWRITING";
+                echo "USER DATA EXISTS - OVERWRITING\n";
             }
         }
     }
