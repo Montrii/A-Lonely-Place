@@ -4,7 +4,7 @@ export class Animator
     player = 0;
     constructor(playerObject)
     {
-        console.log(playerObject);
+        console.log(playerObject.addItemToPlayer("sjhfgsdf"));
     }
     playerPlayAnimation()
     {
