@@ -11,28 +11,34 @@
     {
         echo 'Connection error: ' . mysqli_connect_error();
     }
-
-
-    $ITEM_ID = intval($_GET['item']);
-
-    // Get Sword slot
-    $sql = "SELECT * FROM items";
-    $result = mysqli_query($conn, $sql);
-    $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    $matchsword = false;
-    foreach($item as $key => $value)
+    else 
     {
-        if($item['id'] == $ITEM_ID)
+        $ITEM_ID = intval($_GET['item']);
+
+        // Get Sword slot
+        $sql = "SELECT * FROM items";
+        $result = mysqli_query($conn, $sql);
+        $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $matchsword = false;
+        foreach($item as $key => $value)
         {
-            $matchsword = true; 
+            if($item['id'] == $ITEM_ID)
+            {
+                $matchsword = true; 
+            }
+        }
+        if($matchsword == false)
+        {
+            echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
+        }
+        else 
+        {
+            echo "ITEM ITEGRITY VERIFIED!";
+            echo print_r($item);
         }
     }
-    if($matchsword == false)
-    {
-        return echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
-    }
-    echo "ITEM ITEGRITY VERIFIED!";
-    echo print_r($item);
+
+
 
     /*
     // SAVING DATA INTO INVENTORY TABLE
