@@ -27,6 +27,10 @@
         else 
         {
             echo "ITEM FOUND IN DATABASE!";
+            $sqlUser = "SELECT * FROM inventory WHERE user_name " = $_GET['ip'];
+            $result = mysqli_query($conn, $sqlUser);
+            $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            echo print_r($userInfo); 
         }
     }
 
