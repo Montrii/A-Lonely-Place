@@ -34,6 +34,9 @@
             {
                 // insert new data into database
                 echo "USER DATA DOES NOT EXIST\n";
+                $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
+                $result = mysqli_query($conn, $sqlInsert);
+                echo $result;
             }
             else
             {
