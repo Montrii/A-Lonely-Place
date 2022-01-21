@@ -27,6 +27,7 @@
                 $MATCH_ITEM = true; 
             }
         }
+        echo print_r($item);
         if($MATCH_ITEM == false)
         {
             echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
