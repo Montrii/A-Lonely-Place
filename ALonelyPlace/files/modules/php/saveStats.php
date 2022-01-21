@@ -21,5 +21,5 @@
     //fetch the resulting rows
 
     $inventories = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    echo print_r($inventories);
+    echo print_r($inventories) . print_r($_GET);
 ?>
