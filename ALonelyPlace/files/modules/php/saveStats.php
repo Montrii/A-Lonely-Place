@@ -22,12 +22,8 @@
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
         foreach($item as $key => $value)
         {
-            if($item['id'] == $ITEM_ID)
-            {
-                $MATCH_ITEM = true; 
-            }
+            echo $item['id'];
         }
-        echo print_r($item);
         if($MATCH_ITEM == false)
         {
             echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
