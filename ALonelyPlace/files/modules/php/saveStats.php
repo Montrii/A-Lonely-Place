@@ -19,7 +19,7 @@
         $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
         $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
-        $sqlitems = "SELECT item1, item2, item3, item4, item FROM inventory WHERE user = '" . $_GET['ip'] . "'";
+        $sqlitems = "SELECT item1, item2, item3, item4, item FROM inventory";
 
         // Get Item slot
         $result = mysqli_query($conn, $sql);
