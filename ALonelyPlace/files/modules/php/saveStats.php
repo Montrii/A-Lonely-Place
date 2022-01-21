@@ -26,7 +26,6 @@
             {
                 $MATCH_ITEM = true;
             }
-            echo $item[$i];
         }
         if($MATCH_ITEM == false)
         {
