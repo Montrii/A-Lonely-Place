@@ -14,7 +14,7 @@
 
 
     // Get Sword slot
-    $sql = "SELECT * FROM items WHERE id = " . $_GET['sword'];
+    $sql = "SELECT name FROM items WHERE id = " . $_GET['sword'];
     $result = mysqli_query($conn, $sql);
     $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
     echo print_r($sword);
