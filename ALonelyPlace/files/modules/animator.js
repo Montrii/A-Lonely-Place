@@ -11,7 +11,7 @@ export class Animator
         var id = 1;
         const interval = setInterval(function()
         {
-            player.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
+            playerObject.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
             if(id >= 4)
             {
                 id = 1;
