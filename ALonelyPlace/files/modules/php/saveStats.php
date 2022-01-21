@@ -25,16 +25,13 @@
         if($item['id'] == $ITEM_ID)
         {
             $matchsword = true; 
-            echo "ITEM ITEGRITY VERIFIED!";
         }
     }
-    /*
     if($matchsword == false)
     {
         echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
     }
-    echo "ITEM FOUND IN DATABASE!";
-    */
+    echo "ITEM ITEGRITY VERIFIED!";
     echo print_r($item);
 
     /*
