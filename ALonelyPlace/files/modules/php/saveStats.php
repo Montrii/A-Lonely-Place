@@ -21,5 +21,8 @@
     //fetch the resulting rows
 
     $inventories = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    echo print_r($inventories) . print_r($_GET);
+    if(count($inventories) > 0)
+    {
+        echo print_r($inventories[0]) . print_r($_GET);
+    }
 ?>
