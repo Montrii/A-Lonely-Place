@@ -70,6 +70,5 @@
                 echo "SUCCESSFULLY UPDATED USER DATA IN DATABASE!";
             }
         }
-        mysqli_close($conn);
     }
 ?>
