@@ -17,26 +17,10 @@
         $MATCH_ITEM = false;
 
         // Get Sword slot
-        $sql = "SELECT * FROM items";
+        $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        for($i = 0; $i < count($item); $i++)
-        {
-            if($item[$i]['id'] == $ITEM_ID)
-            {
-                $MATCH_ITEM = true;
-            }
-            echo print_r($item[$i]);
-        }
-        if($MATCH_ITEM == false)
-        {
-            echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
-        }
-        else 
-        {
-            echo "ITEM ITEGRITY VERIFIED!";
-            echo $item[$ITEM_ID]['name'];
-        }
+        echo $item;
     }
 
 
