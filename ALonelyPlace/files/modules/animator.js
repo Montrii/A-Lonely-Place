@@ -10,6 +10,7 @@ export class Animator
         var id = 1;
         const interval = setInterval(function()
         {
+            /*
             playerObject.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
             if(id >= 4)
             {
@@ -19,6 +20,8 @@ export class Animator
             {
                 id++;
             }
+            */
+           console.log(this.playerObject);
         }, 200);
         this.playerAnimationInterval = interval;
     }
