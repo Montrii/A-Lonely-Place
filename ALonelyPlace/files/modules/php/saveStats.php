@@ -16,15 +16,7 @@
     // Get Sword slot
     $sql = "SELECT * FROM items WHERE id = " . $_GET['sword'];
     $result = mysqli_query($conn, $sql);
-    $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    if(count($sword) <= 0)
-    {
-        echo "WEAPON DOES NOT EXIST";
-    }
-    else 
-    {
-        // save data
-    }
+    echo print_r(mysqli_fetch_all($result, MYSQLI_ASSOC));
 
     /*
     // SAVING DATA INTO INVENTORY TABLE
