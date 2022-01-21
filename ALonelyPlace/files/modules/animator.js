@@ -1,6 +1,7 @@
 export class Animator
 {
     playerAnimationInterval = 0;
+    playerObject;
     constructor(playerObject)
     {
         this.playerObject = playerObject;
