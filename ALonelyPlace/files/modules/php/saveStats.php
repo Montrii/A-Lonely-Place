@@ -14,11 +14,11 @@
     else 
     {
         // VARIABLES & SQL STATEMENTS
+        $ITEM_ID = intval($_GET['item']);
+        $MATCH_ITEM = false;
         $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
         $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
-        $ITEM_ID = intval($_GET['item']);
-        $MATCH_ITEM = false;
 
         // Get Sword slot
         $result = mysqli_query($conn, $sql);
