@@ -19,6 +19,7 @@
         $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
         $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
+        $sqlitems = "SELECT item1, item2, item3, item4, item FROM inventory WHERE user = '" . $_GET['ip'] . "'";
 
         // Get Item slot
         $result = mysqli_query($conn, $sql);
@@ -44,6 +45,9 @@
             {
                 // update inventory
                 echo "USER DATA EXISTS - OVERWRITING\n";
+                $result = mysqli_query($conn, $sqlItems);
+                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                echo print_r($items);
             }
         }
     }
