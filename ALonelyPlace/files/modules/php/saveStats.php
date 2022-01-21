@@ -20,7 +20,7 @@
         $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo $item;
+        echo print_r($item);
     }
 
 
