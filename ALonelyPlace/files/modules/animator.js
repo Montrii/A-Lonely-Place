@@ -1,10 +1,10 @@
 export class Animator
 {
     playerAnimationInterval = 0;
-    playerObject = 0;
+    #player;
     constructor(playerObject)
     {
-        this.playerObject = playerObject;
+        this.#player = playerObject;
     }
     playerPlayAnimation()
     {
@@ -22,7 +22,7 @@ export class Animator
                 id++;
             }
             */
-           console.log(this.playerObject);
+           console.log(this.#player);
         }, 200);
         this.playerAnimationInterval = interval;
     }
