@@ -71,23 +71,4 @@
             }
         }
     }
-
-
-
-    /*
-    // SAVING DATA INTO INVENTORY TABLE
-    // query for all inventorys
-    $sql = "SELECT * FROM inventory WHERE user_name = '" . $_GET['ip'] . "'";
-
-    // make query and get result
-    $result = mysqli_query($conn, $sql);
-
-    //fetch the resulting rows
-
-    $inventories = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    if(count($inventories) > 0)
-    {
-        echo print_r($inventories[0]) . print_r($_GET);
-    }
-    */
 ?>
