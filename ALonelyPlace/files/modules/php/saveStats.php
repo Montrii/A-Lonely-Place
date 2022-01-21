@@ -20,7 +20,7 @@
         $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
         $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
 
-        // Get Sword slot
+        // Get Item slot
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
         if(count($item) < 1)
@@ -38,7 +38,7 @@
                 // insert new data into database
                 echo "USER DATA DOES NOT EXIST\n";
                 $result = mysqli_query($conn, $sqlInsert);
-                echo $result;
+                echo "SUCCESSFULLY WRITTEN DATA INTO DATABASE!\n";
             }
             else
             {
