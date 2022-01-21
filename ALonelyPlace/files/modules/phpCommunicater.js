@@ -4,6 +4,21 @@ export class phpCommunicater
     {
 
     }
+    getItems()
+    {
+        $.ajax({
+            type: "GET",
+            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',
+            data: 
+            {
+                'officalRequest' : true
+            },
+            success: function(userData)
+            {
+                console.log(userData);
+            }
+        })
+    }
     saveStats(inventory)
     {
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
