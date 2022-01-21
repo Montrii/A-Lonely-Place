@@ -16,7 +16,8 @@
     // Get Sword slot
     $sql = "SELECT * FROM items WHERE id = " . $_GET['sword'];
     $result = mysqli_query($conn, $sql);
-    echo print_r(mysqli_fetch_all($result, MYSQLI_ASSOC));
+    $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo print_r($sword);
 
     /*
     // SAVING DATA INTO INVENTORY TABLE
