@@ -29,7 +29,7 @@
     }
     if($matchsword == false)
     {
-        echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
+        return echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
     }
     echo "ITEM ITEGRITY VERIFIED!";
     echo print_r($item);
