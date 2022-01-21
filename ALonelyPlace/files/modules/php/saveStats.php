@@ -20,9 +20,13 @@
         $sql = "SELECT * FROM items";
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        foreach($item as $key => $value)
+        for($i = 0; $i < count($item); $i++)
         {
-            echo $item['id'];
+            if($item[$i]['id'] == $ITEM_ID)
+            {
+                $MATCH_ITEM = true;
+            }
+            echo $item[$i];
         }
         if($MATCH_ITEM == false)
         {
