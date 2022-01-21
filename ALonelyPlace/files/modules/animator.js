@@ -22,7 +22,7 @@ export class Animator
                 id++;
             }
             */
-           console.log(this.#player);
+           console.log(this.#player.createPlayerWalkSound());
         }, 200);
         this.playerAnimationInterval = interval;
     }
