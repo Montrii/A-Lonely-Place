@@ -13,11 +13,14 @@
     }
     else 
     {
+        // VARIABLES & SQL STATEMENTS
+        $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
+        $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
+        $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
         $ITEM_ID = intval($_GET['item']);
         $MATCH_ITEM = false;
 
         // Get Sword slot
-        $sql = "SELECT * FROM items WHERE id = " . $ITEM_ID;
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
         if(count($item) < 1)
@@ -27,14 +30,13 @@
         else 
         {
             echo "ITEM FOUND IN DATABASE!\n";
-            $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
+
             $result = mysqli_query($conn, $sqlUser);
             $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
             if(count($userInfo) < 1)
             {
                 // insert new data into database
                 echo "USER DATA DOES NOT EXIST\n";
-                $sqlInsert = "INSERT INTO inventory (user, item1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ")";
                 $result = mysqli_query($conn, $sqlInsert);
                 echo $result;
             }
