@@ -62,7 +62,6 @@ export class Player
     addItemToPlayer(item)
     {
         this.items.push(item);
-        console.log("yes!");
     }
     getItems()
     {

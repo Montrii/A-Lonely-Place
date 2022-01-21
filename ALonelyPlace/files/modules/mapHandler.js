@@ -5,10 +5,6 @@ import { Events } from "./event.js";
 
 
 var callbacks = new Events();
-<<<<<<< HEAD
-let player = new Player();
-=======
->>>>>>> parent of 1deece7 (0.6.2)
 export class MapHandler
 {
     constructor()
