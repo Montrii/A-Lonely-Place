@@ -27,9 +27,9 @@
             $matchsword = true; 
         }
     }
-    if(!$matchsword)
+    if($matchsword == false)
     {
-        return echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
+        echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
     }
     echo "ITEM FOUND IN DATABASE!":
     echo print_r($sword);
