@@ -13,19 +13,25 @@
     }
 
 
-    $SWORD_ID = intval($_GET['sword']);
+    $ITEM_ID = intval($_GET['item']);
 
     // Get Sword slot
     $sql = "SELECT * FROM items";
     $result = mysqli_query($conn, $sql);
-    $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    foreach ($sword as $key => $value)
+    $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $matchsword = false 
+    foreach ($item as $key => $value)
     {
-        if($sword['id'] == $SWORD_ID)
+        if($item['id'] == $ITEM_ID)
         {
-            echo "found matching sword!";
+            $matchsword = true 
         }
     }
+    if(!$matchsword)
+    {
+        return echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
+    }
+    echo "ITEM FOUND IN DATABASE!":
     echo print_r($sword);
 
     /*
