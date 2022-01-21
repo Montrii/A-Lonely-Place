@@ -11,8 +11,12 @@ export class Animator
         var id = 1;
         const interval = setInterval(function()
         {
+<<<<<<< HEAD
             /*
             playerObject.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
+=======
+            this.player.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
+>>>>>>> parent of f1fc8a7 (0.6.21)
             if(id >= 4)
             {
                 id = 1;
