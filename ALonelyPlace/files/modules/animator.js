@@ -1,17 +1,16 @@
 export class Animator
 {
     playerAnimationInterval = 0;
-    player = 0;
     constructor(playerObject)
     {
-        console.log(playerObject.addItemToPlayer("sjhfgsdf"));
+        this.playerObject = playerObject;
     }
     playerPlayAnimation()
     {
         var id = 1;
         const interval = setInterval(function()
         {
-            playerObject.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
+            this.playerObject.getPlayerImage().src = "../../../Assets/monsters_idle/skeleton1/v2/skeleton_32_"+id+".png";
             if(id >= 4)
             {
                 id = 1;
