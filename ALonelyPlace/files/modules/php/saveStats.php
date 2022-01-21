@@ -13,10 +13,19 @@
     }
 
 
+    $SWORD_ID = intval($_GET['sword']);
+
     // Get Sword slot
     $sql = "SELECT * FROM items";
     $result = mysqli_query($conn, $sql);
     $sword = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    foreach ($sword as $key => $value)
+    {
+        if($sword['id'] == $SWORD_ID)
+        {
+            echo "found matching sword!";
+        }
+    }
     echo print_r($sword);
 
     /*
