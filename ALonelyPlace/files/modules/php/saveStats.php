@@ -20,19 +20,20 @@
     $result = mysqli_query($conn, $sql);
     $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
     $matchsword = false;
-    /*
     foreach($item as $key => $value)
     {
         if($item['id'] == $ITEM_ID)
         {
             $matchsword = true; 
+            echo "ITEM ITEGRITY VERIFIED!";
         }
     }
+    /*
     if($matchsword == false)
     {
         echo "THIS ITEM ID DOES NOT EXIST WITHIN THE DATABASE"; 
     }
-    echo "ITEM FOUND IN DATABASE!":
+    echo "ITEM FOUND IN DATABASE!";
     */
     echo print_r($item);
 
