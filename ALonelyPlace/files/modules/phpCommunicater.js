@@ -6,6 +6,7 @@ export class phpCommunicater
     }
     getPlayerItems()
     {
+        var content = 0;
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
         // Convert key-value pairs to JSON
         // https://stackoverflow.com/a/39284735/452587
@@ -19,10 +20,11 @@ export class phpCommunicater
                 data: userData,
                 success: function(userData)
                 {
-                    return userData;
+                    content = userData;
                 }
             });
         });
+        return content;
     }
     getItems()
     {
