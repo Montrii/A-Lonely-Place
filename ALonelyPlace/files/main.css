@@ -117,14 +117,14 @@
             /* WEAPON SLOT: 0 */
             z-index: 1;
             position: absolute;
-            content:url("../../../Assets/item/weapon/orcish_long_sword.png");
+            content:url("../../../../Assets/item/weapon/orcish_long_sword.png");
         }
         .armor
         {
             /* WEAPON SLOT: 1 */
             z-index: 1;
             position: absolute;
-            content:url("../../../Assets/item/weapon/shield_of_reflection.png");
+            content:url("../../../../Assets/item/weapon/shield_of_reflection.png");
         }
         #playground
         {
