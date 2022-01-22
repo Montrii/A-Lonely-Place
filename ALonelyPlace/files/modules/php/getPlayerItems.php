@@ -15,7 +15,7 @@
     {
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($userInfo);
+        echo $userInfo[$i]['item1'] . ";" . $userInfo[$i]['item2'] . ";" . $userInfo[$i]['item3'] . ";" . $userInfo[$i]['item4'] . ";" . $userInfo[$i]['item5'];
     }
     mysqli_close($conn);
 ?>
