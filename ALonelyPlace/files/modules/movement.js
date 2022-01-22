@@ -16,7 +16,23 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
-        console.log(php.getPlayerItems());
+        $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
+            // Convert key-value pairs to JSON
+            // https://stackoverflow.com/a/39284735/452587
+            userData = userData.trim().split('\n').reduce(function(obj, pair) {
+                pair = pair.split('=');
+                return obj[pair[0]] = pair[1], obj;
+            }, {});
+                $.ajax({
+                    type: "GET",
+                    url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getPlayerItems.php',
+                    data: userData,
+                    success: function(userData)
+                    {
+                        console.log(userData);
+                    }
+                });
+            });
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
