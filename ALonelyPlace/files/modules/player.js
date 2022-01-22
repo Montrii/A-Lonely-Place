@@ -61,8 +61,4 @@ export class Player
         this.getPlayerObject().style.height = this.getPlayerImage().offsetHeight+'px';
         this.getPlayerObject().style.width = this.getPlayerImage().offsetWidth+'px';
     }
-    returnItems()
-    {
-        php.getPlayerItems();
-    }
 }

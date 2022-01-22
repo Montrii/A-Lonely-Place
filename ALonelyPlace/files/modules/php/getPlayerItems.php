@@ -14,7 +14,7 @@
     else 
     {
         $result = mysqli_query($conn, $sqlUser);
-        $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
         echo print_r($item);
     }
     mysqli_close($conn);
