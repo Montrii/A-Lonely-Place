@@ -15,7 +15,7 @@
     {
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($item);
+        echo print_r($userInfo);
     }
     mysqli_close($conn);
 ?>
