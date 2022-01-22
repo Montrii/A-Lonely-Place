@@ -13,7 +13,7 @@
     }
     else 
     {
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sqlUser);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
         echo print_r($item);
     }
