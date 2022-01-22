@@ -16,9 +16,7 @@ export class phpCommunicater
             $.ajax({
                 type: "GET",
                 url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getPlayerItems.php',
-                data: {
-                    'officalRequest': true
-                },
+                data: userData,
                 success: function(userData)
                 {
                     console.log(userData);
