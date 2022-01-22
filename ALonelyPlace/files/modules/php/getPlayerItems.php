@@ -5,7 +5,7 @@
     $password_db = "JrUtMK12.";
 
     $conn = mysqli_connect($servername, $user_db, $password_db, $database);
-    $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
+    $sqlUser = "SELECT * FROM inventory";
     // Check Connection
     if(!$conn)
     {
@@ -16,6 +16,13 @@
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
         echo print_r($userInfo);
+        for($i = 0; $i < count($userInfo); $i++)
+        {
+            if($userInfo[$i]['user'] == $_GET['ip'])
+            {
+                echo "HI";
+            }
+        }
     }
     mysqli_close($conn);
 ?>
