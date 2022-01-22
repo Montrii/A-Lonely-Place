@@ -18,8 +18,8 @@
         //echo print_r($userInfo);
         for($i = 0; $i < count($userInfo); $i++)
         {
-            echo $userInfo[$i]['user'];
-            echo $_GET['ip'];
+            echo "HI: " . $userInfo[$i]['user'];
+            echo "HI2: " . $_GET['ip'];
         }
     }
     mysqli_close($conn);
