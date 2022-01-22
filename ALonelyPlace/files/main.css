@@ -167,7 +167,8 @@
             align-items: center; /* align items in Cross Axis */
             align-content: center; /* Extra space in Cross Axis */
             
-            background-image: url("../../../../Assets/misc/slot.png");
+            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8709/inventory-atlas.png');
+            background-position: -229px -331px;
         }
         
         /* left */
