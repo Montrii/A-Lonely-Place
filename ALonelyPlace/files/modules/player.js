@@ -63,6 +63,6 @@ export class Player
     }
     returnItems()
     {
-        console.log(php.getPlayerItems());
+        php.getPlayerItems();
     }
 }

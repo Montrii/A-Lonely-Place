@@ -15,7 +15,7 @@ export class phpCommunicater
             },
             success: function(userData)
             {
-                return userData;
+                console.log(userData);
             }
         });
     }

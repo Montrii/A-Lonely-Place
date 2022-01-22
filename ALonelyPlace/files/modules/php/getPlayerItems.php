@@ -15,7 +15,7 @@
     {
         $result = mysqli_query($conn, $sql);
         $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($item);
+        echo "super";
     }
     mysqli_close($conn);
 ?>
