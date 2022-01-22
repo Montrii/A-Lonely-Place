@@ -124,7 +124,7 @@
             /* WEAPON SLOT: 1 */
             z-index: 1;
             position: absolute;
-            content:url("../../../Assets/item/weapon/shield_of_reflection.png");
+            content:url("../../../../Assets/item/armor/shieldsshield_of_reflection.png");
         }
         #playground
         {
