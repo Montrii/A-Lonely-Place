@@ -5,7 +5,7 @@
     $password_db = "JrUtMK12.";
 
     $conn = mysqli_connect($servername, $user_db, $password_db, $database);
-    $sqlUser = "SELECT * FROM inventory WHERE user = " . $_GET['ip'];
+    $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
     // Check Connection
     if(!$conn)
     {
