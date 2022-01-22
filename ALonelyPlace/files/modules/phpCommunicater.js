@@ -19,7 +19,7 @@ export class phpCommunicater
                 data: userData,
                 success: function(userData)
                 {
-                    console.log(userData);
+                    return userData;
                 }
             });
         });
