@@ -1,9 +1,11 @@
 import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
 import { phpCommunicater } from "./phpCommunicater.js";
+import { backPack } from "./backPack.js";
 var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
+var back = new backPack();
 export class Movement
 {
     constructor()
@@ -45,6 +47,10 @@ export class Movement
                 position = player.getPlayerOffSetLeft() - 10;
                 player.addToLeftPosition(position);
                 player.playPlayerWalkSound();
+            }
+            else if(event.keyCode == 66) /* B */ // INVENTORY
+            {
+                back.toggleBackPackMenu();
             }
         });
     }

@@ -127,6 +127,11 @@
             content:url("../../../Assets/item/weapon/shield_of_reflection.png");
         }
 
+        #backpack
+        {
+            color: grey;
+            background-color: white;
+        }
 
 
 

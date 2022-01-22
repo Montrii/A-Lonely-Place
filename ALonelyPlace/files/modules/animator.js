@@ -1,10 +1,8 @@
-import { Player } from "./player.js";
-
-var player = new Player();
 export class Animator
 {
     playerAnimationInterval = 0;
-    constructor()
+    player = 0; 
+    constructor(player)
     {
 
     }
