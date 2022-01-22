@@ -1,7 +1,9 @@
+import { phpCommunicater } from "./phpCommunicater.js";
+
+var php = new phpCommunicater();
 export class Player
 {
     audio = 0;
-    items = [];
     constructor()
     {
 
@@ -59,16 +61,8 @@ export class Player
         this.getPlayerObject().style.height = this.getPlayerImage().offsetHeight+'px';
         this.getPlayerObject().style.width = this.getPlayerImage().offsetWidth+'px';
     }
-    addItemToPlayer(item)
+    returnItems()
     {
-        this.items.push(item);
-    }
-    getItems()
-    {
-        return this.items;
-    }
-    getItemsAmountOnPlayer()
-    {
-        return this.items.length;
+        console.log(php.getPlayerItems());
     }
 }

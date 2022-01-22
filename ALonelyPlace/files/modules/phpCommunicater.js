@@ -4,6 +4,21 @@ export class phpCommunicater
     {
 
     }
+    getPlayerItems()
+    {
+        $.ajax({
+            type: "GET",
+            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getPlayerItems.php',
+            data: 
+            {
+                'officalRequest' : true
+            },
+            success: function(userData)
+            {
+                return userData;
+            }
+        });
+    }
     getItems()
     {
         $.ajax({
