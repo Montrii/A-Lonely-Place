@@ -15,13 +15,11 @@
     {
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($userInfo);
+        //echo print_r($userInfo);
         for($i = 0; $i < count($userInfo); $i++)
         {
-            if($userInfo[$i]['user'] == $_GET['ip'])
-            {
-                echo "HI";
-            }
+            echo $userInfo[$i]['user'];
+            echo $_GET['ip'];
         }
     }
     mysqli_close($conn);
