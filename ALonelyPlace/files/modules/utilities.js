@@ -137,3 +137,15 @@ export function getTitleOfItem(innerHTML)
     var info = innerHTML.split(";");
     return info[3];
 }
+
+export function getDescriptionOfItem(innerHTML)
+{
+    var info = innerHTML.split(";");
+    return info[4];
+}
+
+export function getEffectOfItem(innerHTML)
+{
+    var info = innerHTML.split(";");
+    return info[5];
+}
