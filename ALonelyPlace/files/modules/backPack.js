@@ -34,7 +34,7 @@ export class backPack
             var itemsInInventory = document.querySelector('.inventory-row').querySelector('.item');
             for(var i = 0; i < itemsInInventory.length; i++)
             {
-                console.log(itemsInInventory.innerHTML);
+                console.log(itemsInInventory[i].innerHTML);
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
