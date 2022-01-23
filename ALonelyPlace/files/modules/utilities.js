@@ -115,18 +115,18 @@ export function translateRareityLevelToClass(rareity)
 
 export function getSlotFromItem(classList)
 {
-    var info = classList.split(";");
+    var info = String(classList).split(";");
     return info[1];
 }
 
 export function getItemIDFromItem(classList)
 {
-    var info = classList.split(";");
+    var info = String(classList).split(";");
     return info[0];
 }
 
 export function getRareityFromItem(classList)
 {
-    var info = classList.split(";");
+    var info = String(classList).split(";");
     return info[2];
 }
