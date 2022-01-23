@@ -134,5 +134,6 @@ export function getRareityFromItem(classList)
 
 export function getTitleOfItem(innerHTML)
 {
-    console.log(innerHTML);
+    var info = innerHTML.split(";");
+    return info[3];
 }

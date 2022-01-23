@@ -21,12 +21,12 @@ export class backPack
                     if(items[i] >= 1 && items[i] <= 5) // WEAPONS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity}">${items[i]};${i};${rareity};${items[i+10]};${items[i+15]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity}">${items[i]};${i};${rareity};${items[i+10]};${items[i+15]};${items[i+20]}</div></div>`);
                     }
                     else if(items[i] >= 6 && items[i] <= 10) // SHIELDS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity}">${items[i]};${i};${rareity};${items[i+10]};${items[i+15]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity}">${items[i]};${i};${rareity};${items[i+10]};${items[i+15]};${items[i+20]}</div></div>`);
                     }
                 }
             }
@@ -37,7 +37,7 @@ export class backPack
                 {
                     $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:400px;height:400px;top:${event.clientY}px;left:${event.clientX}px;">
                     <p>THIS IS THE TITLE OF THE WEAPON</p><br><p>DESCRIPTION</p><br><p>EFFECT></p><br><p>RAREITY LEVEL</p></div>`);
-                    console.log(this.innerHTML);
+                    console.log(getTitleOfItem(this.innerHTML));
                 });
                 allItems[i].addEventListener("mouseout", function(event)
                 {

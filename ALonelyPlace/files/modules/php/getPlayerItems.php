@@ -35,6 +35,7 @@
 
         echo $userInfo[0]['item1'] . ";" . $userInfo[0]['item2'] . ";" . $userInfo[0]['item3'] . ";" . $userInfo[0]['item4'] . ";" . $userInfo[0]['item5'] . ";";
         echo $userInfo[0]['rareity1'] . ";" . $userInfo[0]['rareity2'] . ";" . $userInfo[0]['rareity3'] . ";" . $userInfo[0]['rareity4'] . ";" . $userInfo[0]['rareity5'] . ";";
+        echo $item1[0]['name'] . ";" . $item2[0]['name'] . ";" . $item3[0]['name'] . ";" . $item4[0]['name'] . ";" . $item5[0]['name'] . ";";
         echo $item1[0]['description'] . ";" . $item2[0]['description'] . ";" . $item3[0]['description'] . ";" . $item4[0]['description'] . ";" . $item5[0]['description'] . ";";
         echo $item1[0]['effect'] . ";" . $item2[0]['effect'] . ";" . $item3[0]['effect'] . ";" . $item4[0]['effect'] . ";" . $item5[0]['effect'] . ";";
     }
