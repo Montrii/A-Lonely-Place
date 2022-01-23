@@ -35,10 +35,10 @@ export class backPack
             for(var i = 0; i < itemsInInventory.length; i++)
             {
                 var item_id = itemsInInventory[i].innerHTML;
-                console.log(i);
+                var y = i;
                 itemsInInventory[i].addEventListener("mouseenter", function(event)
                 {
-                    $('body').append(`<div class="infoText ${itemsInInventory[i]}" style="position:absolute;height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
+                    $('body').append(`<div class="infoText ${y}" style="position:absolute;height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
