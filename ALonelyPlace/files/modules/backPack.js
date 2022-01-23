@@ -35,7 +35,7 @@ export class backPack
             {
                 allItems[i].addEventListener("mouseenter", function(event)
                 {
-                    $('body').append(`<div class="infoText" style="position:absolute;width:200px;height:200px;top:${event.clientY};left:${event.clientX}></div>`);
+                    $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:200px;height:200px;top:${event.clientY};left:${event.clientX};"></div>`);
                 });
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
