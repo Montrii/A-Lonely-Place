@@ -21,24 +21,22 @@ export class backPack
                     if(items[i] >= 1 && items[i] <= 5) // WEAPONS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append('<div class="inventory-cell"><div class= "sword ' +rareity+ '"></div></div>');
+                        $('.inventory-row').append('<div class="inventory-cell"><div class= "sword ' +rareity+ '">' + items[i] + '</div></div>');
                     }
                     else if(items[i] >= 6 && items[i] <= 10) // SHIELDS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append('<div class="inventory-cell"><div class= "armor ' +rareity+ '"></div></div>');
+                        $('.inventory-row').append('<div class="inventory-cell"><div class= "armor ' +rareity+ '">' + items[i] + '</div></div>');
                     }
                 }
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
-            alert("SHOW");
         }
         else if(this.toggled == true)
         {
             console.log(userData);
             this.toggled = false;
             document.querySelector('.inventory-row').remove();
-            alert("HIDE");
         }
     }
 }
