@@ -144,9 +144,9 @@
 
         .infoText 
         {
-            background-color: rgba(49, 49, 49, 0.3);
-            color: rgba(255, 255, 255, 0.5);
-            border: 2px solid rgba(77, 77, 77, 0.3);
+            background-color: rgba(49, 49, 49, 0.4);
+            color: rgba(255, 255, 255, 0.55);
+            border: 2px solid rgba(77, 77, 77, 0.4);
             z-index: 100;
         }
         /* INVENTORY */
