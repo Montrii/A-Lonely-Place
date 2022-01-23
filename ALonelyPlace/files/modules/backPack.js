@@ -40,7 +40,11 @@ export class backPack
                     console.log(item_id);
                     console.log(event.clientX);
                     console.log(event.clientY);
-                    $('body').append(`<div id="infoText" style="position:absolute;height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
+                    $('body').append(`<div class="infoText ${i}" style="position:absolute;height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
+                })
+                itemsInInventory[i].addEventListener("mouseover", function(event)
+                {
+                    document.querySelector(`.infoText ${i}`).remove();
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
