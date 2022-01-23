@@ -21,25 +21,16 @@ export class backPack
                     if(items[i] >= 1 && items[i] <= 5) // WEAPONS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity} slot${i}">${items[i]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity}">${items[i]};${i};${rareity}</div></div>`);
                     }
                     else if(items[i] >= 6 && items[i] <= 10) // SHIELDS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity} slot${i}">${items[i]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity}">${items[i]};${i};${rareity}</div></div>`);
                     }
                 }
             }
-            alert("HI");
-            var itemsInInventory = document.querySelectorAll('.item');
-            for(var i = 0; i < itemsInInventory.length; i++)
-            {
-                var item_id = itemsInInventory[i].innerHTML;
-                itemsInInventory[i].addEventListener("mouseenter", function(event)
-                {
-                    $('body').append(`<div class="infoText ${y}" style="position:absolute;height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
-                })
-            }
+            
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
         else if(this.toggled == true)
