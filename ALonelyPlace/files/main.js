@@ -20,7 +20,6 @@ async function main()
             success: async function(userData)
             {
                 await mapHandler.loadMap(parseInt(userData));
-                location.reload(true);
             }
         });
     });
