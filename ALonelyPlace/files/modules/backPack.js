@@ -39,7 +39,7 @@ export class backPack
                 });
                 allItems[i].addEventListener("mouseover", function(event)
                 {
-                    $(`.infoText ${getSlotFromItem(this.innerHTML)}`).remove();
+                    console.log(document.querySelector(`.infoText ${getSlotFromItem(this.innerHTML)}`));
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
