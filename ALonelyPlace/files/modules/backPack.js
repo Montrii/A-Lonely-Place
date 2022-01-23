@@ -35,6 +35,7 @@ export class backPack
             for(var i = 0; i < itemsInInventory.length; i++)
             {
                 var item_id = itemsInInventory[i].innerHTML;
+                console.log(i);
                 itemsInInventory[i].addEventListener("mouseenter", function(event)
                 {
                     console.log(item_id);
