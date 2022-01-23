@@ -148,7 +148,7 @@ export function translateRareityToColor(classList)
     }
     if(info[2] == "ultra")
     {
-        return "rgb(153, 4, 4)";
+        return "rgb(226, 7, 7)";
     }
     if(info[2] == "legendary")
     {
