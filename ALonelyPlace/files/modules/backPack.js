@@ -42,7 +42,7 @@ export class backPack
                     var infoTexts = document.querySelectorAll(`.infoText`);
                     for(var y = 0; y < infoTexts.length; y++)
                     {
-                        console.log(infoTexts[y].classList);
+                        console.log(infoTexts[y].classList[1]);
                     }
                 })
             }
