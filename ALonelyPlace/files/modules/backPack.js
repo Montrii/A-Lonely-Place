@@ -13,7 +13,7 @@ export class backPack
             this.toggled = true;
             console.log(userData);
             const items = String(userData).split(';');
-            $('#body').append('<div class="inventory-table"><div class="inventory-row"></div></div>');
+            $('body').append('<div class="inventory-table"><div class="inventory-row"></div></div>');
             for(var i = 0; i < items.length/2; i++)
             {
                 if(items[i] != 0)
@@ -21,20 +21,22 @@ export class backPack
                     if(items[i] >= 1 && items[i] <= 5) // WEAPONS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('#inventory-row').append('<div class="inventory-cell"><div class= "weapon ' +rareity+ '"></div></div>');
+                        $('.inventory-row').append('<div class="inventory-cell"><div class= "weapon ' +rareity+ '"></div></div>');
                     }
                     else if(items[i] >= 6 && items[i] <= 10) // SHIELDS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('#inventory-row').append('<div class="inventory-cell"><div class= "armor ' +rareity+ '"></div></div>');
+                        $('.inventory-row').append('<div class="inventory-cell"><div class= "armor ' +rareity+ '"></div></div>');
                     }
                 }
             }
+            document.querySelector('.inventory-row').style.display = "show";
         }
         else if(this.toggled == true)
         {
             console.log(userData);
             this.toggled = false;
+            document.querySelector('.inventory-row').style.display = "hidden";
         }
     }
 }
