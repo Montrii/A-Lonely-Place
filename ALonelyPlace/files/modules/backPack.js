@@ -37,7 +37,7 @@ export class backPack
         {
             console.log(userData);
             this.toggled = false;
-            document.querySelector('.inventory-row').style.display = "hidden";
+            document.querySelector('.inventory-row').style.display = "none";
             alert("HIDE");
         }
     }
