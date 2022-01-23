@@ -29,6 +29,10 @@ export class backPack
                         $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity}">${items[i]};${i};${rareity};${items[i+10]};${items[i+15]};${items[i+20]}</div></div>`);
                     }
                 }
+                else 
+                {
+                    $('.inventory-row').append(`<div class="inventory-cell"></div>`);
+                }
             }
             var allItems = document.querySelectorAll('.item');
             for(var i = 0; i < allItems.length; i++)
