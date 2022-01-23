@@ -144,7 +144,7 @@
 
 
         /* INVENTORY */
-        .inventory-row
+        .inventory-table
         {
             position:fixed;
             top: 50%;
@@ -153,7 +153,11 @@
             height:18em;
             margin-top: -9em; /*set to a negative number 1/2 of your height*/
             margin-left: -15em; /*set to a negative number 1/2 of your width*/
-            display: flex;
+        }
+        .inventory-row
+        {
+            position: fixed;
+           display: flex;
             flex-direction: row;
             justify-content: flex-start; /* align items in Main Axis */
             align-items: flex-start; /* align items in Cross Axis */
