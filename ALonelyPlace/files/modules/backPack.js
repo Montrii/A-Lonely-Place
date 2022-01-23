@@ -31,11 +31,8 @@ export class backPack
                 }
             }
             alert("HI");
-            var itemsInInventory = document.querySelector('.item');
-            for(var i = 0; i < itemsInInventory.length; i++)
-            {
-                console.log(itemsInInventory[i].innerHTML);
-            }
+            var itemsInInventory = document.querySelectorAll('.item');
+            alert(itemsInInventory);
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
         else if(this.toggled == true)
