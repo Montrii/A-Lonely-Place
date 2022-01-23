@@ -39,7 +39,11 @@ export class backPack
                 });
                 allItems[i].addEventListener("mouseover", function(event)
                 {
-                    console.log(document.querySelectorAll(`.infoText`));
+                    var infoTexts = document.querySelectorAll(`.infoText`);
+                    for(var y = 0; y < infoTexts.length; y++)
+                    {
+                        console.log(infoTexts[y].classList);
+                    }
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
