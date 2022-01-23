@@ -146,13 +146,10 @@
         /* INVENTORY */
         .inventory-table
         {
-            z-index: 2;
-            position:fixed;
             left: 50%;
         }
         .inventory-row
         {
-            position: fixed;
            display: flex;
             flex-direction: row;
             justify-content: flex-start; /* align items in Main Axis */
