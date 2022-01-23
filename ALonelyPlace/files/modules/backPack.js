@@ -34,9 +34,10 @@ export class backPack
             var itemsInInventory = document.querySelectorAll('.item');
             for(var i = 0; i < itemsInInventory.length; i++)
             {
+                console.log(itemsInInventory[i].innerHTML);
                 itemsInInventory[i].addEventListener("mouseenter", function(event)
                 {
-                    alert("HOVERED ITEM: " + itemsInInventory[i].innerHTML);
+                    alert("HOVERED ITEM");
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
