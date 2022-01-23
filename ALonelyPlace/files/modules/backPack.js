@@ -39,7 +39,7 @@ export class backPack
                 allItems[i].addEventListener("mouseover", function(event)
                 {
                     $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:400px;height:300px;top:${event.clientY}px;left:${event.clientX}px;">
-                    <p>(${getSlotFromItem(this.innerHTML)}) - ${getTitleOfItem(this.innerHTML)}</p><br><p>Description: ${getDescriptionOfItem(this.innerHTML)}</p><br><p>Effect: ${getEffectOfItem(this.innerHTML)}</p><br><p>Rareity: ${getRareityFromItem(this.innerHTML)}</p></div>`);
+                    <p>(${getSlotFromItem(this.innerHTML)}) - ${getTitleOfItem(this.innerHTML)}</p><br><p>Description: ${getDescriptionOfItem(this.innerHTML)}</p><br><p>Effect: ${getEffectOfItem(this.innerHTML)}</p><br><p>Rareity: <span style="color:${translateRareityToColor(this.innerHTML)}">${getRareityFromItem(this.innerHTML)}</span></p></div>`);
                 });
                 allItems[i].addEventListener("mouseout", function(event)
                 {

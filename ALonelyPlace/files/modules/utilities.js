@@ -131,6 +131,31 @@ export function getRareityFromItem(classList)
     return info[2];
 }
 
+export function translateRareityToColor(classList)
+{
+    var info = classList.split(";");
+    if(info[2] == "common")
+    {
+        return "rgb(160, 157, 157)";
+    }
+    if(info[2] == "rare")
+    {
+        return "#0070dd";
+    }
+    if(info[2] == "epic")
+    {
+        return "#a335ee";
+    }
+    if(info[2] == "ultra")
+    {
+        return "rgb(153, 4, 4)";
+    }
+    if(info[2] == "legendary")
+    {
+        return "#fca420";
+    }
+}
+
 
 export function getTitleOfItem(innerHTML)
 {
