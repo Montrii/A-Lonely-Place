@@ -11,7 +11,6 @@ export class backPack
         if(this.toggled == false)
         {
             this.toggled = true;
-            console.log(userData);
             const items = String(userData).split(';');
             $('body').append('<div class="inventory-table"><div class="inventory-row"></div></div>');
             for(var i = 0; i < 5; i++)
