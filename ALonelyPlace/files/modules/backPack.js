@@ -31,7 +31,7 @@ export class backPack
                 }
             }
             alert("HI");
-            var itemsInInventory = document.querySelector('.inventory-row').querySelector('.item');
+            var itemsInInventory = document.querySelector('.item');
             for(var i = 0; i < itemsInInventory.length; i++)
             {
                 console.log(itemsInInventory[i].innerHTML);
