@@ -30,14 +30,14 @@ export class backPack
                     }
                 }
             }
-            document.querySelector('.inventory-row').style.display = "show";
+            document.querySelector('.inventory-row').style.visibility = "visible";
             alert("SHOW");
         }
         else if(this.toggled == true)
         {
             console.log(userData);
             this.toggled = false;
-            document.querySelector('.inventory-row').style.display = "none";
+            document.querySelector('.inventory-row').style.visibility = "hidden";
             alert("HIDE");
         }
     }

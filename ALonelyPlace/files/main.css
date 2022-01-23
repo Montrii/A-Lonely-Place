@@ -149,7 +149,7 @@
             left: 50%;
             position: fixed;
             top: 0%;
-            display: none;
+            visibility: hidden;
         }
         .inventory-row
         {
