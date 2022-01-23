@@ -149,8 +149,6 @@
             z-index: 2;
             position:fixed;
             left: 50%;
-            width:30em;
-            height:18em;
         }
         .inventory-row
         {
