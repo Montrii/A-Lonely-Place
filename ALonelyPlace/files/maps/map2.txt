@@ -1,0 +1,9 @@
+Height: 288
+Width: 816
+Top: 200
+Left: 400
+X,X,X,X,X,X,X,X,X,X,X,X,X
+X,O,O,O,O,O,O,O,X,X,X,X,O,X
+X,E,P,O,O,O,O,X,D,C,O,X,X
+X,O,O,O,O,O,O,O,D,O,O,X
+X,X,X,X,X,X,X,X,X,X,X,X
