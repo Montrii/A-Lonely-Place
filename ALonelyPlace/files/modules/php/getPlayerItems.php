@@ -18,6 +18,7 @@
 
         for($i = 0; $i < 5; $i++)
         {
+            echo "ITEM SELECTED: " . intval($userInfo[0]['item' . $i+1];
             $result = mysqli_query($conn, "SELECT * FROM items WHERE id = " . intval($userInfo[0]['item' . $i+1]));
             $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
             if(count($item) < 0)
