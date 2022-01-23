@@ -38,6 +38,8 @@ export class backPack
                 itemsInInventory[i].addEventListener("mouseenter", function(event)
                 {
                     console.log(item_id);
+                    console.log(event);
+
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
