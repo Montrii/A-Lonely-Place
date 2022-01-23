@@ -147,6 +147,7 @@
         .inventory-table
         {
             left: 50%;
+            position: fixed;
         }
         .inventory-row
         {
