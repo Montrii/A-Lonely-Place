@@ -18,13 +18,16 @@
 
         for($i = 0; $i < 5; $i++)
         {
-            echo "ITEM SELECTED: " . $userInfo[0]['item1'];
-            $result = mysqli_query($conn, "SELECT * FROM items WHERE id = " . intval($userInfo[0]['item' . $i+1]));
+            $itemSelected = 'item'.$i+1; 
+            $descriptionSelected = 'description'.$i+1;
+            $effectSelected = 'effect'.$i+1;
+            echo "ITEM SELECTED: " . $userInfo[0][$itemSelected];
+            $result = mysqli_query($conn, "SELECT * FROM items WHERE id = " . intval($userInfo[0][$itemSelected]));
             $item = mysqli_fetch_all($result, MYSQLI_ASSOC);
             if(count($item) < 0)
             {
-                $userInfo[0]['description'.$i+1] = $item[0]['description'];
-                $userInfo[0]['effect'.$i+1] = $item[0]['effect'];
+                $userInfo[0][$descriptionSelected] = $item[0]['description'];
+                $userInfo[0][$effectSelected] = $item[0]['effect'];
             }
         }
         echo $userInfo[0]['item1'] . ";" . $userInfo[0]['item2'] . ";" . $userInfo[0]['item3'] . ";" . $userInfo[0]['item4'] . ";" . $userInfo[0]['item5'] . ";";
