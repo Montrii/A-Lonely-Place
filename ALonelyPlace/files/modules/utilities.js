@@ -130,3 +130,9 @@ export function getRareityFromItem(classList)
     var info = classList.split(";");
     return info[2];
 }
+
+
+export function getTitleOfItem(innerHTML)
+{
+    console.log(innerHTML);
+}
