@@ -142,7 +142,10 @@
 
 
 
-
+        #infoText 
+        {
+            background-color: white;
+        }
         /* INVENTORY */
         .inventory-table
         {
