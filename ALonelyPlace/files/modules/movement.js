@@ -29,7 +29,7 @@ export class Movement
                     data: userData,
                     success: function(userData)
                     {
-                        console.log(userData);
+                        back.toggleBackPackMenu(userData);
                     }
                 });
             });
