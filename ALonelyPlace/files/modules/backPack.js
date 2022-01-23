@@ -1,4 +1,4 @@
-import { translateRareityLevelToClass, getSlotFromItem, getTitleOfItem, getItemIDFromItem, getDescriptionOfItem, getEffectOfItem, getRareityFromItem} from "./utilities.js";
+import { translateRareityLevelToClass, getSlotFromItem, getTitleOfItem, translateRareityToColor, getDescriptionOfItem, getEffectOfItem, getRareityFromItem} from "./utilities.js";
 
 export class backPack
 {
