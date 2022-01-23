@@ -14,7 +14,7 @@ export class backPack
             console.log(userData);
             const items = String(userData).split(';');
             $('body').append('<div class="inventory-table"><div class="inventory-row"></div></div>');
-            for(var i = 0; i < items.length/2; i++)
+            for(var i = 0; i < 5; i++)
             {
                 if(items[i] != 0)
                 {
