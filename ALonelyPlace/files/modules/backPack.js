@@ -35,7 +35,7 @@ export class backPack
             {
                 allItems[i].addEventListener("mouseover", function(event)
                 {
-                    $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:400px;height:200px;top:${event.clientY}px;left:${event.clientX}px;">
+                    $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:400px;height:400px;top:${event.clientY}px;left:${event.clientX}px;">
                     <p>THIS IS THE TITLE OF THE WEAPON</p><br><p>DESCRIPTION</p><br><p>EFFECT></p><br><p>RAREITY LEVEL</p></div>`);
                 });
                 allItems[i].addEventListener("mouseout", function(event)
