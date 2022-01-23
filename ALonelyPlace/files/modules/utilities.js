@@ -88,3 +88,27 @@ export function getRandomInt(max)
 {
     return Math.floor(Math.random() * max);
 }
+
+export function translateRareityLevelToClass(rareity)
+{
+    if(rareity == 0)
+    {
+        return "common";
+    }
+    if(rareity == 1)
+    {
+        return "rare";
+    }
+    if(rareity == 2)
+    {
+        return "epic";
+    }
+    if(rareity == 3)
+    {
+        return "ultra";
+    }
+    if(rareity == 4)
+    {
+        return "legendary";
+    }
+}
