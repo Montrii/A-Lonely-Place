@@ -33,7 +33,10 @@ export class backPack
             var allItems = document.querySelectorAll('.item');
             for(var i = 0; i < allItems.length; i++)
             {
-                console.log(allItems[i]);
+                allItems[i].addEventListener("mouseenter", function(event)
+                {
+                    console.log(this.classList);
+                })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
