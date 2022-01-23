@@ -33,7 +33,7 @@ export class backPack
             var allItems = document.querySelectorAll('.item');
             for(var i = 0; i < allItems.length; i++)
             {
-                allItems[i].addEventListener("mouseenter", function(event)
+                allItems[i].addEventListener("mouseover", function(event)
                 {
                     $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:200px;height:200px;top:${event.clientY}px;left:${event.clientX}px;"></div>`);
                 });
@@ -45,7 +45,6 @@ export class backPack
                         if(infoTexts[y].classList[1] == getSlotFromItem(this.innerHTML))
                         {
                             infoTexts[y].remove();
-                            alert("REMOVED INFO BOX");
                         }
                     }
                 })
