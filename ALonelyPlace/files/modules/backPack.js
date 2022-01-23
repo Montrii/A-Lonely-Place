@@ -31,10 +31,7 @@ export class backPack
                 }
             }
             var allItems = document.querySelector('.item');
-            for(var i = 0; i < allItems.length; i++)
-            {
-                console.log(allItems[i].innerHTML);
-            }
+            console.log(allItems);
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
         else if(this.toggled == true)
