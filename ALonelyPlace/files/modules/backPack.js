@@ -37,7 +37,7 @@ export class backPack
                 console.log(itemsInInventory[i].innerHTML);
                 itemsInInventory[i].addEventListener("mouseenter", function(event)
                 {
-                    alert("HOVERED ITEM");
+                    console.log(event);
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
