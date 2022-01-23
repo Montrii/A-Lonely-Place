@@ -39,7 +39,7 @@ export class backPack
                 {
                     console.log(item_id);
                     console.log(event.clientX);
-
+                    console.log(event.clientY);
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
