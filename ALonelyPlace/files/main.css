@@ -145,6 +145,7 @@
         .infoText 
         {
             background-color: white;
+            z-index: 100;
         }
         /* INVENTORY */
         .inventory-table
