@@ -35,7 +35,8 @@ export class backPack
             {
                 allItems[i].addEventListener("mouseenter", function(event)
                 {
-                    console.log("Hovered over Slot: " + getSlotFromItem(this.classList));
+                    console.log(this.classList);
+                    console.log("Hovered over Slot: " + getSlotFromItem());
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
