@@ -1,4 +1,4 @@
-import { translateRareityLevelToClass } from "./utilities.js";
+import { translateRareityLevelToClass, getSlotFromItem, getRareityFromItem, getItemIDFromItem } from "./utilities.js";
 
 export class backPack
 {
@@ -35,7 +35,7 @@ export class backPack
             {
                 allItems[i].addEventListener("mouseenter", function(event)
                 {
-                    console.log(this.innerHTML);
+                    console.log("Hovered over Slot: " + getSlotFromItem(this.classList));
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";

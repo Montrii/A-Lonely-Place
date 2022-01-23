@@ -112,3 +112,21 @@ export function translateRareityLevelToClass(rareity)
         return "legendary";
     }
 }
+
+export function getSlotFromItem(classList)
+{
+    var info = classList.split(";");
+    return info[1];
+}
+
+export function getItemIDFromItem(classList)
+{
+    var info = classList.split(";");
+    return info[0];
+}
+
+export function getRareityFromItem(classList)
+{
+    var info = classList.split(";");
+    return info[2];
+}
