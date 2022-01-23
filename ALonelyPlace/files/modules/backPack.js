@@ -37,7 +37,7 @@ export class backPack
                 {
                     $('body').append(`<div class="infoText ${getSlotFromItem(this.innerHTML)}" style="position:absolute;width:200px;height:200px;top:${event.clientY}px;left:${event.clientX}px;"></div>`);
                 });
-                allItems[i].addEventListener("mouseover", function(event)
+                allItems[i].addEventListener("mouseout", function(event)
                 {
                     var infoTexts = document.querySelectorAll(`.infoText`);
                     for(var y = 0; y < infoTexts.length; y++)
