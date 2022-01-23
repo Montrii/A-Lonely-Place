@@ -21,12 +21,12 @@ export class backPack
                     if(items[i] >= 1 && items[i] <= 5) // WEAPONS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity}">${items[i]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item sword ${rareity} slot${i}">${items[i]}</div></div>`);
                     }
                     else if(items[i] >= 6 && items[i] <= 10) // SHIELDS
                     {
                         var rareity = translateRareityLevelToClass(items[i+5]); 
-                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity}">${items[i]}</div></div>`);
+                        $('.inventory-row').append(`<div class="inventory-cell"><div class= "item armor ${rareity} slot${i}">${items[i]}</div></div>`);
                     }
                 }
             }
