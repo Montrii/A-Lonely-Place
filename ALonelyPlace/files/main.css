@@ -145,7 +145,7 @@
         .infoText 
         {
             background-color: rgba(49, 49, 49, 0.3);
-            color: white;
+            color: rgba(255, 255, 255, 0.5);
             border: 2px solid rgba(77, 77, 77, 0.3);
             z-index: 100;
         }
