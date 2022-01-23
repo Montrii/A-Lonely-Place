@@ -32,7 +32,10 @@ export class backPack
             }
             alert("HI");
             var itemsInInventory = document.querySelectorAll('.item');
-            alert(itemsInInventory);
+            for(var i = 0; i < itemsInInventory.length; i++)
+            {
+                console.log(itemsInInventory[i].innerHTML);
+            }
             document.querySelector('.inventory-row').style.visibility = "visible";
         }
         else if(this.toggled == true)
