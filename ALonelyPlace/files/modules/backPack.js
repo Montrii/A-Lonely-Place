@@ -40,7 +40,7 @@ export class backPack
                     console.log(item_id);
                     console.log(event.clientX);
                     console.log(event.clientY);
-                    $('body').append('<div style="position: absolute;background-color:white;width:200px;height:200px;top:' + event.clientY + 'px;left:' + event.clientY + "px;" + ">");
+                    $('body').append(`<div id="infoText" style="height:${200}px;width:${200}px;top:${event.clientY}px;left:${event.clientX}px"></div>`);
                 })
             }
             document.querySelector('.inventory-row').style.visibility = "visible";
