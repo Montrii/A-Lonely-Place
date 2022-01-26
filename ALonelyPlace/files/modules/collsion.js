@@ -57,7 +57,7 @@ export class Collsion
                         console.log("bottom side");
                         events.onCollsionGapObject();
                     }
-                    if(keyCode == 65 && playerLeft-10 >= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    if(keyCode == 65 && playerLeft-1 <= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey = 65;
