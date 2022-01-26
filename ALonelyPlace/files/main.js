@@ -8,7 +8,7 @@ async function main()
     var mapHandler = new MapHandler();
     var github = new Github();
     //console.log(await mapHandler.loadMap(1));
-    github.getLatestGameUpdate("https://api.github.com/users/Montrii/events");
+    console.log(github.getLatestGameUpdate("https://api.github.com/users/Montrii/events"));
     console.log("Version 0.7.09 BETA.");
     $.get('https://www.cloudflare.com/cdn-cgi/trace', async function(userData) {
             userData = userData.trim().split('\n').reduce(function(obj, pair) {
