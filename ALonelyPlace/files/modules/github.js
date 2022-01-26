@@ -2,7 +2,7 @@ export class Github
 {
     constructor()
     {}
-    getLatestCommitNumber(website)
+    getLatestGameUpdate(website)
     {
         $.getJSON(website, function(data)
         {
@@ -11,6 +11,10 @@ export class Github
             for(var i = 0; i < data.length; i++)
             {
                 console.log(data[i].repo.name);
+                if(data[i].repo.name == "Montrii/A-Lonely-Place")
+                {
+                    return data[i].payload.commits[0].message;
+                }
             }
         });
     }
