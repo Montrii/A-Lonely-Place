@@ -2,7 +2,7 @@ export class Github
 {
     constructor()
     {}
-    getLatestGameUpdate(website)
+    displayLatestUpdate(website)
     {
         var commitMessage = "test";
         $.getJSON(website, function(data)
@@ -17,10 +17,10 @@ export class Github
                     if(commitMessage == "test")
                     {
                         commitMessage = data[i].payload.commits[0].message;
+                        console.log("Running on Github Commit: " + commitMessage);
                     }
                 }
             }
         });
-        return commitMessage;
     }
 }
