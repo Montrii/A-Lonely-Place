@@ -4,6 +4,7 @@ export class Github
     {}
     getLatestGameUpdate(website)
     {
+        var commitMessage = "test";
         $.getJSON(website, function(data)
         {
             // latest commit
@@ -13,9 +14,13 @@ export class Github
                 console.log(data[i].repo.name);
                 if(data[i].repo.name == "Montrii/A-Lonely-Place")
                 {
-                    return data[i].payload.commits[0].message;
+                    if(commitMessage == "test")
+                    {
+                        commitMessage = data[i].payload.commits[0].message;
+                    }
                 }
             }
         });
+        return commitMessage;
     }
 }
