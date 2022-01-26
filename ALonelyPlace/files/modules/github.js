@@ -13,7 +13,7 @@ export class Github
                 console.log(data[i].repo.name);
                 if(data[i].repo.name == "Montrii/A-Lonely-Place")
                 {
-                    return data[i].payload.commits[0].message;
+                    console.log(data[i].payload);
                 }
             }
         });
