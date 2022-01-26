@@ -8,7 +8,10 @@ export class Github
         {
             // latest commit
             // data[0].payload.commits[0].message
-            console.log(data);
+            for(var i = 0; i < data.length; i++)
+            {
+                console.log(data[i].repo.name);
+            }
         });
     }
 }
