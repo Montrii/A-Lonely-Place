@@ -50,7 +50,7 @@ export class Collsion
                         blockingKey = 87;
                         events.onCollsionGapObject();
                     }
-                    else if(keyCode == 83 && playerBottom+10 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(keyCode == 83 && playerBottom-10 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey = 83;
