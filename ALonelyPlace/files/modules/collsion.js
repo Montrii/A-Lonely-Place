@@ -43,27 +43,6 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    if((keyCode == 87 && playerTop+10 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight)))
-                    {
-                        console.log("bottom side");
-
-                        blockingKey = 87;
-                        events.onCollsionGapObject();
-                    }
-                    else if(keyCode == 83 && playerBottom-10 >= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey = 83;
-                        console.log("bottom side");
-                        events.onCollsionGapObject();
-                    }
-                    if(keyCode == 65 && playerLeft-10 <= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey = 65;
-                        console.log("right side");
-                        events.onCollsionGapObject();
-                    }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
