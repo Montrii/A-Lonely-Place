@@ -43,12 +43,18 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
-                    if((keyCode == 87 && playerTop+10 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
-                    )
+                    if((keyCode == 87 && playerTop+10 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight)))
                     {
                         console.log("top side");
 
                         blockingKey = 87;
+                        events.onCollsionGapObject();
+                    }
+                    else if(keyCode == 83 && playerBottom-10 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey = 83;
+                        console.log("bottom side");
                         events.onCollsionGapObject();
                     }
                 }
