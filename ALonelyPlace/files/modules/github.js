@@ -2,11 +2,13 @@ export class Github
 {
     constructor()
     {}
-    displayJSONWebsite(website)
+    getLatestCommitNumber(website)
     {
         $.getJSON(website, function(data)
         {
-            console.log(data[0].payload.commits[0].message);
+            // latest commit
+            // data[0].payload.commits[0].message
+            console.log(data);
         });
     }
 }
