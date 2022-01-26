@@ -6,7 +6,7 @@ export class Github
     {
         $.getJSON(website, function(data)
         {
-            console.log(website);
+            console.log(data);
         });
     }
 }
