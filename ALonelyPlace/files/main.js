@@ -7,7 +7,7 @@ async function main()
     var mapHandler = new MapHandler();
     //console.log(await mapHandler.loadMap(1));
 
-    console.log("Version 0.6.0 BETA.");
+    console.log("Version 0.7.09 BETA.");
     $.get('https://www.cloudflare.com/cdn-cgi/trace', async function(userData) {
             userData = userData.trim().split('\n').reduce(function(obj, pair) {
             pair = pair.split('=');
