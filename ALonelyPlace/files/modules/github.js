@@ -6,7 +6,7 @@ export class Github
     {
         $.getJSON(website, function(data)
         {
-            console.log(data);
+            console.log(data[0].payload.commits[0].message);
         });
     }
 }
