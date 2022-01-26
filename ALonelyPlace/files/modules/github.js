@@ -11,7 +11,6 @@ export class Github
             // data[0].payload.commits[0].message
             for(var i = 0; i < data.length; i++)
             {
-                console.log(data[i].repo.name);
                 if(data[i].repo.name == "Montrii/A-Lonely-Place")
                 {
                     if(commitMessage == "test")
