@@ -18,6 +18,7 @@ export class Collsion
     friendlyPlayerCollsion(keyCode)
     {
         var events = new Events();
+        var blockingKey = 0;
         var playerCollsion = player.getPlayerSides();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
         var playGroundCollsion = playGround.getPlayGroundSides();
@@ -46,6 +47,8 @@ export class Collsion
                     )
                     {
                         console.log("top side");
+
+                        blockingKey = 87;
                         events.onCollsionGapObject();
                     }
                 }
@@ -63,6 +66,7 @@ export class Collsion
                 }
             }
         }
+        return blockingKey;
     }
     playerCollsion(keyCode)
     {
