@@ -99,6 +99,33 @@ export class Collsion
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "exit")
                 {
+                    if(keyCode == 65 && playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey[0] = 65;
+                        events.onEnterStairs();
+                    }
+                    // Linke Wand des Objekts
+                    else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey[0] = 68;
+                        events.onEnterStairs();
+                    }
+                    // Untere Wand des Objekts
+                    else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey[0] = 87;
+                        events.onEnterStairs();
+                    }
+                    // Obere Wand des Objekts
+                    else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey[0] = 83;
+                        events.onEnterStairs();
+                    }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "playerspawn")
                 {

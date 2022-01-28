@@ -87,6 +87,10 @@ export class Events
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
         location.reload();
     }
+    onEnterStairs()
+    {
+        console.log("ENTERED NEXT LEVEL");
+    }
 }
 
 function playAudio(audio){
