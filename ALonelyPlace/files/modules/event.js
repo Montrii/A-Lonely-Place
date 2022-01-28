@@ -51,7 +51,14 @@ export class Events
     onEnterTrap()
     {
         console.log("Entered Trap!");
-        var audio = new Audio('../../../Assets/sounds/falling.wav');
-        audio.play();
+        await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
+        location.reload();
     }
+}
+
+function playAudio(audio){
+    return new Promise(res=>{
+      audio.play()
+      audio.onended = res
+    })
 }
