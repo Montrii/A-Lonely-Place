@@ -56,12 +56,12 @@ export class Events
                             type: "GET",
                             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/saveStats.php',
                             data: {
-                                "item": item_ID,
-                                "rareity": rareity
+                                'item': item_ID,
+                                'rareity': rareity
                             },
                             success: function(userData)
                             {
-                                console.log("SUCCESSFULLY WRITTEN ITEM: " + item_ID + " | with RAREITY : " + rareity + " INTO DATABASE!");
+                                console.log("\n\nSUCCESSFULLY WRITTEN ITEM: " + item_ID + " | with RAREITY : " + rareity + " INTO DATABASE!");
                                 console.log(userData);
                             }
                         });
