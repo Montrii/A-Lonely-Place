@@ -16,7 +16,7 @@
         // VARIABLES & SQL STATEMENTS
         $ITEM_ID = intval($_GET['item']);
         $RAREITY = intval($_GET['rareity']);
-        $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
+        $sqlUser = "SELECT * FROM inventory";
 
         // Get Item slot
         $result = mysqli_query($conn, $sqlUser);
