@@ -90,6 +90,8 @@ export class Events
     onEnterStairs()
     {
         console.log("ENTERED NEXT LEVEL");
+        await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
+        console.log("updating in database and reloading website!");
     }
 }
 
