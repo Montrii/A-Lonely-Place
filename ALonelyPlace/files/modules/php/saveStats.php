@@ -30,27 +30,27 @@
         $item5 = intval($userInfo[0]['item5']);
         if($item1 == 0)
         {
-            $result = mysqli_query($conn, "UPDATE inventory SET item1 = " . $ITEM_ID . "rareity1 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
+            $result = mysqli_query($conn, "UPDATE inventory SET item1 = " . $ITEM_ID . ", rareity1 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
             echo $result;
         }
         else if($item2 == 0)
         {
-            $result = mysqli_query($conn, "UPDATE inventory SET item2 = " . $ITEM_ID . "rareity2 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
+            $result = mysqli_query($conn, "UPDATE inventory SET item2 = " . $ITEM_ID . ", rareity2 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
             echo $result;
         }
         else if($item3 == 0)
         {
-            $result = mysqli_query($conn, "UPDATE inventory SET item3 = " . $ITEM_ID . "rareity3 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
+            $result = mysqli_query($conn, "UPDATE inventory SET item3 = " . $ITEM_ID . ", rareity3 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
             echo $result;
         }
         else if($item4 == 0)
         {
-            $result = mysqli_query($conn, "UPDATE inventory SET item4 = " . $ITEM_ID . "rareity4 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
+            $result = mysqli_query($conn, "UPDATE inventory SET item4 = " . $ITEM_ID . " ,rareity4 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
             echo $result;
         }
         else if($item5 == 0)
         {
-            $result = mysqli_query($conn, "UPDATE inventory SET item5 = " . $ITEM_ID . "rareity5 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
+            $result = mysqli_query($conn, "UPDATE inventory SET item5 = " . $ITEM_ID . ", rareity5 = " . $RAREITY . " WHERE user = '" . $_GET['ip'] . "'");
             echo $result;
         }
         else
