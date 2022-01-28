@@ -29,9 +29,11 @@ export class Events
     {
         console.log("hit gap object");
     }
-    onChestOpened()
+    async onChestOpened()
     {
         console.log("OPENING CHEST");
+        await playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
+        console.log("CALCULATE LOOT");
     }
     onDoorOpened()
     {
