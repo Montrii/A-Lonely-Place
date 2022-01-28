@@ -56,7 +56,8 @@ export class Events
                             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/saveStats.php',
                             data: {
                                 'item': item_ID,
-                                'rareity': rareity
+                                'rareity': rareity,
+                                'ip': userData['ip']
                             },
                             success: function(userData)
                             {
