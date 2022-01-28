@@ -163,7 +163,7 @@ export class MapHandler
                     y = 0;
 
                 }
-                document.getElementById("progressbar").style.display = "none";
+                document.getElementById("progressbar").remove();
                 callbacks.onMapLoaded();
                 return;
             }
