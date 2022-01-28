@@ -49,7 +49,7 @@ export class Collsion
                         blockingKey = 65;
                         events.onEnterTrap();
                     }
-                    else if(keyCode == 68 && playerRight+15 <= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    else if(keyCode == 68 && playerRight-15 <= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey = 68;
