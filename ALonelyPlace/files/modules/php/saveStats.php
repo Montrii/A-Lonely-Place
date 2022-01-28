@@ -21,7 +21,7 @@
         // Get Item slot
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        echo print_r($sqlUser);
+        echo print_r($userInfo);
         // update inventory
         $item1 = intval($userInfo[0]['item1']);
         $item2 = intval($userInfo[0]['item2']);
