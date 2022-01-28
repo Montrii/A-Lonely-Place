@@ -42,7 +42,9 @@ export class Events
             success: function(userData)
             {
                 var itemLength = parseInt(userData);
-                console.log(determineItem(itemLength));
+                var item_ID = determineItem(itemLength);
+                var rareity = defineRareityLevel();
+                console.log("ITEM: " + item_ID + " | RAREITY: " + rareity);
             }
         });
     }
