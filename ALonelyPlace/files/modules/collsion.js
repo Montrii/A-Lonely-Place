@@ -15,11 +15,10 @@ export class Collsion
     {
 
     }
-    openObjectsCollsion(keyCode)
+    openObjectsCollsion(object, keyDown)
     {
         var events = new Events();
         var playerCollsion = player.getPlayerSides();
-        var friendlyObjects = friendlyObject.getFriendlyObjects();
         var playGroundCollsion = playGround.getPlayGroundSides();
         var foData = 0;
         var playerTop = parseInt(playerCollsion.top);
@@ -30,26 +29,9 @@ export class Collsion
         var playGroundBottom = parseInt(playGroundCollsion.top);
         var playGroundLeft = parseInt(playGroundCollsion.left);
         var playGroundRight = parseInt(playGroundCollsion.right);
-        for(var i = 0; i < friendlyObjects.length; i++)
-        {
-            foData = friendlyObjects[i].getBoundingClientRect();
-            // Konvertiere Informationen in tatsächliche ints 
-            var collsionLeft = parseInt(foData.left);
-            var collsionRight = parseInt(foData.right);
-            var collsionTop = parseInt(foData.top);
-            var collsionBottom = parseInt(foData.bottom);
-            if(checkIfValidFriendlyObject(getFriendlyObjectClass(friendlyObjects[i])) == true)
-            {
-                if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
-                {
-
-                }
-                else if(getFriendlyObjectClass(friendlyObjects[i]) == "door")
-                {
-                    
-                }
-            }
-        }
+        foData = object.getBoundingClientRect();
+        console.log(object);
+        console.log(keyDown);
     }
     friendlyPlayerCollsion(keyCode)
     {

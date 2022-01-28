@@ -67,6 +67,10 @@ export class Movement
                         });
                     });
             }
+            else if(collsionKey[1] != 0)
+            {
+                collsion.openObjectsCollsion(collsionKey[1], keyDown);
+            }
         });
     }
 }
