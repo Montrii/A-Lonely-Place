@@ -29,12 +29,9 @@ export class Events
     {
         console.log("hit gap object");
     }
-    onChestOpened(itemCount)
+    onChestOpened()
     {
-        // Once Chest is opened, generate content
-        var item_ID = this.itemGenerator.determineItem(itemCount);
-        var rareity = this.itemGenerator.defineRareityLevel();
-        return this.itemGenerator.buildItem(item_ID, rareity);
+        console.log("OPENING CHEST");
     }
     onDoorOpened()
     {
