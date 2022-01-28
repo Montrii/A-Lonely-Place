@@ -92,6 +92,26 @@ export class Events
         console.log("ENTERED NEXT LEVEL");
         await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
         console.log("updating in database and reloading website!");
+        $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
+            // Convert key-value pairs to JSON
+            // https://stackoverflow.com/a/39284735/452587
+            userData = userData.trim().split('\n').reduce(function(obj, pair) {
+                pair = pair.split('=');
+                return obj[pair[0]] = pair[1], obj;
+            }, {});
+                $.ajax({
+                    type: "GET",
+                    url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/enterNextLevel.php',
+                    data: {
+                        'ip': userData['ip']
+                    },
+                    success: function(userData)
+                    {
+                        console.log(userData);
+                        location.reload();
+                    }
+                });
+            });
     }
 }
 
