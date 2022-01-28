@@ -44,6 +44,7 @@ export class Events
                 var itemLength = parseInt(userData);
                 var item_ID = determineItem(itemLength);
                 var rareity = defineRareityLevel();
+                console.log("ITEM" + item_ID + " RAREITY" + rareity);
                 $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
                     // Convert key-value pairs to JSON
                     // https://stackoverflow.com/a/39284735/452587
