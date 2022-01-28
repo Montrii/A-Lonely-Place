@@ -72,6 +72,7 @@ export class Collsion
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
+                    console.log(keyCode);
                     if(keyCode == 45 && playerLeft+15 <= collsionRight && (playerBottom-15 >= collsionTop && playerBottom <= collsionBottom || playerTop+32 <= collsionBottom && playerTop  >= collsionTop))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
