@@ -59,7 +59,7 @@ export class backPack
         {
             console.log(userData);
             this.toggled = false;
-            document.querySelector('.inventory-row').remove();
+            document.querySelector('.inventory-table').remove();
         }
     }
 }
