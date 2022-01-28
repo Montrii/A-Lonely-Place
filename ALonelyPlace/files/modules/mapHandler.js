@@ -31,7 +31,7 @@ export class MapHandler
                 // Position of Map
                 if(stringContainsNumber(lines[i]) && lines[i].includes("Top: ", 0))
                 {
-                    contains.top = parseInt(lines[i].substring(5, lines[i].length));
+                    contains.top = parseInt(lines[i].substring(5, lines[i].length)+150);
                     delete lines[i];
                 }
                 if(stringContainsNumber(lines[i]) && lines[i].includes("Left: ", 0))
