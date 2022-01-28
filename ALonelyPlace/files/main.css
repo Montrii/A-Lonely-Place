@@ -84,7 +84,7 @@
         {
             z-index: 1;
             position: absolute;
-            content:url("../../../Assets/UNUSED/other/chest2_open.png");
+            content:url("../../../../Assets/UNUSED/other/chest2_open.png");
         }
         .friendlyObject
         {
