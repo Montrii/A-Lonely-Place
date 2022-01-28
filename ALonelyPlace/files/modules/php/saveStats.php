@@ -21,8 +21,8 @@
         // Get Item slot
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        echo print_r($sqlUser);
         // update inventory
-        echo "USER DATA EXISTS - OVERWRITING\n";
         $item1 = intval($userInfo[0]['item1']);
         $item2 = intval($userInfo[0]['item2']);
         $item3 = intval($userInfo[0]['item3']);
@@ -57,7 +57,6 @@
         {
             echo "UNABLE TO WRITE INTO FILE AS INVENTORY IS FULL";
         }
-        echo "SUCCESSFULLY UPDATED USER DATA IN DATABASE!";
         mysqli_close($conn);
     }
 ?>
