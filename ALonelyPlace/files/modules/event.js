@@ -37,7 +37,9 @@ export class Events
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',
-            data: userData,
+            data: {
+                'ajax' : true
+            },
             success: function(userData)
             {
                 var itemLength = parseInt(userData);
