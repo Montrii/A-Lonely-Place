@@ -34,6 +34,16 @@ export class Events
         console.log("OPENING CHEST");
         await playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
         console.log("CALCULATE LOOT");
+        $.ajax({
+            type: "GET",
+            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',
+            data: userData,
+            success: function(userData)
+            {
+                var itemLength = parseInt(userData);
+                console.log(itemGenerator.determineItem(itemLength));
+            }
+        });
     }
     onDoorOpened()
     {

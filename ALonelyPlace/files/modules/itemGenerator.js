@@ -18,7 +18,7 @@ export class ItemGenerator
         }
         return item_ID;
     }
-    defineRareityLevel(item_ID)
+    defineRareityLevel()
     {
         var rareity = 0;
         // RAREITY LEVELS
