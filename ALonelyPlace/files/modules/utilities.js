@@ -214,5 +214,6 @@ export function defineRareityLevel()
             break;
     }
     console.log(random);
+    console.log(rareity);
     return rareity;
 }
