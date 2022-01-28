@@ -43,7 +43,7 @@ export class Events
             success: function(userData)
             {
                 var itemLength = parseInt(userData);
-                console.log(itemGenerator.determineItem(itemLength));
+                console.log(this.itemGenerator.determineItem(itemLength));
             }
         });
     }
