@@ -37,6 +37,7 @@ export class Collsion
                 
                 object.classList.toggle("chest");
                 object.classList.add("openedChest");
+                events.onChestOpened();
             }
         }
     }
@@ -130,32 +131,6 @@ export class Collsion
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
                         blockingKey[1] = friendlyObjects[i];
-                    }
-                }
-                else if(getFriendlyObjectClass(friendlyObjects[i]) == "openedChest")
-                {
-                    if(playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey[0] = 65;
-                    }
-                    // Linke Wand des Objekts
-                    else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey[0] = 68;
-                    }
-                    // Untere Wand des Objekts
-                    else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey[0] = 87;
-                    }
-                    // Obere Wand des Objekts
-                    else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
-                    {
-                        // Richtung Key wird returnt und von movement.js geblockt.
-                        blockingKey[0] = 83;
                     }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "door")
