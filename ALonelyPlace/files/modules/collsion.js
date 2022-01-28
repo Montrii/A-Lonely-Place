@@ -118,7 +118,7 @@ export class Collsion
                         blockingKey[1] = friendlyObjects[i];
                     }
                     // Obere Wand des Objekts
-                    else if(playerBottom-6 <= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
