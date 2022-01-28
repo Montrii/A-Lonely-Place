@@ -26,9 +26,7 @@
         {
 
             // Writting into database!;
-            $result = mysqli_query($conn, $sqlInsert);
-            $user2 = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            echo "WRITTEN INTO DATABASE";
+            echo "USER WORKS";
         }
         else 
         {
