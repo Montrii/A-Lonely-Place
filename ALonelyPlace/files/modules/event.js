@@ -87,7 +87,7 @@ export class Events
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
         location.reload();
     }
-    onEnterStairs()
+    async onEnterStairs()
     {
         console.log("ENTERED NEXT LEVEL");
         await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
