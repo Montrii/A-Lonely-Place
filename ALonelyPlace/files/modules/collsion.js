@@ -42,25 +42,25 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
-                    if(keyCode == 69 && playerLeft+5 <= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    if(keyCode == 69 && playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         events.onChestOpened();
                     }
                     // Linke Wand des Objekts
-                    else if(keyCode == 69 && playerRight-5 >= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    else if(keyCode == 69 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         events.onChestOpened();
                     }
                     // Untere Wand des Objekts
-                    else if(keyCode == 69 && playerTop+5 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(keyCode == 69 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         events.onChestOpened();
                     }
                     // Obere Wand des Objekts
-                    else if(keyCode == 69 && playerBottom-5 >= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(keyCode == 69 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         events.onChestOpened();
@@ -117,7 +117,7 @@ export class Collsion
                         events.onEnterTrap();
                     }
                     // Obere Wand des Objekts
-                    else if(keyCode == 83 && playerBottom-15 >= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(keyCode == 83 && playerBottom+15 >= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey = 83;
