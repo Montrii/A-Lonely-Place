@@ -22,7 +22,8 @@
         // Get Item slot
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        if($userInfo[0]['item1'] == 0 || $userInfo[0]['rareity1'] == 0)
+        $item1 = intval($userInfo[0]['item1']);
+        if($item1 == 0)
         {
                 // insert new data into database
             echo "USER DATA DOES NOT EXIST\n";
