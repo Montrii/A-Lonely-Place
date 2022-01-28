@@ -30,8 +30,14 @@ export class Collsion
         var playGroundLeft = parseInt(playGroundCollsion.left);
         var playGroundRight = parseInt(playGroundCollsion.right);
         foData = object.getBoundingClientRect();
-        console.log(object);
-        console.log(keyDown);
+        if(checkIfValidFriendlyObject(getFriendlyObjectClass(object)) == true)
+        {
+            if(keyDown == 69 && (getFriendlyObjectClass(object) == "chest")) // OPEN THE CHEST
+            {
+                console.log(object);
+                console.log(keyDown);
+            }
+        }
     }
     friendlyPlayerCollsion(keyCode)
     {

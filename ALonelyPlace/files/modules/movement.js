@@ -67,7 +67,7 @@ export class Movement
                         });
                     });
             }
-            else if(collsionKey[1] != 0)
+            else if(collsionKey[1] != 0) // INTERACTION
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
             }
