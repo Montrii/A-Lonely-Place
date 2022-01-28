@@ -34,8 +34,9 @@ export class Collsion
         {
             if(keyDown == 69 && (getFriendlyObjectClass(object) == "chest")) // OPEN THE CHEST
             {
-                console.log(object);
-                console.log(keyDown);
+                
+                object.classList.toggle("chest");
+                object.classList.add("openedChest");
             }
         }
     }
