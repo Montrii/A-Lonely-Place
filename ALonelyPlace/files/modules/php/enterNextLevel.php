@@ -17,7 +17,8 @@
         $result = mysqli_query($conn, $sqlUser);
         $userInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $mapLevel = intval($userInfo[0]['map']); 
-        echo $mapLevel;
+        $newLevel = $mapLevel+1;
+        echo $newLevel; 
         $result = mysqli_query($conn, "UPDATE inventory SET map = " . $mapLevel+1 . " WHERE user = '" . $_GET['ip'] . "'");
     }
     mysqli_close($conn);
