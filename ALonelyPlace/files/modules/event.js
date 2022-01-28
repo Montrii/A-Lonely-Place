@@ -1,7 +1,7 @@
 import { Player } from "./player.js";
 import { Movement } from "./movement.js";
 import { Animator } from "./animator.js";
-import { ItemGenerator } from "./itemGenerator.js";
+import { determineItem, defineRareityLevel } from "./utilities.js";
 
 
 export class Events
@@ -9,7 +9,6 @@ export class Events
     player = new Player();
     movement = new Movement();
     animator = new Animator();
-    itemGenerator = new ItemGenerator();
     constructor()
     {
     }
@@ -43,7 +42,7 @@ export class Events
             success: function(userData)
             {
                 var itemLength = parseInt(userData);
-                console.log(this.itemGenerator.determineItem(itemLength));
+                console.log(determineItem(itemLength));
             }
         });
     }
