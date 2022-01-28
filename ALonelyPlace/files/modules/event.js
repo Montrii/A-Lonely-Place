@@ -50,6 +50,8 @@ export class Events
     }
     onEnterTrap()
     {
-        
+        console.log("Entered Trap!");
+        var audio = new Audio('../../../Assets/sounds/falling.wav');
+        audio.play();
     }
 }
