@@ -44,7 +44,28 @@ export class Events
                 var itemLength = parseInt(userData);
                 var item_ID = determineItem(itemLength);
                 var rareity = defineRareityLevel();
-                console.log("ITEM: " + item_ID + " | RAREITY: " + rareity);
+                $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
+                    // Convert key-value pairs to JSON
+                    // https://stackoverflow.com/a/39284735/452587
+                    userData = userData.trim().split('\n').reduce(function(obj, pair) {
+                        pair = pair.split('=');
+                        return obj[pair[0]] = pair[1], obj;
+                    }, {});
+                    console.log(userData);
+                        $.ajax({
+                            type: "GET",
+                            url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/saveStats.php',
+                            data: {
+                                "item": item_ID,
+                                "rareity": rareity
+                            },
+                            success: function(userData)
+                            {
+                                console.log("SUCCESSFULLY WRITTEN ITEM: " + item_ID + " | with RAREITY : " + rareity + " INTO DATABASE!");
+                                console.log(userData);
+                            }
+                        });
+                    });
             }
         });
     }
