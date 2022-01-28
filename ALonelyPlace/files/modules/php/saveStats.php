@@ -17,22 +17,11 @@
         $ITEM_ID = intval($_GET['item']);
         $RAREITY = intval($_GET['rareity']);
         $sqlUser = "SELECT * FROM inventory WHERE user = '" . $_GET['ip'] . "'";
-        $sqlInsert = "INSERT INTO inventory (user, item1, rareity1) VALUES('" . $_GET['ip'] . "'," . $ITEM_ID . ", " . $RAREITY . ")";
 
         // Get Item slot
         $result = mysqli_query($conn, $sqlUser);
         $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        if(count($user) < 1)
-        {
-
-            // Writting into database!;
-            echo "USER WORKS";
-        }
-        else 
-        {
-            echo print_r($user);
-            echo "ITEM FOUND IN DATABASE!\n";
-        }
+        echo print_r($user);
         mysqli_close($conn);
     }
 ?>
