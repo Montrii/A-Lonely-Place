@@ -48,7 +48,7 @@ export class Events
     {
 
     }
-    onEnterTrap()
+    async onEnterTrap()
     {
         console.log("Entered Trap!");
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
