@@ -159,7 +159,7 @@ export class Collsion
         var elements = wall.getWallElements();
 
         // Variablen zur Initialisierung
-        var blockingKey = [0, 0];
+        var blockingKey = 0;
         var i = 0;
         var collisionData = 0;
         var playerTop = parseInt(playerCollsion.top);
@@ -186,28 +186,28 @@ export class Collsion
             if(keyCode == 65 && playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
-                blockingKey[0] = 65;
+                blockingKey = 65;
                 console.log("hit")
             }
             // Linke Wand des Objekts
             else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
-                blockingKey[0] = 68;
+                blockingKey = 68;
                 console.log("hit")
             }
             // Untere Wand des Objekts
             else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
-                blockingKey[0] = 87;
+                blockingKey = 87;
                 console.log("hit")
             }
             // Obere Wand des Objekts
             else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
-                blockingKey[0] = 83;
+                blockingKey = 83;
                 console.log("hit")
             }
             
