@@ -43,6 +43,32 @@ export class Collsion
             {
                 if(getFriendlyObjectClass(friendlyObjects[i]) == "gap")
                 {
+                    if(keyCode == 65 && playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey = 65;
+                        events.onEnterTrap();
+                    }
+                    else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey = 68;
+                        events.onEnterTrap();
+                    }
+                    // Untere Wand des Objekts
+                    else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey = 87;
+                        events.onEnterTrap();
+                    }
+                    // Obere Wand des Objekts
+                    else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    {
+                        // Richtung Key wird returnt und von movement.js geblockt.
+                        blockingKey = 83;
+                        events.onEnterTrap();
+                    }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
                 {
