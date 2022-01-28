@@ -78,7 +78,7 @@
         {
             z-index: 1;
             position: absolute;
-            content:url("../../../../Assets/dungeon/chest.png");
+            content:url("../../../../Assets/UNUSED/other/chest2_closed.png");
         }
         .friendlyObject
         {
