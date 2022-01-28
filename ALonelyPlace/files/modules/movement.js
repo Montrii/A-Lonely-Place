@@ -65,7 +65,6 @@ export class Movement
                         });
                     });
             }
-            collsion.openObjectsCollsion(keyDown);
         });
     }
 }
