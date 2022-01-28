@@ -56,7 +56,7 @@ export class Collsion
                         events.onEnterTrap();
                     }
                     // Untere Wand des Objekts
-                    else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+                    else if(keyCode == 87 && playerTop+15 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey = 87;
