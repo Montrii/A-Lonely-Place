@@ -65,10 +65,7 @@ export class Movement
                         });
                     });
             }
-            else if(event.keyCode == 69) // INTERACTION MENU
-            {
-                collsion.openObjectsCollsion(keyDown);
-            }
+            collsion.openObjectsCollsion(keyDown);
         });
     }
 }
