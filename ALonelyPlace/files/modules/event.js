@@ -84,14 +84,12 @@ export class Events
     async onEnterTrap()
     {
         console.log("Entered Trap!");
-        Object.freeze(document.getElementById("player"));
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
         location.reload();
     }
     async onEnterStairs()
     {
         console.log("ENTERED NEXT LEVEL");
-        Object.freeze(document.getElementById("player"));
         await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
         console.log("updating in database and reloading website!");
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
