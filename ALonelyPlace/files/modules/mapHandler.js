@@ -124,7 +124,7 @@ export class MapHandler
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
                             $('#playground').append(`<div class="playerspawn friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
-                            document.getElementById("player").style.top = top+contains.top+32+"px";
+                            document.getElementById("player").style.top = top+contains.top+34+"px";
                             document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
