@@ -24,7 +24,11 @@
         $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
         if(count($user) < 1)
         {
-            echo "THIS ITEM DOES NOT EXIST IN OUR DATABASE!";
+
+            // Writting into database!;
+            $result = mysqli_query($conn, $sqlInsert);
+            $user2 = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            echo "WRITTEN INTO DATABASE";
         }
         else 
         {

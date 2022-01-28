@@ -61,7 +61,6 @@ export class Events
                             },
                             success: function(userData)
                             {
-                                console.log("\n\nSUCCESSFULLY WRITTEN ITEM: " + item_ID + " | with RAREITY : " + rareity + " INTO DATABASE!");
                                 console.log(userData);
                             }
                         });
