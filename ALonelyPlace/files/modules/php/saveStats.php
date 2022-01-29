@@ -51,23 +51,23 @@
         {
             if($RAREITY == 4)
             {
-                echo `You would've gotten a <span style="color:#fca420;">legendary</span> item, but your inventory is full!`;
+                echo "You would've gotten a legendary item, but your inventory is full!";
             }
             else if($RAREITY == 3)
             {
-                echo `You would've gotten an <span style="color:rgb(226, 7, 7);">ultra</span> item, but your inventory is full!`;
+                echo "You would've gotten a ultra item, but your inventory is full!";
             }
             else if($RAREITY == 2)
             {
-                echo `You would've gotten an <span style="color:#a335ee;">epic</span> item, but your inventory is full!`;
+                echo "You would've gotten a epic item, but your inventory is full!";
             }
             else if($RAREITY == 1)
             {
-                echo `You would've gotten a <span style="color:#0070dd;">rare</span> item, but your inventory is full`;
+                echo "You would've gotten a rare item, but your inventory is full!";
             }
             else if($RAREITY == 0)
             {
-                echo `You would've gotten a <span style="color:rgb(160, 157, 157);">common</span> item, but your inventory is full!`;
+                echo "You would've gotten a common item, but your inventory is full!";
             }
         }
         mysqli_close($conn);
