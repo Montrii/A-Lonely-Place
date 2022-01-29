@@ -69,14 +69,7 @@ export class Events
                             success: function(userData)
                             {
                                 console = new Console();
-                                if(userData)
-                                {
-                                    console.writeToConsole(userData);
-                                }
-                                else 
-                                {
-                                    console.writeToConsole(`<span style="color:#90EE90">Successfully </span>saved loot into your inventory!`);
-                                }
+                                console.writeToConsole(userData);
                             }
                         });
                     });
