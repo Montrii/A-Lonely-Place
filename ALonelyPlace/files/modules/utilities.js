@@ -244,3 +244,11 @@ export function defineSpecialRareityLevel()
     }
     return rareity;
 }
+
+export function playBackGroundMusic(audio)
+{
+    if(!audio.paused == false)
+    {
+        audio.play();
+    }
+}
