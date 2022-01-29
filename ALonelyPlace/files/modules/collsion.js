@@ -64,11 +64,11 @@ export class Collsion
                 object.classList.add("doorOpen");
                 events.onDoorOpened();
             }
-            else if(keyDown == 69) // MONSTERS INTERACTION
-            {
-                console.log(object);
-                alert("HIT MONSTER");
-            }
+        }
+        if(keyDown == 69) // MONSTERS INTERACTION
+        {
+            console.log(object);
+            alert("HIT MONSTER");
         }
     }
     friendlyPlayerCollsion(keyCode)
