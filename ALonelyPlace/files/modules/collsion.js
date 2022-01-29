@@ -30,10 +30,14 @@ export class Collsion
         var playGroundLeft = parseInt(playGroundCollsion.left);
         var playGroundRight = parseInt(playGroundCollsion.right);
         foData = object.getBoundingClientRect();
-        var content = "Press <b>E</b> to interact";
-        // SHOWCASING E TO INTERACT MENU POPUP
-        $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
-        </div>`);
+        var interaction = document.querySelectorAll(".infoTextInteraction");
+        if(interaction.length == 0)
+        {
+            var content = "Press <b>E</b> to interact";
+            // SHOWCASING E TO INTERACT MENU POPUP
+            $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
+            </div>`);
+        }
         if(checkIfValidFriendlyObject(getFriendlyObjectClass(object)) == true)
         {
             if(keyDown == 69 && (getFriendlyObjectClass(object) == "chest")) // OPEN THE CHEST
