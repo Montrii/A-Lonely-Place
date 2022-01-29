@@ -164,7 +164,7 @@ export class MapHandler
                         else if (blocks[y] == "MS" || blocks[y] == "MS") /* Monster: Skull */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob skullAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">2</div>`);
+                            $('#playground').append(`<div class="mob monster${mobcounter} skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
                             animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
@@ -173,7 +173,7 @@ export class MapHandler
                         else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob vampireAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">1</div>`);
+                            $('#playground').append(`<div class="mob monster${mobcounter} vampireAnimation1" style="top:${top}px;left:${left}px;">1</div>`);
                             animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
