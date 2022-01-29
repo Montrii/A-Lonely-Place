@@ -69,10 +69,6 @@ export class Movement
             else if(collsionKey[1] != 0) // INTERACTION
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
-                var content = "Press <b>E</b> to interact";
-                // SHOWCASING E TO INTERACT MENU POPUP
-                $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
-                </div>`);
             }
             console.log("INTERACTIVE OBJECT : " + collsionKey[1] + " KEY BLOCKED: " + collsionKey[0]);
         });
