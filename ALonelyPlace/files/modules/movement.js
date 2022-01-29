@@ -76,7 +76,7 @@ export class Movement
             }
             else 
             {
-                document.querySelector(".infoText").remove();
+                document.querySelector(".infoTextInteraction").remove();
             }
         });
     }

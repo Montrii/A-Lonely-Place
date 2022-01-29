@@ -37,7 +37,9 @@ export class Collsion
                 
                 object.classList.toggle("chest");
                 object.classList.add("openedChest");
+                document.querySelector(".infoTextInteraction").remove();
                 events.onChestOpened();
+
             }
         }
     }
