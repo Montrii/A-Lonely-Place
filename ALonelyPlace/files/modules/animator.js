@@ -26,6 +26,40 @@ export class Animator
         }, 200);
         this.playerAnimationInterval = interval;
     }
+    skullPlayAnimation(skull)
+    {
+        var id = 1;
+        const interval = setInterval(function() 
+        {
+            skull.classList.toggle("skullAnimation1");
+            skull.classList.add(`skullAnimation${id}`);
+            if(id >= 4)
+            {
+                id = 1;
+            }
+            else 
+            {
+                id++;
+            }
+        }, 200);
+    }
+    vampirePlayAnimation(vampire)
+    {
+        var id = 1;
+        const interval = setInterval(function() 
+        {
+            skull.classList.toggle("vapireAnimation1");
+            skull.classList.add(`vapireAnimation${id}`);
+            if(id >= 4)
+            {
+                id = 1;
+            }
+            else 
+            {
+                id++;
+            }
+        }, 200);
+    }
     playerStopAnimation()
     {
         clearInterval(this.playerAnimationInterval);

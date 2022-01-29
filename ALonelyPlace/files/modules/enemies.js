@@ -1,5 +1,9 @@
 export class Enemy
 {
-    constructor()
-    {}
+    name = 0;
+    constructor(name)
+    {
+        this.name = name;
+    }
+
 }

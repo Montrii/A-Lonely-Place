@@ -1,11 +1,13 @@
 import { Sleep, stringContainsNumber, detectBrowser, mobileDetection } from "./utilities.js"; 
 import { Events } from "./event.js";
+import { Animator } from "./animator.js";
 import { Enemy } from "./enemies.js";
 
 
 
 
 var callbacks = new Events(); 
+var animation = new Animator();
 export class MapHandler
 {
     constructor()
@@ -97,6 +99,7 @@ export class MapHandler
                 var y = 0;
                 var precentage = 0;
                 var precentageToAdd = 100 / elements;
+                var mobcounter = 0;
                 for(i = 0; i < lines.length; i++)
                 {
                     var blocks = lines[i].split(",");
@@ -161,14 +164,16 @@ export class MapHandler
                         else if (blocks[y] == "MS" || blocks[y] == "MS") /* Monster: Skull */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
+                            $('#playground').append(`<div class="mob skullAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">2</div>`);
+                            animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             precentage = precentage + precentageToAdd;
                             await Sleep(10);
                         }
                         else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob vampireAnimation1" style="top:${top}px;left:${left}px;">1</div>`);
+                            $('#playground').append(`<div class="mob vampireAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">1</div>`);
+                            animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             precentage = precentage + precentageToAdd;
                             await Sleep(10)
                         }
