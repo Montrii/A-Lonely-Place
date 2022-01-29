@@ -1,4 +1,4 @@
-Height: 2988
+Height: 788
 Width: 3016
 Top: 0
 Left: 50
