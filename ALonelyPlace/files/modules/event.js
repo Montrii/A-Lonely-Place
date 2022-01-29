@@ -33,6 +33,7 @@ export class Events
         console.log("OPENING CHEST");
         await playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
         console.log("CALCULATE LOOT");
+        document.querySelector(".infoTextInteraction").remove();
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',

@@ -37,7 +37,6 @@ export class Collsion
                 
                 object.classList.toggle("chest");
                 object.classList.add("openedChest");
-                document.querySelector(".infoTextInteraction").remove();
                 events.onChestOpened();
 
             }
@@ -47,6 +46,7 @@ export class Collsion
     {
         var events = new Events();
         var blockingKey = [0,0];
+        blockingKey[1] = 0;
         var playerCollsion = player.getPlayerSides();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
         var playGroundCollsion = playGround.getPlayGroundSides();
