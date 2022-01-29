@@ -23,7 +23,6 @@ export class Movement
             player.getPlayerObject().scrollIntoView();
             playBackGroundMusic(audio);
             var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
-            console.log("HIT OBJECT: " + collsionKey[1]);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
             {

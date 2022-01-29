@@ -65,6 +65,10 @@ export class Collsion
                 events.onDoorOpened();
             }
         }
+        else 
+        {
+            console.log(object);
+        } 
     }
     friendlyPlayerCollsion(keyCode)
     {
