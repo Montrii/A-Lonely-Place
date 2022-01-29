@@ -67,6 +67,11 @@ export class Collsion
         var playGroundBottom = parseInt(playGroundCollsion.top);
         var playGroundLeft = parseInt(playGroundCollsion.left);
         var playGroundRight = parseInt(playGroundCollsion.right);
+        var interaction = document.querySelectorAll(".infoTextInteraction");
+        for(var i = 0; i < interaction.length; i++)
+        {
+            interaction[i].remove();
+        }
         for(var i = 0; i < friendlyObjects.length; i++)
         {
             foData = friendlyObjects[i].getBoundingClientRect();
@@ -173,14 +178,6 @@ export class Collsion
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "door")
                 {
                     
-                }
-                else
-                {
-                    var interaction = document.querySelectorAll(".infoTextInteraction");
-                    for(var i = 0; i < interaction.length; i++)
-                    {
-                        interaction[i].remove();
-                    }
                 }
             }
         }
