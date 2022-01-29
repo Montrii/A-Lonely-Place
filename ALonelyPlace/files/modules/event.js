@@ -2,6 +2,7 @@ import { Player } from "./player.js";
 import { Movement } from "./movement.js";
 import { Animator } from "./animator.js";
 import { determineItem, defineRareityLevel } from "./utilities.js";
+import { Console } from "./console.js";
 
 
 export class Events
@@ -9,15 +10,16 @@ export class Events
     player = new Player();
     movement = new Movement();
     animator = new Animator();
+    console = new Console();
     constructor()
     {
     }
     onMapLoaded()
     {
-        console.log("MAP FINISHED LOADING! ");
         this.player.syncPlayer();
         this.movement.playerMovement();
         this.animator.playerPlayAnimation();
+        console.writeToConsole(`<span style="color:#90EE90">Successfully </span>loaded the Map!`);
     }
     onMapFailed(reason)
     {

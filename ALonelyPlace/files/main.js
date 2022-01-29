@@ -1,6 +1,6 @@
 import { MapHandler } from "./modules/mapHandler.js";
 import { Github } from "./modules/github.js";
-import { Console } from "./modules/console.js";
+
 $(document).ready(main);
 
 
@@ -8,7 +8,7 @@ async function main()
 {
     var mapHandler = new MapHandler();
     var github = new Github();
-    var console = new Console();
+
     //console.log(await mapHandler.loadMap(1));
     github.displayLatestUpdate("https://api.github.com/users/Montrii/events");
     $.get('https://www.cloudflare.com/cdn-cgi/trace', async function(userData) {
@@ -26,7 +26,7 @@ async function main()
             }
         });
     });
-    console.writeToConsole(`<span style="color:#90EE90">Successfully</span>loaded the Map!`);
+
 }
 
 
