@@ -56,7 +56,7 @@ export class Collsion
                 events.onSpecialChestOpened();
 
             }
-            else if(keyDown == 69 && getFriendlyObjectClass(friendlyObjects[i]) == "door")
+            else if(keyDown == 69 && getFriendlyObjectClass(object) == "door")
             {
                 object.classList.toggle("door");
                 object.classList.add("doorOpen");
