@@ -74,7 +74,7 @@ export class Movement
                 $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
                 </div>`);
             }
-            else 
+            else if(collsionKey[1] == 0 || collsionKey[0] == 0)
             {
                 document.querySelector('.infoTextInteraction').remove();
             }
