@@ -27,18 +27,18 @@ export class Events
     }
     onCollsionGapObject()
     {
-        console.log("hit gap object");
+        this.console.writeToConsole("You've hit an gap Object!");
     }
     async onChestOpened()
     {
-        console.log("OPENING CHEST");
+        this.console.writeToConsole("Opening Chest...");
         var interaction = document.querySelectorAll(".infoTextInteraction");
         for(var i = 0; i < interaction.length; i++)
         {
             interaction[i].remove();
         }
         await playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
-        console.log("CALCULATE LOOT");
+        this.console.writeToConsole("Calculating Loot...");
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',
@@ -68,7 +68,14 @@ export class Events
                             },
                             success: function(userData)
                             {
-                                console.log(userData);
+                                if(userData != "")
+                                {
+                                    this.console.writeToConsole(userData);
+                                }
+                                else 
+                                {
+                                    this.console.writeToConsole(`<span style="color:#90EE90">Successfully </span>saved loot into your inventory!`);
+                                }
                             }
                         });
                     });
