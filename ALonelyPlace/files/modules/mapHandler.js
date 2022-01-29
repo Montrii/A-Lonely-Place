@@ -1,10 +1,11 @@
 import { Sleep, stringContainsNumber, detectBrowser, mobileDetection } from "./utilities.js"; 
 import { Events } from "./event.js";
+import { Enemy } from "./enemies.js";
 
 
 
 
-var callbacks = new Events();
+var callbacks = new Events(); 
 export class MapHandler
 {
     constructor()
@@ -160,14 +161,14 @@ export class MapHandler
                         else if (blocks[y] == "MS" || blocks[y] == "MS") /* Monster: Skull */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob skullAnimation1" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="mob skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
                         else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob vampireAnimation1" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="mob vampireAnimation1" style="top:${top}px;left:${left}px;">1</div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
