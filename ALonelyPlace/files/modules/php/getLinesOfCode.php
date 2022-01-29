@@ -5,7 +5,6 @@ foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as
 {
     if(is_dir($filename) == false)
     {
-        echo "$filename <br/>";
         $handle = fopen($filename, "r");
         while(!feof($handle))
         {
@@ -16,6 +15,7 @@ foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as
         fclose($handle);
     }
 }
+echo $linecount; 
 
 
 
