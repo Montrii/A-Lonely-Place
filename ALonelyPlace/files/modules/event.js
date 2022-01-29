@@ -20,6 +20,7 @@ export class Events
         this.movement.playerMovement();
         this.animator.playerPlayAnimation();
         this.console.writeToConsole(`<span style="color:#90EE90">Successfully </span>loaded the Map!`);
+        playAudio(new Audio("../../../Assets/sounds/justin game 44.wav"));
     }
     onMapFailed(reason)
     {
