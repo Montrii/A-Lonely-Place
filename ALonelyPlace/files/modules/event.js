@@ -137,8 +137,18 @@ export class Events
         if(getMobType(enemy) == "skull")
         {
             this.console.writeToConsole("I just hit a skull!");
-            await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
-            alert(enemy.innerHTML);
+            var health = parseInt(enemy.innerHTML);
+            if(enemy.innerHTML <= 1)
+            {
+                await playAudio(new Audio("../../../Assets/sounds/skull_die.wav"));
+                enemy.remove();
+            }
+            else 
+            {
+                health = health - 1;
+                enemy.innerHTML = health;
+                await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
+            }
         }
         else if(getMobType(enemy) == "vampire")
         {
