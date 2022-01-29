@@ -40,9 +40,9 @@ export class Collsion
             $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
             </div>`);
         }
-        console.log(keyDown);
         if(checkIfValidFriendlyObject(getFriendlyObjectClass(object)) == true)
         {
+            console.log(keyDown);
             if(keyDown == 69 && (getFriendlyObjectClass(object) == "chest")) // OPEN THE CHEST
             {
                 
