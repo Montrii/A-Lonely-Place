@@ -20,7 +20,12 @@ export class Events
         this.movement.playerMovement();
         this.animator.playerPlayAnimation();
         this.console.writeToConsole(`<span style="color:#90EE90">Successfully </span>loaded the Map!`);
-        playAudio(new Audio("../../../Assets/sounds/justin game 44.wav"));
+        $("body").hover(
+            function() {
+                playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
+            }, function() {
+            }
+        );
     }
     onMapFailed(reason)
     {
