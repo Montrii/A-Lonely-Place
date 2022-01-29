@@ -3,7 +3,6 @@ $path = realpath('../../../');
 $linecount = 0;
 foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as $filename)
 {
-    echo $filename . "<br>";
     if(is_dir($filename) == false)
     {
         $handle = fopen($filename, "r");
