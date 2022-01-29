@@ -165,8 +165,8 @@ export class MapHandler
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob skullAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">2</div>`);
-                            animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
-                            mobcounter = mobcounter + 1;
+                            //animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
+                            //mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(25);
                         }
