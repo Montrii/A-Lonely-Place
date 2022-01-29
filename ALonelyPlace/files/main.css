@@ -149,12 +149,11 @@
 
         .infoTextInteraction
         {
-            border: 2px solid yellow;
-            left: 50%;
-            position: fixed;
-            top: 50px;
-            width: 250px;
+            width: 50px;
             height: 50px;
+            background-color: red;
+            /* Center horizontally*/
+            margin: 0 auto;
         }
         .infoText 
         {
