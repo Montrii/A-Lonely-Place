@@ -24,13 +24,13 @@ function main()
             // muted 
             audio.play();
             audio.volume = 0.1;
-            $("#muteIcon").attr("src", "./speakerMuted.png");
+            $("#muteIcon").attr("src", "../../Assets/mainscreen/speakerMuted.png");
         }
         else if(document.getElementById("muteIcon").src.includes("speakerMuted.png"))
         {
             // unmuted
             audio.pause();
-            $("#muteIcon").attr("src", "./speakerNormal.png");
+            $("#muteIcon").attr("src", "../../Assets/mainscreen/speakerNormal.png");
         }
 
     });
