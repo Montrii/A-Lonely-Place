@@ -1,5 +1,5 @@
 Height: 688
-Width: 3016
+Width: 1800
 Top: 0
 Left: 50
 X,X,X,X,X,X,X,X,X,X,X,X,X

@@ -32,7 +32,7 @@ export class MapHandler
                 if(stringContainsNumber(lines[i]) && lines[i].includes("Top: ", 0))
                 {
                     contains.top = parseInt(lines[i].substring(5, lines[i].length));
-                    contains.top = contains.top + 150;
+                    contains.top = contains.top + 110;
                     delete lines[i];
                 }
                 if(stringContainsNumber(lines[i]) && lines[i].includes("Left: ", 0))
