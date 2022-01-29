@@ -69,6 +69,13 @@ export class Movement
             else if(collsionKey[1] != 0) // INTERACTION
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
+                // SHOWCASING E TO INTERACT MENU POPUP
+                $('body').append(`<div class="infoText" style="position:absolute;width:400px;height:300px;top:${player.getPlayerOffSetTop()}px;left:${player.getPlayerOffSetLeft()}px;">
+                </div>`);
+            }
+            else 
+            {
+                document.querySelector("#infoText").remove();
             }
         });
     }
