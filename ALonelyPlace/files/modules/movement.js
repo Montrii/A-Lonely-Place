@@ -70,14 +70,6 @@ export class Movement
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
             }
-            else if(collsionKey[1] == 0) // DENY INTERACTION MENU POPUP
-            {
-                var interaction = document.querySelectorAll(".infoTextInteraction");
-                for(var i = 0; i < interaction.length; i++)
-                {
-                    interaction[i].remove();
-                }
-            }
         });
     }
 }

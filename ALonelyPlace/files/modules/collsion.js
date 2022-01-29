@@ -174,6 +174,14 @@ export class Collsion
                 {
                     
                 }
+                else
+                {
+                    var interaction = document.querySelectorAll(".infoTextInteraction");
+                    for(var i = 0; i < interaction.length; i++)
+                    {
+                        interaction[i].remove();
+                    }
+                }
             }
         }
         return blockingKey;
