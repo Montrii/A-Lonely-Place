@@ -1,4 +1,4 @@
-import { getFriendlyObjectClass, checkIfValidFriendlyObject } from "./utilities.js";
+import { getFriendlyObjectClass, checkIfValidFriendlyObject, getMobObjectClass } from "./utilities.js";
 import { Player } from "./player.js";
 import { FriendlyObject } from "./friendlyObject.js";
 import { Wall } from "./wall.js";
@@ -63,6 +63,10 @@ export class Collsion
                 object.classList.toggle("door");
                 object.classList.add("doorOpen");
                 events.onDoorOpened();
+            }
+            else if(keyDown == 69 && getMobObjectClass(object) == "mob")
+            {
+                events.onMonsterHit(object);
             }
         }
     }
@@ -258,25 +262,25 @@ export class Collsion
             var collsionRight = parseInt(foData.right);
             var collsionTop = parseInt(foData.top);
             var collsionBottom = parseInt(foData.bottom);
-            if(keyCode == 65 && playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+            if(playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey[0] = 65;
                 blockingKey[1] = enemies[i];
             }
-            else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+            else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 blockingKey[0] = 68;
                 blockingKey[1] = enemies[i];
             }
-            else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey[0] = 87;
                 blockingKey[1] = enemies[i];
             }
             // Obere Wand des Objekts
-            else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey[0] = 83;

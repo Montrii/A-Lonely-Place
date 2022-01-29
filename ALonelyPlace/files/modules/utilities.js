@@ -42,6 +42,17 @@ export function checkIfValidFriendlyObject(friendlyObject)
     return false;
 }
 
+export function getMobObjectClass(mob)
+{
+    const text = friendlyObject.className;
+    var split = text.split(" ");
+    if(split[0] == "" || split[0] == " " || split[0] == null || split[0] == typeof(undefined))
+    {
+        return "null";
+    }
+    return split[0];
+}
+
 export function detectBrowser()
 { 
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
