@@ -31,8 +31,7 @@ export class Animator
         var id = 1;
         const interval2 = setInterval(function() 
         {
-            skull.classList.toggle("skullAnimation1");
-            skull.classList.add(`skullAnimation${id}`);
+            skull.classList.toggle(`skullAnimation${id}`);
             if(id >= 4)
             {
                 id = 1;
@@ -41,7 +40,8 @@ export class Animator
             {
                 id++;
             }
-        }, 200);
+            skull.classList.add(`skullAnimation${id}`);
+        }, 1000);
     }
     playerStopAnimation()
     {
