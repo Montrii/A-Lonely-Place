@@ -19,7 +19,7 @@ export class Events
         this.player.syncPlayer();
         this.movement.playerMovement();
         this.animator.playerPlayAnimation();
-        console.writeToConsole(`<span style="color:#90EE90">Successfully </span>loaded the Map!`);
+        this.console.writeToConsole(`<span style="color:#90EE90">Successfully </span>loaded the Map!`);
     }
     onMapFailed(reason)
     {
