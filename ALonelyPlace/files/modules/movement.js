@@ -66,11 +66,6 @@ export class Movement
                         });
                     });
             }
-            else if(collsionKey[1] == 0)
-            {
-                alert("removed");
-                document.querySelector('.infoTextInteraction').remove();
-            }
             else if(collsionKey[1] != 0) // INTERACTION
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
