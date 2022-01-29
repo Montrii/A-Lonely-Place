@@ -132,7 +132,7 @@ export class MapHandler
                         }
                         else if (blocks[y] == "D" || blocks[y] == "d")
                         {
-                            $('#playground').append(`<div class="door" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="door friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
