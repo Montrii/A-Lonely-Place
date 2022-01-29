@@ -6,6 +6,7 @@ foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as
     if(is_dir($filename) == false)
     {
         $handle = fopen($filename, "r");
+        echo $filename . "<br>";
         while(!feof($handle))
         {
             $line = fgets($handle, 4096);
