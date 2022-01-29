@@ -27,18 +27,7 @@ async function main()
             }
         });
     });
-    $.ajax({
-        type: "GET",
-        url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getLinesOfCode.php',
-        data: {
-            'ajax':true
-        },
-        success: function(userData)
-        {
-            var con = new Console();
-            con.writeToConsole("This game was written in " + userData + " lines of Code!");
-        }
-    });
+
 
 }
 
