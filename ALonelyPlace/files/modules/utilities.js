@@ -192,7 +192,6 @@ export function defineRareityLevel()
 {
     var rareity = 0;
     var random = getRandomInt(100) + 1;
-    console.log(random);
     // RAREITY LEVELS
     // 4 -> legendary, 3 -> ultra, 2 -> epic, 1 -> rare, 0 -> common
     // legi -> 1%, ultra -> 3%, epic -> 8%, rare -> 30%, common -> 58% 
