@@ -201,7 +201,7 @@
             align-items: center; /* align items in Cross Axis */
             align-content: center; /* Extra space in Cross Axis */
             
-            background-image: url('../../inventory-atlas.png');
+            background-image: url('../../../../Assets/mainscreen/inventory-atlas.png');
             background-position: -229px -331px;
         }
         
