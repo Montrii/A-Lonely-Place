@@ -218,3 +218,30 @@ export function defineRareityLevel()
     }
     return rareity;
 }
+
+export function defineSpecialRareityLevel()
+{
+    var rareity = 0;
+    var random = getRandom(70) + 1;
+    if(random >= 1 && random <= 3)
+    {
+        rareity = 4;
+    }
+    else if(random >= 4 && random <= 8)
+    {
+        rareity = 3;
+    }
+    else if(random >= 9 && random <= 20)
+    {
+        rareity = 2;
+    }
+    else if(random >= 21 && random <= 40)
+    {
+        rareity = 1;
+    }
+    else if(random >= 41 && random <= 70)
+    {
+        rareity = 0;
+    }
+    return rareity;
+}

@@ -96,6 +96,12 @@
             position: absolute;
             content:url("../../../../Assets/items and trap_animation/chest/specialChest closed.png");
         }
+        .specialChestOpen
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../../../Assets/items and trap_animation/chest/specialChest open.png");
+        }
 
         /* WEAPON SLOTS AND RAREITES */
         .legendary
