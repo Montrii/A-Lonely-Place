@@ -67,7 +67,11 @@ export class Collsion
         }
         else 
         {
-            console.log(object);
+            if(keyDown == 69)
+            {
+                console.log(object);
+                alert("yo");
+            }
         } 
     }
     friendlyPlayerCollsion(keyCode)
