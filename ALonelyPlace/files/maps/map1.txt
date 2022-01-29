@@ -18,7 +18,4 @@ X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,
 X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
 X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
 X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
-X,O,O,O,O,O,O,o,o,o,o,o,X,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
-X,O,O,O,O,O,O,o,o,o,o,o,X
-X,O,O,O,O,O,O,o,o,o,o,o,X
-X,x,x,x,x,x,x,x,x,x,x,x,x
+X,x,x,x,x,x,x,x,x,x,x,x,X,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
