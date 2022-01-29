@@ -153,6 +153,8 @@
             left: 50%;
             position: fixed;
             top: 50px;
+            width: 250px;
+            height: 50px;
         }
         .infoText 
         {
