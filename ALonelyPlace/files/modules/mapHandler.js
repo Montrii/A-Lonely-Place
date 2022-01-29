@@ -149,6 +149,13 @@ export class MapHandler
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
+                        else if (blocks[y] == "SC" || blocks[y] == "sc")
+                        {
+                            $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="specialChest friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
+                            precentage = precentage + precentageToAdd;
+                            await Sleep(20);
+                        }
                         if(precentage >= 100)
                         {
                             precentage = 100;
