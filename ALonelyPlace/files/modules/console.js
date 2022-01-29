@@ -5,5 +5,6 @@ export class Console
     writeToConsole(string)
     {
         $('#console').append(`<p>${string}</p>`);
+        document.querySelector("#console p").scrollIntoView();
     }
 }
