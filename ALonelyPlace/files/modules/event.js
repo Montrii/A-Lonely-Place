@@ -123,7 +123,7 @@ export class Events
     }
     onDoorOpened()
     {
-
+        this.console.writeToConsole("Opened door!");
     }
     onPlayerHit()
     {

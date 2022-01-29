@@ -73,6 +73,12 @@
             position: absolute;
             content:url("../../../../Assets/dc-dngn/dngn_closed_door.png");
         }
+        .doorOpen
+        {
+            z-index: 1;
+            position: absolute;
+            content:url("../../../../Assets/dc-dngn/dngn_open_door.png");
+        }
         .chest
         {
             z-index: 1;
