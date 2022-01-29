@@ -147,7 +147,10 @@
         }
 
 
-
+        .infoTextInteraction
+        {
+            border: 2px solid yellow;
+        }
         .infoText 
         {
             background-color: rgba(49, 49, 49, 0.4);

@@ -70,7 +70,7 @@ export class Movement
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
                 // SHOWCASING E TO INTERACT MENU POPUP
-                $('body').append(`<div class="infoTextInteraction" style="position:absolute;width:100px;height:100px;top:${player.getPlayerOffSetTop()}px;left:${player.getPlayerOffSetLeft()+32}px;">
+                $('body').append(`<div class="infoTextInteraction" style="position:absolute;width:250px;height:75px;top:${50}px;left:${50}%;">
                 </div>`);
             }
             else 
