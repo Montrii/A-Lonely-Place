@@ -164,6 +164,13 @@ export class MapHandler
                             precentage = precentage + precentageToAdd;
                             await Sleep(20);
                         }
+                        else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
+                        {
+                            $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="mob vampireAnimation1" style="top:${top}px;left:${left}px;"></div>`);
+                            precentage = precentage + precentageToAdd;
+                            await Sleep(20);
+                        }
                         if(precentage >= 100)
                         {
                             precentage = 100;

@@ -131,6 +131,23 @@
         {
             content: url("../../../../Assets/monsters_idle/skull/v2/skull 4.png");
         }
+        .vampireAnimation1
+        {
+            content:url("../../../../Assets/monsters_idle/vampire/v2/vampire_v2_1_32.png");
+        }
+        .vampireAnimation2
+        {
+            content:url("../../../../Assets/monsters_idle/vampire/v2/vampire_v2_2_32.png");
+        }
+        .vampireAnimation3
+        {
+            content:url("../../../../Assets/monsters_idle/vampire/v2/vampire_v2_3_32.png");
+        }
+        .vampireAnimation4
+        {
+            content:url("../../../../Assets/monsters_idle/vampire/v2/vampire_v2_4_32.png");
+        }
+
 
         /* WEAPON SLOTS AND RAREITES */
         .legendary
