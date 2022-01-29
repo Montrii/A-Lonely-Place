@@ -18,7 +18,6 @@ export class Player
         {
             this.audio.play();
         }
-        console.log("played walk sound");
     }
     getPlayerObject()
     {

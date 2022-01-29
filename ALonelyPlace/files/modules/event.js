@@ -90,15 +90,15 @@ export class Events
     }
     async onEnterTrap()
     {
-        console.log("Entered Trap!");
+        this.console.writeToConsole("Entered Trap!");
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
         location.reload();
     }
     async onEnterStairs()
     {
-        console.log("ENTERED NEXT LEVEL");
+        this.console.writeToConsole("ENTERED NEXT LEVEL");
         await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
-        console.log("updating in database and reloading website!");
+        this.console.writeToConsole("updating in database and reloading website!");
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
             // Convert key-value pairs to JSON
             // https://stackoverflow.com/a/39284735/452587
