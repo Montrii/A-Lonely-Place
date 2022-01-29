@@ -96,9 +96,8 @@ export class Events
     }
     async onEnterStairs()
     {
-        this.console.writeToConsole("ENTERED NEXT LEVEL");
+        this.console.writeToConsole("Entering Next Level...");
         await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
-        this.console.writeToConsole("updating in database and reloading website!");
         $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
             // Convert key-value pairs to JSON
             // https://stackoverflow.com/a/39284735/452587
@@ -114,7 +113,6 @@ export class Events
                     },
                     success: function(userData)
                     {
-                        console.log(userData);
                         location.reload();
                     }
                 });
