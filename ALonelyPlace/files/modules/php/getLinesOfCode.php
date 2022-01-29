@@ -1,5 +1,5 @@
 <?php
-$path = realpath('../../../../');
+$path = realpath('../../../');
 $linecount = 0;
 foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as $filename)
 {
@@ -16,6 +16,7 @@ foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)) as
     }
 }
 echo $linecount; 
+?>
 
 
 

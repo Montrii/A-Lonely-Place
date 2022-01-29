@@ -1,5 +1,6 @@
 import { MapHandler } from "./modules/mapHandler.js";
 import { Github } from "./modules/github.js";
+import { Console } from "./modules/console.js";
 
 $(document).ready(main);
 
@@ -34,7 +35,8 @@ async function main()
         },
         success: function(userData)
         {
-            console.log(userData);
+            var con = new Console();
+            con.writeToConsole("This game was written in " + userData + " lines of Code!");
         }
     });
 
