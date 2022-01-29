@@ -31,9 +31,13 @@ export class Events
     async onChestOpened()
     {
         console.log("OPENING CHEST");
+        var interaction = document.querySelectorAll(".infoTextInteraction");
+        for(var i = 0; i < interaction.length; i++)
+        {
+            interaction[i].remove();
+        }
         await playAudio(new Audio("../../../Assets/sounds/chest_open.wav"));
         console.log("CALCULATE LOOT");
-        document.querySelectorAll(".infoTextInteraction").remove();
         $.ajax({
             type: "GET",
             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getItems.php',
