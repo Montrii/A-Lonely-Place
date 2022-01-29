@@ -153,6 +153,18 @@ export class Events
         else if(getMobType(enemy) == "vampire")
         {
             this.console.writeToConsole("I just hit a vampire!");
+            var health = parseInt(enemy.innerHTML);
+            if(enemy.innerHTML <= 1)
+            {
+                await playAudio(new Audio("../../../Assets/sounds/vamp_die.wav"));
+                enemy.remove();
+            }
+            else 
+            {
+                health = health - 1;
+                enemy.innerHTML = health;
+                await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
+            }
         }
     }
     async onEnterTrap()
