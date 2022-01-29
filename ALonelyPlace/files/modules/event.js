@@ -121,7 +121,7 @@ export class Events
             }
         });
     }
-    onDoorOpened()
+    async onDoorOpened()
     {
         this.console.writeToConsole("Opened door!");
         await playAudio(new Audio("../../../Assets/sounds/door_open.wav"));
