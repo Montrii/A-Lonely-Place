@@ -26,6 +26,15 @@ async function main()
             }
         });
     });
+    $.ajax({
+        type: "GET",
+        url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getLinesOfCode.php',
+        data: userData,
+        success: function(userData)
+        {
+            console.log(userData);
+        }
+    });
 
 }
 
