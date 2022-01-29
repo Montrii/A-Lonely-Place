@@ -151,7 +151,9 @@
         {
             width: 250px;
             height: 50px;
-            border: 2px solid red;
+            background-color: rgba(49, 49, 49, 0.4);
+            color: rgba(255, 255, 255, 0.55);
+            border: 2px solid rgba(77, 77, 77, 0.4);
             /* Center horizontally*/
             left: 50%;
             position: fixed;
