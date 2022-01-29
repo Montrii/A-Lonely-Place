@@ -57,7 +57,6 @@ export class backPack
         }
         else if(this.toggled == true)
         {
-            console.log(userData);
             this.toggled = false;
             document.querySelector('.inventory-table').remove();
         }
