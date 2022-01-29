@@ -405,7 +405,7 @@
         {
             width: 500px;
             height: 145px;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             color: white;
             position:absolute;
             top:0;
