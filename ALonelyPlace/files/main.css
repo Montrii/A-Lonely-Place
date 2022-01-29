@@ -151,10 +151,11 @@
         {
             width: 250px;
             height: 50px;
-            top: -275px;
-            border: 2px solid yellow;
-            position: relative;
-            margin: 0 auto;
+            border-color: red;
+            /* Center horizontally*/
+            left: 50%;
+            position: fixed;
+            top: 10%;
         }
         .infoText 
         {
@@ -166,11 +167,9 @@
         /* INVENTORY */
         .inventory-table
         {
-            width: 250px;
-            height: 50px;
-            top: -325px;
-            position: relative;
-            margin: 0 auto;
+            left: 50%;
+            position: fixed;
+            top: 0%;
             visibility: hidden;
         }
         .inventory-row
