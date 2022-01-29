@@ -48,8 +48,8 @@ export class Animator
         var id = 1;
         const interval = setInterval(function() 
         {
-            skull.classList.toggle("vapireAnimation1");
-            skull.classList.add(`vapireAnimation${id}`);
+            vampire.classList.toggle("vapireAnimation1");
+            vampire.classList.add(`vapireAnimation${id}`);
             if(id >= 4)
             {
                 id = 1;
