@@ -150,6 +150,8 @@
         .infoTextInteraction
         {
             border: 2px solid yellow;
+            margin: auto;
+            padding: 10px;
         }
         .infoText 
         {
