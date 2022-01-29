@@ -26,6 +26,23 @@ export class Animator
         }, 200);
         this.playerAnimationInterval = interval;
     }
+    vampirePlayAnimation(vampire)
+    {
+        var id = 1;
+        const interval3 = setInterval(function() 
+        {
+            vampire.classList.toggle(`vampireAnimation${id}`);
+            if(id >= 4)
+            {
+                id = 1;
+            }
+            else 
+            {
+                id++;
+            }
+            vampire.classList.add(`vampireAnimation${id}`);
+        }, 200);
+    }
     skullPlayAnimation(skull)
     {
         var id = 1;
@@ -41,7 +58,7 @@ export class Animator
                 id++;
             }
             skull.classList.add(`skullAnimation${id}`);
-        }, 1000);
+        }, 200);
     }
     playerStopAnimation()
     {
