@@ -36,7 +36,6 @@
             z-index: 1;
             position: absolute;
             content:url("../../../../Assets/dungeon/wall/catacombs_9.png");
-            border: 1px solid red;
         }
         .ground
         {
