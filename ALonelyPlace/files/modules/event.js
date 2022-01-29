@@ -133,7 +133,7 @@ export class Events
     }
     onMonsterHit(enemy)
     {
-
+        this.console.writeToConsole("Hit an monster!");
     }
     async onEnterTrap()
     {
