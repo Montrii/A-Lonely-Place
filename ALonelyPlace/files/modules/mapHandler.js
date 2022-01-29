@@ -174,6 +174,7 @@ export class MapHandler
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob vampireAnimation1 monster${mobcounter}" style="top:${top}px;left:${left}px;">1</div>`);
                             animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
+
                             precentage = precentage + precentageToAdd;
                             await Sleep(10)
                         }
@@ -189,6 +190,7 @@ export class MapHandler
                     top = top + 32;
                     left = 0;
                     y = 0;
+                    mobcounter = mobcounter + 1;
 
                 }
                 document.getElementById("progressbar").remove();
