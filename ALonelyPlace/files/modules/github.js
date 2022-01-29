@@ -18,6 +18,8 @@ export class Github
                     if(commitMessage == "test")
                     {
                         commitMessage = data[i].payload.commits[0].message;
+                        console.writeToConsole("A Lonely Place - A Browser Dungeoncrawler.");
+                        console.writeToConsole("© Montri 2021-2022");
                         console.writeToConsole("Running on Github Commit: " + commitMessage);
                     }
                 }
