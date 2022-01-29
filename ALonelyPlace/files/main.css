@@ -411,7 +411,10 @@
             top:0;
             right:0;
             overflow-y: scroll;
-            scrollbar-color: darkgrey;
+        }
+        ::-webkit-scrollbar
+        {
+            background-color: darkgrey;
         }
 
         
