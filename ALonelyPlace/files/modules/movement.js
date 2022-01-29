@@ -66,6 +66,11 @@ export class Movement
                         });
                     });
             }
+            else if(collsionKey[1] == 0)
+            {
+                alert("removed");
+                document.querySelector('.infoTextInteraction').remove();
+            }
             else if(collsionKey[1] != 0) // INTERACTION
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
@@ -73,11 +78,6 @@ export class Movement
                 // SHOWCASING E TO INTERACT MENU POPUP
                 $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
                 </div>`);
-            }
-            else if(collsionKey[1] == 0)
-            {
-                alert("removed");
-                document.querySelector('.infoTextInteraction').remove();
             }
             console.log("INTERACTIVE OBJECT : " + collsionKey[1] + " KEY BLOCKED: " + collsionKey[0]);
         });
