@@ -107,6 +107,28 @@
             position: absolute;
             content:url("../../../../Assets/items and trap_animation/chest/specialChest open.png");
         }
+        .mob
+        {
+            border: 2px solid red;
+        }
+
+        /* MOB MODES */
+        .skullAnimation1
+        {
+            content: url("../../../../Assets/monsters_idle/skull/v2/skull 1.png");
+        }
+        .skullAnimation2
+        {
+            content: url("../../../../Assets/monsters_idle/skull/v2/skull 2.png");
+        }
+        .skullAnimation3
+        {
+            content: url("../../../../Assets/monsters_idle/skull/v2/skull 3.png");
+        }
+        .skullAnimation4
+        {
+            content: url("../../../../Assets/monsters_idle/skull/v2/skull 4.png");
+        }
 
         /* WEAPON SLOTS AND RAREITES */
         .legendary
