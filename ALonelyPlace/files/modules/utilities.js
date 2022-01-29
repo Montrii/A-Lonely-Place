@@ -222,7 +222,7 @@ export function defineRareityLevel()
 export function defineSpecialRareityLevel()
 {
     var rareity = 0;
-    var random = getRandom(70) + 1;
+    var random = getRandomInt(70) + 1;
     if(random >= 1 && random <= 3)
     {
         rareity = 4;
