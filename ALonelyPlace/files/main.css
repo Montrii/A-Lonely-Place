@@ -412,9 +412,14 @@
             right:0;
             overflow-y: scroll;
         }
+        /* CONSOLE BAR SCROLLBAR DESIGN */
         ::-webkit-scrollbar
         {
             background-color: rgba(49, 49, 49, 0.4);
+        }
+        ::-webkit-scrollbar-button, ::-webkit-scrollbar-thumb, ::-webkit-resizer, ::-webkit-scrollbar-track-piec
+        {
+            background-color: rgba(255, 255, 255, 0.55);
         }
 
         
