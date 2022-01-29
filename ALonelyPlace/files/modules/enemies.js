@@ -1,9 +1,11 @@
 export class Enemy
 {
-    name = 0;
-    constructor(name)
+    constructor()
     {
-        this.name = name;
+    }
+    getMobs()
+    {
+        return document.querySelectorAll(".mob");
     }
 
 }
