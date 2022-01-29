@@ -43,6 +43,23 @@ export class Animator
             vampire.classList.add(`vampireAnimation${id}`);
         }, 200);
     }
+    priestPlayAnimation(priest)
+    {
+        var id = 1;
+        const interval3 = setInterval(function() 
+        {
+            priest.classList.toggle(`priestAnimation${id}`);
+            if(id >= 4)
+            {
+                id = 1;
+            }
+            else 
+            {
+                id++;
+            }
+            priest.classList.add(`priestAnimation${id}`);
+        }, 200);
+    }
     skullPlayAnimation(skull)
     {
         var id = 1;

@@ -173,8 +173,17 @@ export class MapHandler
                         else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
-                            $('#playground').append(`<div class="mob monster${mobcounter} vampire vampireAnimation1" style="top:${top}px;left:${left}px;">1</div>`);
+                            $('#playground').append(`<div class="mob monster${mobcounter} vampire vampireAnimation1" style="top:${top}px;left:${left}px;">3</div>`);
                             animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
+                            mobcounter = mobcounter + 1;
+                            precentage = precentage + precentageToAdd;
+                            await Sleep(15)
+                        }
+                        else if (blocks[y] == "MP" || blocks[y] == "MP") /* Monster: Priest */
+                        {
+                            $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
+                            $('#playground').append(`<div class="mob monster${mobcounter} priest priestAnimation1" style="top:${top}px;left:${left}px;">3</div>`);
+                            animation.priestPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)

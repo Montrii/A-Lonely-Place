@@ -133,6 +133,11 @@ export class Events
     }
     async onMonsterHit(enemy)
     {
+        var interaction = document.querySelectorAll(".infoTextInteraction");
+        for(var i = 0; i < interaction.length; i++)
+        {
+            interaction[i].remove();
+        }
         playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         if(getMobType(enemy) == "skull")
         {
@@ -164,6 +169,22 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
+            }
+        }
+        else if(getMobType(enemy) == "priest")
+        {
+            this.console.writeToConsole("I just hit a priest!");
+            var health = parseInt(enemy.innerHTML);
+            if(enemy.innerHTML <= 1)
+            {
+                await playAudio(new Audio("../../../Assets/sounds/priest_die.wav"));
+                enemy.remove();
+            }
+            else 
+            {
+                health = health - 1;
+                enemy.innerHTML = health;
+                await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
             }
         }
     }

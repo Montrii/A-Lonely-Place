@@ -147,6 +147,22 @@
         {
             content:url("../../../../Assets/monsters_idle/vampire/v2/vampire_v2_4_32.png");
         }
+        .priestAnimation1
+        {
+            content:url("../../../../Assets/monsters_idle/priest/priest 1.png");
+        }
+        .priestAnimation2
+        {
+            content:url("../../../../Assets/monsters_idle/priest/priest 2.png");
+        }
+        .priestAnimation3
+        {
+            content:url("../../../../Assets/monsters_idle/priest/priest 3.png");
+        }
+        .priestAnimation4
+        {
+            content:url("../../../../Assets/monsters_idle/priest/priest 4.png");
+        }
 
 
         /* WEAPON SLOTS AND RAREITES */
