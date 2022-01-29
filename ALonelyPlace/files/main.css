@@ -151,7 +151,7 @@
         {
             width: 250px;
             height: 50px;
-            top: -300px;
+            top: -275px;
             border: 2px solid yellow;
             position: relative;
             margin: 0 auto;
@@ -166,9 +166,12 @@
         /* INVENTORY */
         .inventory-table
         {
-            left: 50%;
-            position: fixed;
-            top: 0%;
+            width: 250px;
+            height: 50px;
+            top: -275px;
+            border: 2px solid yellow;
+            position: relative;
+            margin: 0 auto;
             visibility: hidden;
         }
         .inventory-row
