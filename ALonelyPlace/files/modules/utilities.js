@@ -44,7 +44,7 @@ export function checkIfValidFriendlyObject(friendlyObject)
 
 export function getMobObjectClass(mob)
 {
-    const text = friendlyObject.className;
+    const text = mob.className;
     var split = text.split(" ");
     if(split[0] == "" || split[0] == " " || split[0] == null || split[0] == typeof(undefined))
     {
