@@ -69,7 +69,7 @@ export class Events
                             success: function(userData)
                             {
                                 console = new Console();
-                                if(userData != "")
+                                if(userData)
                                 {
                                     console.writeToConsole(userData);
                                 }
