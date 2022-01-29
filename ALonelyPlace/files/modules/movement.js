@@ -16,7 +16,7 @@ export class Movement
     {
         var position = 0;
         player.createPlayerWalkSound();
-        new audio = new Audio("../../../Assets/sounds/justin game 44.wav");
+        var audio = new Audio("../../../Assets/sounds/justin game 44.wav");
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
