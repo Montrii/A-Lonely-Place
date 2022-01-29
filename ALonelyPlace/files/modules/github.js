@@ -1,3 +1,5 @@
+import { Console } from "./console.js";
+var console = new Console();
 export class Github
 {
     constructor()
@@ -16,7 +18,7 @@ export class Github
                     if(commitMessage == "test")
                     {
                         commitMessage = data[i].payload.commits[0].message;
-                        console.log("Running on Github Commit: " + commitMessage);
+                        console.writeToConsole("Running on Github Commit: " + commitMessage);
                     }
                 }
             }
