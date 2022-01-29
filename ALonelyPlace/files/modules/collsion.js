@@ -40,6 +40,7 @@ export class Collsion
             $('body').append(`<div class="infoTextInteraction"><p>${content}</p>
             </div>`);
         }
+        alert(object);
         if(checkIfValidFriendlyObject(getFriendlyObjectClass(object)) == true)
         {
             if(keyDown == 69 && (getFriendlyObjectClass(object) == "chest")) // OPEN THE CHEST
@@ -63,11 +64,6 @@ export class Collsion
                 object.classList.toggle("door");
                 object.classList.add("doorOpen");
                 events.onDoorOpened();
-            }
-            else if(keyDown == 69)
-            {
-                console.log(object);
-                alert("HIT MONSTER");
             }
         }
     }
