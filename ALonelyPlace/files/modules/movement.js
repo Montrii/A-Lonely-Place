@@ -70,7 +70,6 @@ export class Movement
             {
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
             }
-            console.log("INTERACTIVE OBJECT : " + collsionKey[1] + " KEY BLOCKED: " + collsionKey[0]);
         });
     }
 }
