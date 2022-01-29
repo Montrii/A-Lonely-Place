@@ -41,7 +41,16 @@ export function checkIfValidFriendlyObject(friendlyObject)
     }
     return false;
 }
-
+export function getMobType(mob)
+{
+    const text = mob.className;
+    var split = text.split(" ");
+    if(split[2] == "" || split[2] == " " || split[2] == null || split[2] == typeof(undefined))
+    {
+        return "null";
+    }
+    return split[2];
+}
 export function getMobObjectClass(mob)
 {
     const text = mob.className;

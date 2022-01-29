@@ -1,7 +1,7 @@
 import { Player } from "./player.js";
 import { Movement } from "./movement.js";
 import { Animator } from "./animator.js";
-import { determineItem, defineRareityLevel, defineSpecialRareityLevel } from "./utilities.js";
+import { determineItem, defineRareityLevel, defineSpecialRareityLevel, getMobType } from "./utilities.js";
 import { Console } from "./console.js";
 
 
@@ -133,7 +133,14 @@ export class Events
     }
     onMonsterHit(enemy)
     {
-        this.console.writeToConsole("Hit an monster!");
+        if(getMobType(enemy) == "skull")
+        {
+            this.console.writeToConsole("I just hit a skull!");
+        }
+        else if(getMobType(enemy) == "vampire")
+        {
+            this.console.writeToConsole("I just hit a vampire!");
+        }
     }
     async onEnterTrap()
     {
