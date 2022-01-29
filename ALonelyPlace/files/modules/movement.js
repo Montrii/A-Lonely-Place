@@ -2,6 +2,7 @@ import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
 import { phpCommunicater } from "./phpCommunicater.js";
 import { backPack } from "./backPack.js";
+import { playBackGroundMusic } from "./utilities.js";
 var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
@@ -20,6 +21,7 @@ export class Movement
         $(document).keydown(function() {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
+            playBackGroundMusic(audio);
             var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
