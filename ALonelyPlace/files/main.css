@@ -401,4 +401,12 @@
             background-position: -442px -34px;
         }
 
+        #console
+        {
+            left: 100%;
+            width: 500px;
+            height: 150px;
+            border: 2px solid white;
+        }
+
         
