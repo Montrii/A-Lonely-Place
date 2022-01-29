@@ -131,11 +131,14 @@ export class Events
     {
 
     }
-    onMonsterHit(enemy)
+    async onMonsterHit(enemy)
     {
+        await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         if(getMobType(enemy) == "skull")
         {
             this.console.writeToConsole("I just hit a skull!");
+            await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
+            alert(enemy.innerHTML);
         }
         else if(getMobType(enemy) == "vampire")
         {
