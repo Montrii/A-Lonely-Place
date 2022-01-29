@@ -23,8 +23,7 @@ export class Events
     }
     onMapFailed(reason)
     {
-        console.log("Map failed to load.");
-        alert(reason);
+        this.console.writeToConsole(`Map <span style="color:#ff0033">failed </span>to load. Reason: \n ${reason}`);
     }
     onCollsionGapObject()
     {
