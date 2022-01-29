@@ -1,4 +1,4 @@
 <?php
 
 $dir = "../../../";
-echo scandir($dir);
+echo print_r(scandir($dir));
