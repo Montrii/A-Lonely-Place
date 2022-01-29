@@ -414,7 +414,7 @@
         }
         ::-webkit-scrollbar
         {
-            background-color: darkgrey;
+            background-color: rgba(49, 49, 49, 0.4);
         }
 
         
