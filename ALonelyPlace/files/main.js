@@ -1,8 +1,10 @@
 import { MapHandler } from "./modules/mapHandler.js";
 import { Github } from "./modules/github.js";
+import { Console } from "./modules/console.js";
 $(document).ready(main);
 
 
+var console = new Console();
 async function main()
 {
     var mapHandler = new MapHandler();
@@ -21,9 +23,11 @@ async function main()
             success: async function(userData)
             {
                 await mapHandler.loadMap(parseInt(userData));
+                console.writeToConsole("Finished loading Map: " + userData);
             }
         });
     });
+
 }
 
 
