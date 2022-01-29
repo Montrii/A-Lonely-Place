@@ -55,7 +55,6 @@ export class Movement
                         pair = pair.split('=');
                         return obj[pair[0]] = pair[1], obj;
                     }, {});
-                    console.log(userData);
                         $.ajax({
                             type: "GET",
                             url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/getPlayerItems.php',
