@@ -403,10 +403,12 @@
 
         #console
         {
-            left: 100%;
             width: 500px;
             height: 150px;
             border: 2px solid white;
+            position:absolute;
+            top:0;
+            right:0;
         }
 
         
