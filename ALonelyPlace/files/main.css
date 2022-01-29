@@ -411,7 +411,7 @@
             top:0;
             right:0;
             overflow-y: scroll;
-            scrollbar-color: rgba(49, 49, 49, 0.4), rgba(255, 255, 255, 0.55);
+            scrollbar-color: darkgrey;
         }
 
         
