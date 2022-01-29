@@ -107,13 +107,13 @@ export class MapHandler
                         {
                             $('#playground').append(`<div class="object" style="top:${top}px;left:${left}px"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "O" || blocks[y] == "o")
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "_")
                         {
@@ -121,7 +121,7 @@ export class MapHandler
                             $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="gap friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "P" || blocks[y] == "p")
                         {
@@ -129,33 +129,33 @@ export class MapHandler
                             document.getElementById("player").style.top = top+contains.top+36+"px";
                             document.getElementById("player").style.left = left+contains.left+"px";
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "D" || blocks[y] == "d")
                         {
                             $('#playground').append(`<div class="door friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "E" || blocks[y] == "e")
                         {
                             $('#playground').append(`<div class="exit friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "C" || blocks[y] == "c")
                         {
                             $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="chest friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         else if (blocks[y] == "SC" || blocks[y] == "sc")
                         {
                             $('#playground').append(`<div class="groundOnlyTexture" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="specialChest friendlyObject" style="top:${top}px;left:${left}px;"></div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         /* MONSTERS */
                         else if (blocks[y] == "MS" || blocks[y] == "MS") /* Monster: Skull */
@@ -163,14 +163,14 @@ export class MapHandler
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10);
                         }
                         else if (blocks[y] == "MV" || blocks[y] == "MV") /* Monster: Vampire */
                         {
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob vampireAnimation1" style="top:${top}px;left:${left}px;">1</div>`);
                             precentage = precentage + precentageToAdd;
-                            await Sleep(20);
+                            await Sleep(10)
                         }
                         if(precentage >= 100)
                         {
