@@ -114,27 +114,18 @@ export class Movement
            }
             if(getMobType(mob) == "skull")
             {
-                if(skullWalk.paused == false)
-                {
-                    skullWalk.play();
-                    alert("playing this walk sound")
-                }
+                skullWalk.play();
+                alert("playing this walk sound")
             }
             else if(getMobType(mob) == "vampire")
             {
-                if(vampWalk.paused == false)
-                {
-                    vampWalk.play();
-                    alert("playing this walk2 sound")
-                }
+                vampWalk.play();
+                alert("playing this walk2 sound")
             }
             else if(getMobType(mob) == "priest")
             {
-                if(priestWalk.paused == false)
-                {
-                    priestWalk.play();
-                    alert("playing this walk3 sound")
-                }
+                priestWalk.play();
+                alert("playing this walk3 sound")
             }
         }, delay);
     }
