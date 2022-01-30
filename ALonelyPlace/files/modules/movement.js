@@ -116,6 +116,7 @@ export class Movement
            }
            if(this.interacted == true)
            {
+               alert("yes");
                 if(getMobType(mob) == "skull")
                 {
                     skullWalk.play();
