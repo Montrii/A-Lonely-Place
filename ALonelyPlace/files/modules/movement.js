@@ -7,9 +7,9 @@ var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
 var back = new backPack();
+var interacted = false;
 export class Movement
 {
-    interacted = false;
     constructor()
     {
 
@@ -23,7 +23,7 @@ export class Movement
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
             playBackGroundMusic(audio);
-            this.interacted = true;
+            interacted = true;
             var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
@@ -114,9 +114,8 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
-           if(this.interacted == true)
+           if(interacted == true)
            {
-               alert("yes");
                 if(getMobType(mob) == "skull")
                 {
                     skullWalk.play();
@@ -133,6 +132,7 @@ export class Movement
                     alert("playing this walk3 sound")
                 }
            }
+                
 
         }, delay);
     }
