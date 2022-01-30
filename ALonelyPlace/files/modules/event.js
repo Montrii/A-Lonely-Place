@@ -11,6 +11,7 @@ export class Events
     movement = new Movement();
     animator = new Animator();
     console = new Console();
+    enteringNextLevel = false;
     constructor()
     {
     }
@@ -241,33 +242,42 @@ export class Events
     }
     async onEnterTrap()
     {
-        this.console.writeToConsole("Entered Trap!");
-        await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
-        location.reload();
+        if(enteringNextLevel == false)
+        {
+            enteringNextLevel = true;
+            this.console.writeToConsole("Entered Trap!");
+            await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
+            location.reload();
+        }
+
     }
     async onEnterStairs()
     {
-        this.console.writeToConsole("Entering Next Level...");
-        await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
-        $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
-            // Convert key-value pairs to JSON
-            // https://stackoverflow.com/a/39284735/452587
-            userData = userData.trim().split('\n').reduce(function(obj, pair) {
-                pair = pair.split('=');
-                return obj[pair[0]] = pair[1], obj;
-            }, {});
-                $.ajax({
-                    type: "GET",
-                    url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/enterNextLevel.php',
-                    data: {
-                        'ip': userData['ip']
-                    },
-                    success: function(userData)
-                    {
-                        location.reload();
-                    }
+        if(enteringNextLevel == false)
+        {
+            this.enteringNextLevel = true;
+            this.console.writeToConsole("Entering Next Level...");
+            await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
+            $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
+                // Convert key-value pairs to JSON
+                // https://stackoverflow.com/a/39284735/452587
+                userData = userData.trim().split('\n').reduce(function(obj, pair) {
+                    pair = pair.split('=');
+                    return obj[pair[0]] = pair[1], obj;
+                }, {});
+                    $.ajax({
+                        type: "GET",
+                        url: 'https://montriscript.com/projects/ALonelyPlace/ALonelyPlace/files/modules/php/enterNextLevel.php',
+                        data: {
+                            'ip': userData['ip']
+                        },
+                        success: function(userData)
+                        {
+                            location.reload();
+                        }
+                    });
                 });
-            });
+        }
     }
 }
 

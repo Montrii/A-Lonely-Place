@@ -109,9 +109,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 65;
-                        events.onEnterTrap();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterTrap();
                         return;
                     }
                     // Linke Wand des Objekts
@@ -119,9 +120,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 68;
-                        events.onEnterTrap();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterTrap();
                         return;
                     }
                     // Untere Wand des Objekts
@@ -129,9 +131,10 @@ export class Collsion
                     {
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 87;
-                        events.onEnterTrap();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterTrap();
                         return;
                     }
                     // Obere Wand des Objekts
@@ -139,9 +142,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
-                        events.onEnterTrap();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterTrap();
                         return;
                     }
                 }
@@ -151,9 +155,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 65;
-                        events.onEnterStairs();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterStairs();
                         return;
                     }
                         // Linke Wand des Objekts
@@ -161,9 +166,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 68;
-                        events.onEnterStairs();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterStairs();
                         return;
                     }
                         // Untere Wand des Objekts
@@ -171,9 +177,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 87;
-                        events.onEnterStairs();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterStairs();
                         return;
                     }
                         // Obere Wand des Objekts
@@ -181,9 +188,10 @@ export class Collsion
                     {
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
-                        events.onEnterStairs();
+                        
                         event.stopImmediatePropagation();
                         event.cancelBubble = true;
+                        events.onEnterStairs();
                         return;
                     }
                 }
