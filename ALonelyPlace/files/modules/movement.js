@@ -118,24 +118,16 @@ export class Movement
            {
                 if(getMobType(mob) == "skull")
                 {
-                    if(skullWalk.paused == false)
-                    {
-                        skullWalk.play();
-                    }
+                    skullWalk.play();
+                    alert(skullWalk.duration);
                 }
                 else if(getMobType(mob) == "vampire")
                 {
-                    if(vampWalk.paused == false)
-                    {
-                        vampWalk.play();
-                    }
+                    vampWalk.play();
                 }
                 else if(getMobType(mob) == "priest")
                 {
-                    if(priestWalk.paused == false)
-                    {
-                        priestWalk.play();
-                    }
+                    priestWalk.play();
                 }
            }
                 
