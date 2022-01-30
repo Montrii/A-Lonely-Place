@@ -218,7 +218,8 @@
         #winningScreen
         {
             text-align: center;
-            font-size: 30;
+            font-size: 30px;
+            padding: 50px 0 50px;
             color:white;
         }
 
