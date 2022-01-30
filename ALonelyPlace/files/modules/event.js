@@ -242,9 +242,9 @@ export class Events
     }
     async onEnterTrap()
     {
-        if(enteringNextLevel == false)
+        if(this.enteringNextLevel == false)
         {
-            enteringNextLevel = true;
+            this.enteringNextLevel = true;
             this.console.writeToConsole("Entered Trap!");
             await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
             location.reload();
@@ -253,7 +253,7 @@ export class Events
     }
     async onEnterStairs()
     {
-        if(enteringNextLevel == false)
+        if(this.enteringNextLevel == false)
         {
             this.enteringNextLevel = true;
             this.console.writeToConsole("Entering Next Level...");
