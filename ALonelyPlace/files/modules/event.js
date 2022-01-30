@@ -263,6 +263,7 @@ export class Events
     onBeWinner()
     {
         this.console.writeToConsole("NO MORE MAPS; YOU ESCAPED");
+        document.getElementById("progressbar").remove();
         $('body').append(`<p id="winningScreen">You won!</p>`);
     }
     async onEnterStairs(event)
