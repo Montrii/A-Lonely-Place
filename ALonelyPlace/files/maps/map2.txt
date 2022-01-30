@@ -9,12 +9,12 @@ X,_,O,o,O,O,O,o,o,o,o,x,x,o,o,o,o,o,o,o,x
 X,O,O,O,O,O,O,O,O,O,O,O,o,o,o,o,o,o,o,o,x
 X,O,O,O,o,O,O,MP,O,O,_,o,o,o,o,o,o,o,o,_,x
 X,O,O,_,o,O,o,O,O,O,O,O,o,o,o,o,o,o,o,o,o,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
-X,O,O,O,O,O,O,O,O,O,O,O,o,x,x,x,x,x,x,x,xo,o,o,o,o,o,o,o,o,o,x,o,o,o,o,o,x
+X,O,O,O,O,O,O,O,O,O,O,O,o,x,x,x,x,x,x,x,x,o,o,o,o,o,o,o,o,o,x,o,o,o,o,o,x
 X,P,O,O,O,O,O,o,o,o,o,o,X,o,o,o,o,o,o,o,o,o,o,_,o,o,o,_,o,o,d,o,MP,o,o,E,x
 X,O,O,MS,O,O,O,_,o,o,o,o,X,o,o,o,o,o,o,MV,o,o,o,o,o,o,o,o,o,d,o,MP,o,o,o,x
 X,O,O,O,O,O,O,o,o,o,o,o,X,SC,o,o,o,o,o,o,o,o,o,o,o,_,o,o,o,x,o,o,o,o,o,x
-X,O,O,O,O,O,O,o,o,o,o,o,X,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
-X,_,O,O,O,O,O,o,o,o,o,o,o,_,o,o,o,o,o,o,o,o,x
+X,O,O,O,O,O,O,o,o,o,o,o,X,x,x,x,x,x,x,x,d,d,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+X,_,O,O,O,O,O,o,o,o,o,o,o,_,o,o,o,o,o,o,MS,MS,x
 X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,_,o,o,o,o,x
 X,O,O,O,_,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
 X,C,O,O,_,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
