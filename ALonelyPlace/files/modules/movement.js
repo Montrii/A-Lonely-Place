@@ -109,6 +109,6 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
-        }, 200);
+        }, 50);
     }
 }
