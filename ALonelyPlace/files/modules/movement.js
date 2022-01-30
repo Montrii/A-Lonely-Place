@@ -118,18 +118,18 @@ export class Movement
            {
                 if(getMobType(mob) == "skull")
                 {
+                    skullWalk.volume = 0.3;
                     skullWalk.play();
-                    alert("playing this walk sound")
                 }
                 else if(getMobType(mob) == "vampire")
                 {
+                    vampWalk.volume = 0.3;
                     vampWalk.play();
-                    alert("playing this walk2 sound")
                 }
                 else if(getMobType(mob) == "priest")
                 {
+                    priestWalk.volume = 0.3;
                     priestWalk.play();
-                    alert("playing this walk3 sound")
                 }
            }
                 
