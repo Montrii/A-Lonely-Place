@@ -110,7 +110,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 65;
                         events.onEnterTrap();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                     // Linke Wand des Objekts
                     else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
@@ -118,7 +120,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 68;
                         events.onEnterTrap();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                     // Untere Wand des Objekts
                     else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
@@ -126,7 +130,9 @@ export class Collsion
                         // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 87;
                         events.onEnterTrap();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                     // Obere Wand des Objekts
                     else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
@@ -134,7 +140,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
                         events.onEnterTrap();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "exit")
@@ -144,7 +152,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 65;
                         events.onEnterStairs();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                         // Linke Wand des Objekts
                     else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
@@ -152,7 +162,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 68;
                         events.onEnterStairs();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                         // Untere Wand des Objekts
                     else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
@@ -160,7 +172,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 87;
                         events.onEnterStairs();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                         // Obere Wand des Objekts
                     else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
@@ -168,7 +182,9 @@ export class Collsion
                             // Richtung Key wird returnt und von movement.js geblockt.
                         blockingKey[0] = 83;
                         events.onEnterStairs();
-                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        event.cancelBubble = true;
+                        return;
                     }
                 }
                 else if(getFriendlyObjectClass(friendlyObjects[i]) == "chest")
