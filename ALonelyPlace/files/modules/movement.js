@@ -23,7 +23,7 @@ export class Movement
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
             playBackGroundMusic(audio);
-            interacted = true;
+            this.interacted = true;
             var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
@@ -114,7 +114,7 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
-           if(interacted == true)
+           if(this.interacted == true)
            {
                 if(getMobType(mob) == "skull")
                 {
