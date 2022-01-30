@@ -77,6 +77,9 @@ export class Movement
     }
     mobMovement(mob, delay)
     {
+        var skullWalk = new Audio("../../../Assets/sounds/skull_walk.wav");
+        var priestWalk = new Audio("../../../Assets/sounds/priest_walk.wav");
+        var vampWalk = new Audio("../../../Assets/sounds/vamp_walk.wav");
         const interval3 = setInterval(function() 
         {
            var top = parseInt(mob.style.top);
@@ -109,6 +112,30 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
+            if(getMobType(mob) == "skull")
+            {
+                if(skullWalk.paused == false)
+                {
+                    skullWalk.volume = 0.3;
+                    skullWalk.play();
+                }
+            }
+            else if(getMobType(mob) == "vampire")
+            {
+                if(vampWalk.paused == false)
+                {
+                    vampWalk.volume = 0.3;
+                    vampWalk.play();
+                }
+            }
+            else if(getMobType(mob) == "priest")
+            {
+                if(priestWalk.paused == false)
+                {
+                    priestWalk.volume = 0.3;
+                    priestWalk.play();
+                }
+            }
         }, delay);
     }
 }
