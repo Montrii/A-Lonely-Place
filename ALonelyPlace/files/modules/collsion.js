@@ -364,6 +364,46 @@ export class Collsion
         var playerBottom = parseInt(mobSides.bottom);
         var playerLeft = parseInt(mobSides.left);
         var playerRight = parseInt(mobSides.right);
+        var enemies = enemy.getMobs();
+        for(var i = 0; i < enemies.length; i++)
+        {
+            collisionData = enemies[i].getBoundingClientRect();
+
+            // Konvertiere Informationen in tatsächliche ints 
+            var collsionLeft = parseInt(collisionData.left);
+
+            var collsionRight = parseInt(collisionData.right);
+
+            var collsionTop = parseInt(collisionData.top);
+
+            var collsionBottom = parseInt(collisionData.bottom);
+            // ÜBERPRÜFUNGEN SIND FOLGEND AUFGEBAUT:
+            
+            // Rechte Wand des Objekts
+            if(playerLeft >= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Linke Wand des Objekts
+            else if(playerRight <= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Untere Wand des Objekts
+            else if(playerTop >= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Obere Wand des Objekts
+            else if(playerBottom <= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+        }
         for(i = 0; i < elements.length; i++)
         {
             // Erhalte Informationen über top, bottom, right and left Koordinaten von Objekt
@@ -380,25 +420,25 @@ export class Collsion
             // ÜBERPRÜFUNGEN SIND FOLGEND AUFGEBAUT:
             
             // Rechte Wand des Objekts
-            if(playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+            if(playerLeft >= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
             }
             // Linke Wand des Objekts
-            else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+            else if(playerRight <= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
             }
             // Untere Wand des Objekts
-            else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerTop >= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
             }
             // Obere Wand des Objekts
-            else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerBottom <= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
