@@ -8,6 +8,7 @@ $(document).ready(main);
 async function main()
 {
     var mapHandler = new MapHandler();
+    // OFFICIAL VERSION 1.0.0
     var github = new Github();
 
     github.displayLatestUpdate("https://api.github.com/users/Montrii/events");
