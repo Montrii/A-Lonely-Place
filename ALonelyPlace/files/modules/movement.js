@@ -93,54 +93,55 @@ export class Movement
            var random = getRandomInt(4) + 1;
            var returns = collsion.mobCollision(mob);
            var value = 0;
-           console.log(document.querySelector(`.${getMobId(mob)}`));
+           if(document.querySelector(`.${getMobId(mob)}`) != null)
+           {
+                // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
+                if(interacted == true)
+                {
+                        if(getMobType(mob) == "skull")
+                        {
+                            await playAudio(skullWalk);
+                            timer = timer + skullWalkDuration;
+                        }
+                        else if(getMobType(mob) == "vampire")
+                        {
+                            await playAudio(vampWalk);
+                            timer = timer + vampWalkDuration;
+                        }
+                        else if(getMobType(mob) == "priest")
+                        {
+                            await playAudio(priestWalk);
+                            timer = timer + priestWalkDuration;
+                        }
+                }
+                if(random == 1 && returns[1] != random) // walk to the left
+                {
+                    value = 2;
+                    value = value * -1;
+                    mob.style.left = left+value+"px";
+
+                }
+                else if(random == 2 && returns[1] != random) // walk to the right
+                {
+                        value = 2;
+                        mob.style.left = left+value+"px";
+
+                }
+                else if(random == 3 && returns[1] != random) // walk to above
+                {
+                        value = 2;
+                        value = value * -1;
+                        mob.style.top = top+value+"px";
+
+                }
+                else if(random == 4 && returns[1] != random)
+                {
+                        value = 2;
+                        mob.style.top = top+value+"px";
+                }
+           }
            
-           // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
-           /*
-           if(interacted == true)
-           {
-                if(getMobType(mob) == "skull")
-                {
-                    await playAudio(skullWalk);
-                    timer = timer + skullWalkDuration;
-                }
-                else if(getMobType(mob) == "vampire")
-                {
-                    await playAudio(vampWalk);
-                    timer = timer + vampWalkDuration;
-                }
-                else if(getMobType(mob) == "priest")
-                {
-                    await playAudio(priestWalk);
-                    timer = timer + priestWalkDuration;
-                }
-           }
-           */
-           if(random == 1 && returns[1] != random) // walk to the left
-           {
-               value = 2;
-               value = value * -1;
-               mob.style.left = left+value+"px";
 
-           }
-           else if(random == 2 && returns[1] != random) // walk to the right
-           {
-                value = 2;
-                mob.style.left = left+value+"px";
-
-           }
-           else if(random == 3 && returns[1] != random) // walk to above
-           {
-                value = 2;
-                value = value * -1;
-                mob.style.top = top+value+"px";
-
-           }
-           else if(random == 4 && returns[1] != random)
-           {
-                value = 2;
-                mob.style.top = top+value+"px";
-           }
                 
 
         }, timer);
