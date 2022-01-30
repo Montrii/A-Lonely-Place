@@ -170,6 +170,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
                 await playAudio(new Audio("../../../Assets/sounds/skull_swing.wav"));
+                // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
                 
                 if(randomHitChance == 1 || randomHitChance == 2)
@@ -197,6 +198,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
                 await playAudio(new Audio("../../../Assets/sounds/vamp_swing.wav"));
+                // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
                 
                 if(randomHitChance == 1 || randomHitChance == 2)
@@ -224,6 +226,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
                 await playAudio(new Audio("../../../Assets/sounds/priest_swing.wav"));
+                // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
                 if(randomHitChance == 1 || randomHitChance == 2)
                 {
