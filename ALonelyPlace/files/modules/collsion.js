@@ -366,6 +366,43 @@ export class Collsion
         var playerRight = parseInt(mobSides.right);
         var enemies = enemy.getMobs();
         var friendlyObjects = friendlyObject.getFriendlyObjects();
+        var playerCollsion = player.getPlayerSides();
+        var pTop = parseInt(playerCollsion.top);
+        var pBottom = parseInt(playerCollsion.bottom);
+        var pLeft = parseInt(playerCollsion.left);
+        var pRight = parseInt(playerCollsion.right);
+
+        if(playerLeft-2 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+        {
+            // Richtung Key wird returnt und von movement.js geblockt.
+            returnObjects[0] = true;
+            returnObjects[1] = 1;
+            alert("MOB HIT PLAYER");
+        }
+            // Linke Wand des Objekts
+        else if(playerRight+2 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+        {
+                // Richtung Key wird returnt und von movement.js geblockt.
+            returnObjects[0] = true;
+            returnObjects[1] = 2;
+            alert("MOB HIT PLAYER");
+        }
+            // Untere Wand des Objekts
+        else if(playerTop-2 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+        {
+                // Richtung Key wird returnt und von movement.js geblockt.
+            returnObjects[0] = true;
+            returnObjects[1] = 3;
+            alert("MOB HIT PLAYER");
+        }
+            // Obere Wand des Objekts
+        else if(playerBottom+2 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+        {
+                // Richtung Key wird returnt und von movement.js geblockt.
+            returnObjects[0] = true;
+            returnObjects[1] = 4;
+            alert("MOB HIT PLAYER");
+        }
         for(var i = 0; i < friendlyObjects.length; i++)
         {
             collisionData = friendlyObjects[i].getBoundingClientRect();

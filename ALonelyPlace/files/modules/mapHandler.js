@@ -170,6 +170,7 @@ export class MapHandler
                             animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
                             movement.mobMovement(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobHitPlayer(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15);
@@ -181,6 +182,7 @@ export class MapHandler
                             animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
                             movement.mobMovement(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobHitPlayer(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
@@ -192,6 +194,7 @@ export class MapHandler
                             animation.priestPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
                             movement.mobMovement(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobHitPlayer(document.querySelector(`.monster${mobcounter}`));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
