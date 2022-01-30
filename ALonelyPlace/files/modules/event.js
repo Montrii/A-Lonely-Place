@@ -136,7 +136,7 @@ export class Events
         {
             this.player.setPlayerHealth(health);
             var originalHealth = 5;
-            var precentage = (100/orignalHealth) * health;
+            var precentage = (100/originalHealth) * health;
             this.player.getPlayerObject().style.filter = `grayscale(${100-precentage}%)`;
             await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
@@ -173,7 +173,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
                 var originalHealth = 2;
-                var precentage = (100/orignalHealth) * health;
+                var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/skull_swing.wav"));
                 // HIT CHANCE OF MONSTER
@@ -204,7 +204,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
                 var originalHealth = 3;
-                var precentage = (100/orignalHealth) * health;
+                var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_swing.wav"));
                 // HIT CHANCE OF MONSTER
@@ -235,7 +235,7 @@ export class Events
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
                 var originalHealth = 5;
-                var precentage = (100/orignalHealth) * health;
+                var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/priest_swing.wav"));
                 // HIT CHANCE OF MONSTER
