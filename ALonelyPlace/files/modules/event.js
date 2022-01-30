@@ -260,6 +260,10 @@ export class Events
         location.reload();
 
     }
+    onBeWinner()
+    {
+        
+    }
     async onEnterStairs(event)
     {
         // Stop KeyDown Event for multiple inputs during await (skipping levels)

@@ -26,6 +26,11 @@ export class MapHandler
                 callbacks.onMapFailed("Mobile players aren't supported by 'A Lonely Place'");
                 return;
             }
+            if(this.responseText == null || this.responseText == "" || this.responseText == " ")
+            {
+                callbacks.onBeWinner();
+                return;
+            }
             var lines = this.responseText.split("\n"); 
             // Each Line
             var contains = {height: 0, width: 0, top: 0, left: 0, matchingRows: 0};
