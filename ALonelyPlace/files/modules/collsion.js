@@ -368,7 +368,7 @@ export class Collsion
         var friendlyObjects = friendlyObject.getFriendlyObjects();
         for(var i = 0; i < friendlyObjects.length; i++)
         {
-            collisionData = enemies[i].getBoundingClientRect();
+            collisionData = friendlyObjects[i].getBoundingClientRect();
 
             // Konvertiere Informationen in tatsächliche ints 
             var collsionLeft = parseInt(collisionData.left);
