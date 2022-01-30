@@ -82,59 +82,32 @@ export class Movement
            var top = parseInt(mob.style.top);
            var left = parseInt(mob.style.left);
            var random = getRandomInt(4) + 1;
+           var returns = collsion.mobCollision(mob);
            var value;
-           if(random == 1) // top negative
+           if(random == 1 && returns[1] != random) // walk to the left
            {
                value = 2;
                value = value * -1;
-               if(collsion.mobCollision(mob) == false)
-               {
-                    mob.style.top = top+value+"px";
-               }
-               else 
-               {
-                    mob.style.top = top+"px";
-               }
+               mob.style.left = left+value+"px";
 
            }
-           else if(random == 2) // top positive
+           else if(random == 2 && returns[1] != random) // walk to the right
            {
-               value = 2;
-               if(collsion.mobCollision(mob) == false)
-               {
-                    mob.style.top = top+value+"px";
-               }
-               else 
-               {
-                    mob.style.top = top+"px";
-               }
+                value = 2;
+                mob.style.left = left+value+"px";
 
            }
-           else if(random == 3) // left negative
+           else if(random == 3 && returns[1] != random) // walk to above
            {
                 value = 2;
                 value = value * -1;
-                if(collsion.mobCollision(mob) == false)
-                {
-                    mob.style.left = left+value+"px";
-                }
-                else 
-               {
-                mob.style.left = left+"px";
-               }
+                mob.style.top = top+value+"px";
 
            }
-           else if(random == 4)
+           else if(random == 4 && returns[1] != random)
            {
                 value = 2;
-                if(collsion.mobCollision(mob) == false)
-                {
-                    mob.style.left = left+value+"px";
-                }
-                else 
-               {
-                mob.style.left = left+"px";
-               }
+                mob.style.top = top+value+"px";
            }
         }, 200);
     }
