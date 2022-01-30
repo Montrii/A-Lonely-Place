@@ -442,7 +442,7 @@ export class Collsion
                 
             }
             // Linke Wand des Objekts
-            else if(playerRight+2 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+            else if(playerRight+2 <= collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 returnObjects[0] = true;
@@ -450,7 +450,7 @@ export class Collsion
                 
             }
             // Untere Wand des Objekts
-            else if(playerTop-2 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerTop-2 <= collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 returnObjects[0] = true;
@@ -458,7 +458,7 @@ export class Collsion
                 
             }
             // Obere Wand des Objekts
-            else if(playerBottom+2 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            else if(playerBottom+2 >= collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 returnObjects[0] = true;
