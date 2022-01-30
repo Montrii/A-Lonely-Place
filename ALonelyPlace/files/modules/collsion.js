@@ -385,24 +385,28 @@ export class Collsion
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit friendly object");
             }
             // Linke Wand des Objekts
             else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit friendly object");
             }
             // Untere Wand des Objekts
             else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit friendly object");
             }
             // Obere Wand des Objekts
             else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit friendly object");
             }
         }
         for(var i = 0; i < enemies.length; i++)
@@ -424,24 +428,28 @@ export class Collsion
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit enemy");
             }
             // Linke Wand des Objekts
             else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit enemy");
             }
             // Untere Wand des Objekts
             else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit enemy");
             }
             // Obere Wand des Objekts
             else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit enemy");
             }
         }
         for(i = 0; i < elements.length; i++)
@@ -464,24 +472,28 @@ export class Collsion
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit wall");
             }
             // Linke Wand des Objekts
             else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit wall");
             }
             // Untere Wand des Objekts
             else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit wall");
             }
             // Obere Wand des Objekts
             else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 hittingObject = true;
+                alert("hit wall");
             }
             
         }

@@ -85,21 +85,8 @@ export class Movement
            var value;
            if(random == 1) // top negative
            {
-               value = getRandomInt(2) + 1;
+               value = 2;
                value = value * -1;
-               if(collsion.mobCollision(mob) == false)
-               {
-                    mob.style.top = top+value+"px";
-               }
-               else 
-               {
-                    mob.style.top = top-2+"px";
-               }
-
-           }
-           else if(random == 2) // top positive
-           {
-               value = getRandomInt(2) + 1;
                if(collsion.mobCollision(mob) == false)
                {
                     mob.style.top = top+value+"px";
@@ -110,9 +97,22 @@ export class Movement
                }
 
            }
+           else if(random == 2) // top positive
+           {
+               value = 2;
+               if(collsion.mobCollision(mob) == false)
+               {
+                    mob.style.top = top+value+"px";
+               }
+               else 
+               {
+                    mob.style.top = top-2+"px";
+               }
+
+           }
            else if(random == 3) // left negative
            {
-                value = getRandomInt(2) + 1;
+                value = 2;
                 value = value * -1;
                 if(collsion.mobCollision(mob) == false)
                 {
@@ -120,20 +120,20 @@ export class Movement
                 }
                 else 
                 {
-                    mob.style.left = left-2+"px";
+                    mob.style.left = left+2+"px";
                 }
 
            }
            else if(random == 4)
            {
-                value = getRandomInt(2) + 1;
+                value = 2;
                 if(collsion.mobCollision(mob) == false)
                 {
                     mob.style.left = left+value+"px";
                 }
                 else 
                 {
-                    mob.style.left = left+2+"px";
+                    mob.style.left = left-2+"px";
                 }
            }
         }, 200);
