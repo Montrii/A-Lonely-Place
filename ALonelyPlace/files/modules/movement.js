@@ -85,25 +85,41 @@ export class Movement
            var value;
            if(random == 1) // top negative
            {
-               value = getRandomInt(8) + 1;
+               value = getRandomInt(2) + 1;
                value = value * -1;
-               mob.style.top = top+value+"px";
+               if(collsion.mobCollision(mob) == false)
+               {
+                    mob.style.top = top+value+"px";
+               }
+
            }
            else if(random == 2) // top positive
            {
-               value = getRandomInt(8) + 1;
-               mob.style.top = top+value+"px";
+               value = getRandomInt(2) + 1;
+               if(collsion.mobCollision(mob) == false)
+               {
+                    mob.style.top = top+value+"px";
+               }
+
            }
            else if(random == 3) // left negative
            {
-                value = getRandomInt(8) + 1;
+                value = getRandomInt(2) + 1;
                 value = value * -1;
-                mob.style.left = left+value+"px";
+                if(collsion.mobCollision(mob) == false)
+                {
+                    mob.style.left = left+value+"px";
+                }
+
            }
            else if(random == 4)
            {
-                value = getRandomInt(8) + 1;
-                mob.style.left = left+value+"px";
+                value = getRandomInt(2) + 1;
+                if(collsion.mobCollision(mob) == false)
+                {
+                    mob.style.left = left+value+"px";
+                }
+
            }
         }, 200);
     }
