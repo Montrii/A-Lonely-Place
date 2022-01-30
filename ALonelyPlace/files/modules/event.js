@@ -242,18 +242,12 @@ export class Events
     }
     async onEnterTrap()
     {
-        alert("hi");
         if(this.enteringNextLevel == false)
         {
-            alert("yes");
             this.enteringNextLevel = true;
             this.console.writeToConsole("Entered Trap!");
             await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
             location.reload();
-        }
-        else 
-        {
-            alert("no");
         }
 
     }
