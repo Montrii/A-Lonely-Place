@@ -135,6 +135,7 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
+            await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
         else 
         {
@@ -184,8 +185,9 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
+                await playAudio(new Audio("../../../Assets/sounds/vamp_swing.wav"));
                 var randomHitChance = getRandomInt(5) + 1;
-                await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
+                
                 if(randomHitChance == 1 || randomHitChance == 2)
                 {
                     this.onPlayerHit();
