@@ -135,7 +135,7 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
-            var originalHealth = 4;
+            var originalHealth = 5;
             var precentage = (100/originalHealth) * health;
             this.player.getPlayerObject().style.filter = `grayscale(${100-precentage}%)`;
             await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
@@ -172,7 +172,7 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
-                var originalHealth = 1;
+                var originalHealth = 2;
                 var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/skull_swing.wav"));
@@ -203,7 +203,7 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
-                var originalHealth = 2;
+                var originalHealth = 3;
                 var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_swing.wav"));
@@ -234,7 +234,7 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
-                var originalHealth = 4;
+                var originalHealth = 5;
                 var precentage = (100/originalHealth) * health;
                 enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/priest_swing.wav"));
