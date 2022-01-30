@@ -92,7 +92,28 @@ export class Movement
            var left = parseInt(mob.style.left);
            var random = getRandomInt(4) + 1;
            var returns = collsion.mobCollision(mob);
-           var value;
+           var value = 0;
+           /*
+           // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
+           if(interacted == true)
+           {
+                if(getMobType(mob) == "skull")
+                {
+                    await playAudio(skullWalk);
+                    timer = timer + skullWalkDuration;
+                }
+                else if(getMobType(mob) == "vampire")
+                {
+                    await playAudio(vampWalk);
+                    timer = timer + vampWalkDuration;
+                }
+                else if(getMobType(mob) == "priest")
+                {
+                    await playAudio(priestWalk);
+                    timer = timer + priestWalkDuration;
+                }
+           }
+           */
            if(random == 1 && returns[1] != random) // walk to the left
            {
                value = 2;
@@ -117,24 +138,6 @@ export class Movement
            {
                 value = 2;
                 mob.style.top = top+value+"px";
-           }
-           if(interacted == true)
-           {
-                if(getMobType(mob) == "skull")
-                {
-                    await playAudio(skullWalk);
-                    timer = timer + skullWalkDuration;
-                }
-                else if(getMobType(mob) == "vampire")
-                {
-                    await playAudio(vampWalk);
-                    timer = timer + vampWalkDuration;
-                }
-                else if(getMobType(mob) == "priest")
-                {
-                    await playAudio(priestWalk);
-                    timer = timer + priestWalkDuration;
-                }
            }
                 
 
