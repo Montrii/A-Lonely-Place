@@ -86,7 +86,7 @@ export class Movement
         var vampWalkDuration = vampWalk.duration * 1000;
         var priestDuration = priest.duration * 1000;
         var timer = delay;
-        const interval3 = setInterval(function() 
+        const interval3 = setInterval(async function() 
         {
            var top = parseInt(mob.style.top);
            var left = parseInt(mob.style.left);
