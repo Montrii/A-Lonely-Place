@@ -26,7 +26,7 @@ export class MapHandler
                 callbacks.onMapFailed("Mobile players aren't supported by 'A Lonely Place'");
                 return;
             }
-            console.log(this.responseText)
+            console.log(this.responseText.includes("Oops, looks like the page is lost."));
             var lines = this.responseText.split("\n"); 
             // Each Line
             var contains = {height: 0, width: 0, top: 0, left: 0, matchingRows: 0};
