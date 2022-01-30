@@ -213,6 +213,7 @@
         {
             position: relative;
             z-index: 10;
+            border-style: solid;
         }
 
 
