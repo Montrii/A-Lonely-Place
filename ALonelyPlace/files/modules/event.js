@@ -169,6 +169,17 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
+                await playAudio(new Audio("../../../Assets/sounds/skull_swing.wav"));
+                var randomHitChance = getRandomInt(5) + 1;
+                
+                if(randomHitChance == 1 || randomHitChance == 2)
+                {
+                    this.onPlayerHit();
+                }
+                else 
+                {
+                    this.onMonsterFailingHit();
+                }
             }
         }
         else if(getMobType(enemy) == "vampire")
@@ -212,6 +223,16 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
+                await playAudio(new Audio("../../../Assets/sounds/priest_swing.wav"));
+                var randomHitChance = getRandomInt(5) + 1;
+                if(randomHitChance == 1 || randomHitChance == 2)
+                {
+                    this.onPlayerHit();
+                }
+                else 
+                {
+                    this.onMonsterFailingHit();
+                }
             }
         }
     }
