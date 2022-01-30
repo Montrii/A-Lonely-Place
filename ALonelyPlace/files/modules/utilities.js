@@ -51,6 +51,17 @@ export function getMobType(mob)
     }
     return split[2];
 }
+
+export function getMobId(mob)
+{
+    const text = mob.className;
+    var split = text.split(" ");
+    if(split[1] == "" || split[1] == " " || split[1] == null || split[1] == typeof(undefined))
+    {
+        return "null";
+    }
+    return split[1];
+} 
 export function getMobObjectClass(mob)
 {
     const text = mob.className;
@@ -274,3 +285,5 @@ export function playBackGroundMusic(audio)
         audio.play();
     }
 }
+
+

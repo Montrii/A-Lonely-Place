@@ -2,7 +2,7 @@ import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
 import { phpCommunicater } from "./phpCommunicater.js";
 import { backPack } from "./backPack.js";
-import { getRandomInt, playBackGroundMusic, getMobType } from "./utilities.js";
+import { getRandomInt, playBackGroundMusic, getMobType, getMobId } from "./utilities.js";
 var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
@@ -93,8 +93,13 @@ export class Movement
            var random = getRandomInt(4) + 1;
            var returns = collsion.mobCollision(mob);
            var value = 0;
-           /*
+           if(document.querySelector(getMobId(mob)) != null || document.querySelector(getMobId(mob)) != 0)
+           {
+                console.log(mob);
+           }
+           
            // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
+           /*
            if(interacted == true)
            {
                 if(getMobType(mob) == "skull")
@@ -114,7 +119,6 @@ export class Movement
                 }
            }
            */
-          console.log(mob);
            if(random == 1 && returns[1] != random) // walk to the left
            {
                value = 2;
