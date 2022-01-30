@@ -26,7 +26,11 @@ export class MapHandler
                 callbacks.onMapFailed("Mobile players aren't supported by 'A Lonely Place'");
                 return;
             }
-            console.log(this.responseText.includes("<title>Oops, something lost</title>"));
+            if(this.responseText.includes("<title>Oops, something lost</title>") == true) /* IF ERROR 404 MAP FROM XMLHTTPREQUEST OBJECT IS BEING CALLED */
+            {
+                callbacks.onBeWinner();
+                return;
+            }
             var lines = this.responseText.split("\n"); 
             // Each Line
             var contains = {height: 0, width: 0, top: 0, left: 0, matchingRows: 0};
