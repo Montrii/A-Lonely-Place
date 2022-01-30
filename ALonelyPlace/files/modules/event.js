@@ -127,9 +127,21 @@ export class Events
         await playAudio(new Audio("../../../Assets/sounds/door_open.wav"));
         this.console.writeToConsole("OPENED DOOR");
     }
-    onPlayerHit()
+    async onPlayerHit()
     {
         this.console.writeToConsole("A monster successfully hit a player!");
+        var health = parseInt(this.player.getPlayerHealth());
+        health = health - 1;
+        if(health > 0)
+        {
+            this.player.setPlayerHealth(health);
+            await playAudio(new Audio("../../../sounds/skel_hit.wav"));
+        }
+        else 
+        {
+            await playAudio(new Audio("../../../sounds/skel_die.wav"));
+            location.reload(true);
+        }
     }
     onMonsterFailingHit()
     {
@@ -142,7 +154,7 @@ export class Events
         {
             interaction[i].remove();
         }
-        playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
+        playAudio(new Audio("../../../Assets/sounds/skel_swing.wav"));
         if(getMobType(enemy) == "skull")
         {
             this.console.writeToConsole("I just hit a skull!");

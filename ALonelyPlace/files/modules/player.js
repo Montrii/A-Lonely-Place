@@ -47,6 +47,14 @@ export class Player
     {
         return this.getPlayerObject().clientLeft;
     }
+    getPlayerHealth()
+    {
+        return document.getElementById("playerHealth").innerHTML;
+    }
+    setPlayerHealth(text)
+    {
+        document.getElementById("playerHealth").innerHTML = text;
+    }
     addToTopPosition(value)
     {
         this.getPlayerObject().style.top = value+'px';
