@@ -135,7 +135,7 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
-            this.player.getPlayerImage()
+            this.player.getPlayerObject().style.filter = "redscale(50%)";
             await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
         else 
