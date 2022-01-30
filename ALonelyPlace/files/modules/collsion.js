@@ -365,6 +365,39 @@ export class Collsion
         var playerLeft = parseInt(mobSides.left);
         var playerRight = parseInt(mobSides.right);
         var enemies = enemy.getMobs();
+        var friendlyObjects = friendlyObject.getFriendlyObjects();
+        for(var i = 0; i < friendlyObjects.length; i++)
+        {
+            foData = friendlyObjects[i].getBoundingClientRect();
+            // Konvertiere Informationen in tatsächliche ints 
+            var collsionLeft = parseInt(foData.left);
+            var collsionRight = parseInt(foData.right);
+            var collsionTop = parseInt(foData.top);
+            var collsionBottom = parseInt(foData.bottom);
+            if(playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Linke Wand des Objekts
+            else if(playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Untere Wand des Objekts
+            else if(playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+            // Obere Wand des Objekts
+            else if(playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
+            {
+                // Richtung Key wird returnt und von movement.js geblockt.
+                hittingObject = true;
+            }
+        }
         for(var i = 0; i < enemies.length; i++)
         {
             collisionData = enemies[i].getBoundingClientRect();
