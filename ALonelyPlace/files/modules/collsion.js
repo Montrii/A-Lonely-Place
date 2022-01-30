@@ -434,7 +434,7 @@ export class Collsion
             // ÜBERPRÜFUNGEN SIND FOLGEND AUFGEBAUT:
             
             // Rechte Wand des Objekts
-            if(playerLeft-2 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
+            if(playerLeft-2 >= collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 returnObjects[0] = true;
