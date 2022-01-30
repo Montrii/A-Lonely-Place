@@ -263,7 +263,7 @@ export class Events
     onBeWinner()
     {
         this.console.writeToConsole("NO MORE MAPS; YOU ESCAPED");
-        $('body').append(`<p id="winningScreen">You won!<br> There are no more ruines to escape from.</p>`);
+        $('body').append(`<p id="winningScreen">You won!</p>`);
     }
     async onEnterStairs(event)
     {
