@@ -100,16 +100,19 @@ export class Movement
                 {
                         if(getMobType(mob) == "skull")
                         {
+                            skullWalk.volume = 0.3;
                             await playAudio(skullWalk);
                             timer = timer + skullWalkDuration;
                         }
                         else if(getMobType(mob) == "vampire")
                         {
+                            vampWalk.volume = 0.3;
                             await playAudio(vampWalk);
                             timer = timer + vampWalkDuration;
                         }
                         else if(getMobType(mob) == "priest")
                         {
+                            priestWalk.volume = 0.3;
                             await playAudio(priestWalk);
                             timer = timer + priestWalkDuration;
                         }
