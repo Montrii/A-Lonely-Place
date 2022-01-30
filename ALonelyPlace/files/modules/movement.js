@@ -2,7 +2,7 @@ import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
 import { phpCommunicater } from "./phpCommunicater.js";
 import { backPack } from "./backPack.js";
-import { getRandomInt, playBackGroundMusic } from "./utilities.js";
+import { getRandomInt, playBackGroundMusic, getMobType } from "./utilities.js";
 var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
