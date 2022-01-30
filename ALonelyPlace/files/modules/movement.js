@@ -84,7 +84,7 @@ export class Movement
         var vampWalk = new Audio("../../../Assets/sounds/vamp_walk.wav");
         var skullWalkDuration = skullWalk.duration * 1000;
         var vampWalkDuration = vampWalk.duration * 1000;
-        var priestDuration = priest.duration * 1000;
+        var priestDuration = priestWalk.duration * 1000;
         var timer = delay;
         const interval3 = setInterval(async function() 
         {
