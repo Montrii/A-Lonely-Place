@@ -248,7 +248,7 @@ export class Events
             alert("yes");
             this.enteringNextLevel = true;
             this.console.writeToConsole("Entered Trap!");
-            await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
+            playAudio(new Audio('../../../Assets/sounds/falling.wav'));
             location.reload();
         }
 
@@ -259,7 +259,7 @@ export class Events
         {
             this.enteringNextLevel = true;
             this.console.writeToConsole("Entering Next Level...");
-            await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
+            playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
             $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
                 // Convert key-value pairs to JSON
                 // https://stackoverflow.com/a/39284735/452587
