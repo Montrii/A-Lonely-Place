@@ -93,10 +93,7 @@ export class Movement
            var random = getRandomInt(4) + 1;
            var returns = collsion.mobCollision(mob);
            var value = 0;
-           if(document.querySelector(getMobId(mob)) != null || document.querySelector(getMobId(mob)) != 0)
-           {
-                console.log(mob);
-           }
+           console.log(document.querySelector(getMobId(mob)));
            
            // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
            /*
