@@ -173,7 +173,7 @@ export class MapHandler
                             $('#playground').append(`<div class="mob monster${mobcounter} skull skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
                             animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
-                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(1000) + 300);
+                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(200) + 300);
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15);
@@ -184,7 +184,7 @@ export class MapHandler
                             $('#playground').append(`<div class="mob monster${mobcounter} vampire vampireAnimation1" style="top:${top}px;left:${left}px;">3</div>`);
                             animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
-                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(1000) + 300);
+                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(200) + 300);
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
@@ -195,7 +195,7 @@ export class MapHandler
                             $('#playground').append(`<div class="mob monster${mobcounter} priest priestAnimation1" style="top:${top}px;left:${left}px;">5</div>`);
                             animation.priestPlayAnimation(document.querySelector(`.monster${mobcounter}`));
                             // Unfinished
-                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(1000) + 300);
+                            movement.mobMovement(document.querySelector(`.monster${mobcounter}`), getRandomInt(200) + 300);
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
