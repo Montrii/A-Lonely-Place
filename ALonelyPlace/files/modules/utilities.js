@@ -270,6 +270,7 @@ export function playBackGroundMusic(audio)
 {
     if(!audio.paused == false)
     {
+        audio.volume = 0.3;
         audio.play();
     }
 }
