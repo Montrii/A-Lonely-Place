@@ -91,10 +91,6 @@ export class Movement
                {
                     mob.style.top = top+value+"px";
                }
-               else 
-               {
-                    mob.style.top = top+2+"px";
-               }
 
            }
            else if(random == 2) // top positive
@@ -103,10 +99,6 @@ export class Movement
                if(collsion.mobCollision(mob) == false)
                {
                     mob.style.top = top+value+"px";
-               }
-               else 
-               {
-                    mob.style.top = top-2+"px";
                }
 
            }
@@ -118,10 +110,6 @@ export class Movement
                 {
                     mob.style.left = left+value+"px";
                 }
-                else 
-                {
-                    mob.style.left = left+2+"px";
-                }
 
            }
            else if(random == 4)
@@ -130,10 +118,6 @@ export class Movement
                 if(collsion.mobCollision(mob) == false)
                 {
                     mob.style.left = left+value+"px";
-                }
-                else 
-                {
-                    mob.style.left = left-2+"px";
                 }
            }
         }, 200);
