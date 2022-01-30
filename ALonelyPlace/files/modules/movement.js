@@ -93,9 +93,9 @@ export class Movement
            var random = getRandomInt(4) + 1;
            var returns = collsion.mobCollision(mob);
            var value = 0;
-           if(document.querySelector(`.${getMobId(mob)}`) != null)
+           if(document.querySelector(`.${getMobId(mob)}`) != null) // If Monster is actually still alive, then
+           // start calculating sound and steps.
            {
-                // UNFINISHED SYSTEM, THEREFORE COMMENTED OUT, MOBS DO NOT PLAY WALK SOUNDS
                 if(interacted == true)
                 {
                         if(getMobType(mob) == "skull")

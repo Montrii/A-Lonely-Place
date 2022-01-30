@@ -1,7 +1,7 @@
 import { Player } from "./player.js";
 import { Movement } from "./movement.js";
 import { Animator } from "./animator.js";
-import { determineItem, defineRareityLevel, defineSpecialRareityLevel, getMobType } from "./utilities.js";
+import { determineItem, defineRareityLevel, defineSpecialRareityLevel, getMobType, getRandomInt } from "./utilities.js";
 import { Console } from "./console.js";
 
 
@@ -129,7 +129,11 @@ export class Events
     }
     onPlayerHit()
     {
-
+        this.console.writeToConsole("A monster successfully hit a player!");
+    }
+    onMonsterFailingHit()
+    {
+        this.console.writeToConsole("A Monster failed to hit the player!");
     }
     async onMonsterHit(enemy)
     {
@@ -169,6 +173,15 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
+                var randomHitChance = getRandomInt(5) + 1;
+                if(randomHitChance == 1 || randomHitChance == 2)
+                {
+                    this.onPlayerHit();
+                }
+                else 
+                {
+                    this.onMonsterFailingHit();
+                }
             }
         }
         else if(getMobType(enemy) == "priest")
