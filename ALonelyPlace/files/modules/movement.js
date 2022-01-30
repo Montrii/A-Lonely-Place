@@ -75,7 +75,7 @@ export class Movement
             }
         });
     }
-    mobMovement(mob)
+    mobMovement(mob, delay)
     {
         const interval3 = setInterval(function() 
         {
@@ -109,6 +109,6 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
-        }, 50);
+        }, delay);
     }
 }
