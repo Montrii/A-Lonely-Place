@@ -265,6 +265,7 @@ export class Events
         this.console.writeToConsole("NO MORE MAPS; YOU ESCAPED");
         document.getElementById("progressbar").remove();
         document.getElementById("player").remove();
+        document.getElementById("playerHealth").remove();
         $('body').append(`<p id="winningScreen">You won!</p>`);
     }
     async onEnterStairs(event)
