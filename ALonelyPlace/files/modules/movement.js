@@ -19,12 +19,12 @@ export class Movement
         var position = 0;
         player.createPlayerWalkSound();
         var audio = new Audio("../../../Assets/sounds/justin game 44.wav");
-        $(document).keydown(function() {
+        $(document).keydown(function(event) {
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
             playBackGroundMusic(audio);
             interacted = true;
-            var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
+            var collsionKey = collsion.friendlyPlayerCollsion(keyDown, event);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
             {
