@@ -110,6 +110,7 @@
         {
             z-index: 1;
             position: absolute;
+            border: 2px solid red;
         }
 
         /* MOB MODES */
@@ -207,6 +208,7 @@
         #playground
         {
             position: relative;
+            border: 1px solid green;
         }
 
         #player
@@ -214,6 +216,7 @@
             position: relative;
             z-index: 10;
             border-style: solid;
+            border: 1px solid white;
         }
 
 
