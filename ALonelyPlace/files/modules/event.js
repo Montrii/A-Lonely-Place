@@ -135,6 +135,7 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
+            this.player.getPlayerImage()
             await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
         else 
