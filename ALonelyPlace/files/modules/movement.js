@@ -9,6 +9,7 @@ var php = new phpCommunicater();
 var back = new backPack();
 export class Movement
 {
+    interacted = false;
     constructor()
     {
 
@@ -22,6 +23,7 @@ export class Movement
             var keyDown = event.keyCode;
             player.getPlayerObject().scrollIntoView();
             playBackGroundMusic(audio);
+            interacted = true;
             var collsionKey = collsion.friendlyPlayerCollsion(keyDown);
             // if Interactive Object has
             if(event.keyCode == 87 /*W*/ && event.keyCode != collsion.playerCollsion(keyDown) && event.keyCode != collsionKey[0]) 
@@ -112,21 +114,25 @@ export class Movement
                 value = 2;
                 mob.style.top = top+value+"px";
            }
-            if(getMobType(mob) == "skull")
-            {
-                skullWalk.play();
-                alert("playing this walk sound")
-            }
-            else if(getMobType(mob) == "vampire")
-            {
-                vampWalk.play();
-                alert("playing this walk2 sound")
-            }
-            else if(getMobType(mob) == "priest")
-            {
-                priestWalk.play();
-                alert("playing this walk3 sound")
-            }
+           if(interacted == true)
+           {
+                if(getMobType(mob) == "skull")
+                {
+                    skullWalk.play();
+                    alert("playing this walk sound")
+                }
+                else if(getMobType(mob) == "vampire")
+                {
+                    vampWalk.play();
+                    alert("playing this walk2 sound")
+                }
+                else if(getMobType(mob) == "priest")
+                {
+                    priestWalk.play();
+                    alert("playing this walk3 sound")
+                }
+           }
+
         }, delay);
     }
 }
