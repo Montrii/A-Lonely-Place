@@ -368,12 +368,19 @@ export class Collsion
         var friendlyObjects = friendlyObject.getFriendlyObjects();
         for(var i = 0; i < friendlyObjects.length; i++)
         {
-            foData = friendlyObjects[i].getBoundingClientRect();
+            collisionData = enemies[i].getBoundingClientRect();
+
             // Konvertiere Informationen in tatsächliche ints 
-            var collsionLeft = parseInt(foData.left);
-            var collsionRight = parseInt(foData.right);
-            var collsionTop = parseInt(foData.top);
-            var collsionBottom = parseInt(foData.bottom);
+            var collsionLeft = parseInt(collisionData.left);
+
+            var collsionRight = parseInt(collisionData.right);
+
+            var collsionTop = parseInt(collisionData.top);
+
+            var collsionBottom = parseInt(collisionData.bottom);
+            // ÜBERPRÜFUNGEN SIND FOLGEND AUFGEBAUT:
+            
+            // Rechte Wand des Objekts
             if(playerLeft-1 == collsionRight && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
