@@ -135,7 +135,9 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
-            this.player.getPlayerObject().style.filter = "grayscale(100%)";
+            var originalHealth = 5;
+            var precentage = (100/orignalHealth) * health;
+            this.player.getPlayerObject().style.filter = `grayscale(${100-precentage}%)`;
             await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
         else 
@@ -170,6 +172,9 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/skull_hit.wav"));
+                var originalHealth = 2;
+                var precentage = (100/orignalHealth) * health;
+                enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/skull_swing.wav"));
                 // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
@@ -198,6 +203,9 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_hit.wav"));
+                var originalHealth = 3;
+                var precentage = (100/orignalHealth) * health;
+                enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/vamp_swing.wav"));
                 // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
@@ -226,6 +234,9 @@ export class Events
                 health = health - 1;
                 enemy.innerHTML = health;
                 await playAudio(new Audio("../../../Assets/sounds/priest_hit.wav"));
+                var originalHealth = 5;
+                var precentage = (100/orignalHealth) * health;
+                enemy.style.filter = `grayscale(${100-precentage}%)`;
                 await playAudio(new Audio("../../../Assets/sounds/priest_swing.wav"));
                 // HIT CHANCE OF MONSTER
                 var randomHitChance = getRandomInt(5) + 1;
