@@ -241,11 +241,8 @@ export class Events
     }
     async onEnterTrap(event)
     {
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        event.stopPropagation();
+        // Stop KeyDown Event for multiple inputs during await
         $(document).off("keydown");
-        event.cancelBubble = true;
         this.console.writeToConsole("Entered Trap!");
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
         location.reload();
@@ -253,11 +250,8 @@ export class Events
     }
     async onEnterStairs(event)
     {
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        event.stopPropagation();
+        // Stop KeyDown Event for multiple inputs during await (skipping levels)
         $(document).off("keydown");
-        event.cancelBubble = true;
             this.console.writeToConsole("Entering Next Level...");
             await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
             $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
