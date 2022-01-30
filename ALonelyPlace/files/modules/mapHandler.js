@@ -20,7 +20,6 @@ export class MapHandler
         var oReq = new XMLHttpRequest(); // New request object
         oReq.onload = async function() {
             
-            console.log("Playing on Browser: " + detectBrowser());
             if(mobileDetection().any())
             {
                 callbacks.onMapFailed("Mobile players aren't supported by 'A Lonely Place'");

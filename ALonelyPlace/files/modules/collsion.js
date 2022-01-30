@@ -325,28 +325,24 @@ export class Collsion
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey = 65;
-                console.log("hit")
             }
             // Linke Wand des Objekts
             else if(keyCode == 68 && playerRight+1 == collsionLeft && (playerBottom >= collsionTop && playerBottom <= collsionBottom || playerTop  <= collsionBottom && playerTop  >= collsionTop))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey = 68;
-                console.log("hit")
             }
             // Untere Wand des Objekts
             else if(keyCode == 87 && playerTop-1 == collsionBottom && (playerLeft >= collsionLeft && playerLeft <= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey = 87;
-                console.log("hit")
             }
             // Obere Wand des Objekts
             else if(keyCode == 83 && playerBottom+1 == collsionTop && (playerLeft >= collsionLeft && playerLeft<= collsionRight || playerRight >= collsionLeft && playerRight <= collsionRight))
             {
                 // Richtung Key wird returnt und von movement.js geblockt.
                 blockingKey = 83;
-                console.log("hit")
             }
             
         }
