@@ -360,10 +360,10 @@ export class Collsion
         var hittingObject = false;
         var i = 0;
         var collisionData = 0;
-        var playerTop = parseInt(playerCollsion.top);
-        var playerBottom = parseInt(playerCollsion.bottom);
-        var playerLeft = parseInt(playerCollsion.left);
-        var playerRight = parseInt(playerCollsion.right);
+        var playerTop = parseInt(mobSides.top);
+        var playerBottom = parseInt(mobSides.bottom);
+        var playerLeft = parseInt(mobSides.left);
+        var playerRight = parseInt(mobSides.right);
         for(i = 0; i < elements.length; i++)
         {
             // Erhalte Informationen über top, bottom, right and left Koordinaten von Objekt
