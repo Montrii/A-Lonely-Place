@@ -1,9 +1,21 @@
-Height: 288
-Width: 816
-Top: 200
-Left: 400
+Height: 688
+Width: 1800
+Top: 0
+Left: 50
 X,X,X,X,X,X,X,X,X,X,X,X,X
-X,O,O,O,O,O,O,O,X,X,X,X,O,X
-X,E,P,O,O,O,O,X,D,C,O,X,X
-X,O,O,O,O,O,O,O,D,O,O,X
-X,X,X,X,X,X,X,X,X,X,X,X
+X,C,O,MP,O,O,O,O,o,O,o,O,X
+X,O,O,O,O,O,O,O,o,O,O,_,X,X,X,X,X,X,X,X,x
+X,_,O,o,O,O,O,o,o,o,o,x,x,o,o,o,o,o,o,o,x
+X,O,O,O,O,O,O,O,O,O,O,O,o,o,o,o,o,o,o,o,x
+X,O,O,O,o,O,O,MP,O,O,_,o,o,o,o,o,o,o,o,_,x
+X,O,O,_,o,O,o,O,O,O,O,O,o,o,o,o,o,o,o,o,o,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+X,O,O,O,O,O,O,O,O,O,O,O,o,x,x,x,x,x,x,x,xo,o,o,o,o,o,o,o,o,o,x,o,o,o,o,o,x
+X,P,O,O,O,O,O,o,o,o,o,o,X,o,o,o,o,o,o,o,o,o,o,_,o,o,o,_,o,o,d,o,MP,o,o,E,x
+X,O,O,MS,O,O,O,_,o,o,o,o,X,o,o,o,o,o,o,MV,o,o,o,o,o,o,o,o,o,d,o,MP,o,o,o,x
+X,O,O,O,O,O,O,o,o,o,o,o,X,SC,o,o,o,o,o,o,o,o,o,o,o,_,o,o,o,x,o,o,o,o,o,x
+X,O,O,O,O,O,O,o,o,o,o,o,X,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+X,_,O,O,O,O,O,o,o,o,o,o,o,_,o,o,o,o,o,o,o,o,x
+X,O,O,O,O,O,O,o,o,o,o,o,o,o,o,o,o,_,o,o,o,o,x
+X,O,O,O,_,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
+X,C,O,O,_,O,O,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x
+X,x,x,x,x,x,x,x,x,x,x,x,X,x,x,x,x,x,x,x,x,x,x
