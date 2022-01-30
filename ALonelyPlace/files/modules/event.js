@@ -244,6 +244,7 @@ export class Events
         event.stopImmediatePropagation();
         event.preventDefault();
         event.stopPropagation();
+        $(document).off("keydown");
         event.cancelBubble = true;
         this.console.writeToConsole("Entered Trap!");
         await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
@@ -255,6 +256,7 @@ export class Events
         event.stopImmediatePropagation();
         event.preventDefault();
         event.stopPropagation();
+        $(document).off("keydown");
         event.cancelBubble = true;
             this.console.writeToConsole("Entering Next Level...");
             await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
