@@ -114,6 +114,7 @@ export class Movement
                 }
            }
            */
+          console.log(mob);
            if(random == 1 && returns[1] != random) // walk to the left
            {
                value = 2;
