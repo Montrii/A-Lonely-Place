@@ -116,24 +116,24 @@ export class Movement
             {
                 if(skullWalk.paused == false)
                 {
-                    skullWalk.volume = 0.3;
                     skullWalk.play();
+                    alert("playing this walk sound")
                 }
             }
             else if(getMobType(mob) == "vampire")
             {
                 if(vampWalk.paused == false)
                 {
-                    vampWalk.volume = 0.3;
                     vampWalk.play();
+                    alert("playing this walk2 sound")
                 }
             }
             else if(getMobType(mob) == "priest")
             {
                 if(priestWalk.paused == false)
                 {
-                    priestWalk.volume = 0.3;
                     priestWalk.play();
+                    alert("playing this walk3 sound")
                 }
             }
         }, delay);
