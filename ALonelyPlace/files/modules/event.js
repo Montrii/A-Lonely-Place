@@ -262,7 +262,7 @@ export class Events
     }
     onBeWinner()
     {
-        
+        this.console.writeToConsole("NO MORE MAPS; YOU ESCAPED");
     }
     async onEnterStairs(event)
     {
