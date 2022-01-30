@@ -11,7 +11,6 @@ export class Events
     movement = new Movement();
     animator = new Animator();
     console = new Console();
-    enteringNextLevel = false;
     constructor()
     {
     }
@@ -240,22 +239,19 @@ export class Events
             }
         }
     }
-    async onEnterTrap()
+    async onEnterTrap(event)
     {
-        if(this.enteringNextLevel == false)
-        {
-            this.enteringNextLevel = true;
-            this.console.writeToConsole("Entered Trap!");
-            await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
-            location.reload();
-        }
+        event.stopImmediatePropagation();
+        event.cancelBubble = true;
+        this.console.writeToConsole("Entered Trap!");
+        await playAudio(new Audio('../../../Assets/sounds/falling.wav'));
+        location.reload();
 
     }
-    async onEnterStairs()
+    async onEnterStairs(event)
     {
-        if(this.enteringNextLevel == false)
-        {
-            this.enteringNextLevel = true;
+        event.stopImmediatePropagation();
+        event.cancelBubble = true;
             this.console.writeToConsole("Entering Next Level...");
             await playAudio(new Audio('../../../Assets/sounds/stairs.wav'));
             $.get('https://www.cloudflare.com/cdn-cgi/trace', function(userData) {
@@ -277,7 +273,6 @@ export class Events
                         }
                     });
                 });
-        }
     }
 }
 
