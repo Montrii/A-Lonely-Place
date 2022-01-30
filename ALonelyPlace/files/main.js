@@ -10,7 +10,6 @@ async function main()
     var mapHandler = new MapHandler();
     var github = new Github();
 
-    //console.log(await mapHandler.loadMap(1));
     github.displayLatestUpdate("https://api.github.com/users/Montrii/events");
     $.get('https://www.cloudflare.com/cdn-cgi/trace', async function(userData) {
             userData = userData.trim().split('\n').reduce(function(obj, pair) {
