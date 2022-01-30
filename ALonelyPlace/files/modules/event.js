@@ -135,11 +135,11 @@ export class Events
         if(health > 0)
         {
             this.player.setPlayerHealth(health);
-            await playAudio(new Audio("../../../sounds/skel_hit.wav"));
+            await playAudio(new Audio("../../../Assets/sounds/skel_hit.wav"));
         }
         else 
         {
-            await playAudio(new Audio("../../../sounds/skel_die.wav"));
+            await playAudio(new Audio("../../../Assets/sounds/skel_die.wav"));
             location.reload(true);
         }
     }
