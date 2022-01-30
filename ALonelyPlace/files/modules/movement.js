@@ -2,7 +2,7 @@ import { Player } from "./player.js";
 import { Collsion } from "./collsion.js";
 import { phpCommunicater } from "./phpCommunicater.js";
 import { backPack } from "./backPack.js";
-import { playBackGroundMusic } from "./utilities.js";
+import { getRandomInt, playBackGroundMusic } from "./utilities.js";
 var player = new Player();
 var collsion = new Collsion();
 var php = new phpCommunicater();
@@ -74,5 +74,37 @@ export class Movement
                 collsion.openObjectsCollsion(collsionKey[1], keyDown);
             }
         });
+    }
+    mobMovement(mob)
+    {
+        const interval3 = setInterval(function() 
+        {
+           var top = parseInt(mob.style.top);
+           var left = parseInt(mob.style.left);
+           var random = getRandomInt(4) + 1;
+           var value;
+           if(random == 1) // top negative
+           {
+               value = getRandomInt(8) + 1;
+               value = value * -1;
+               mob.style.top = top+value+"px";
+           }
+           else if(random == 2) // top positive
+           {
+               value = getRandomInt(8) + 1;
+               mob.style.top = top+value+"px";
+           }
+           else if(random == 3) // left negative
+           {
+                value = getRandomInt(8) + 1;
+                value = value * -1;
+                mob.style.left = left+value+"px";
+           }
+           else if(random == 4)
+           {
+                value = getRandomInt(8) + 1;
+                mob.style.left = left+value+"px";
+           }
+        }, 200);
     }
 }

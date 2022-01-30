@@ -2,12 +2,14 @@ import { Sleep, stringContainsNumber, detectBrowser, mobileDetection } from "./u
 import { Events } from "./event.js";
 import { Animator } from "./animator.js";
 import { Enemy } from "./enemies.js";
+import { Movement } from "./movement.js";
 
 
 
 
 var callbacks = new Events(); 
 var animation = new Animator();
+var movement = new Movement();
 export class MapHandler
 {
     constructor()
@@ -166,6 +168,7 @@ export class MapHandler
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob monster${mobcounter} skull skullAnimation1" style="top:${top}px;left:${left}px;">2</div>`);
                             animation.skullPlayAnimation(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobMovement(document.querySelector(document.querySelector(`.monster${mobcounter}`)));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15);
@@ -175,6 +178,7 @@ export class MapHandler
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob monster${mobcounter} vampire vampireAnimation1" style="top:${top}px;left:${left}px;">3</div>`);
                             animation.vampirePlayAnimation(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobMovement(document.querySelector(document.querySelector(`.monster${mobcounter}`)));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
@@ -184,6 +188,7 @@ export class MapHandler
                             $('#playground').append(`<div class="ground" style="top:${top}px;left:${left}px;"></div>`);
                             $('#playground').append(`<div class="mob monster${mobcounter} priest priestAnimation1" style="top:${top}px;left:${left}px;">3</div>`);
                             animation.priestPlayAnimation(document.querySelector(`.monster${mobcounter}`));
+                            movement.mobMovement(document.querySelector(document.querySelector(`.monster${mobcounter}`)));
                             mobcounter = mobcounter + 1;
                             precentage = precentage + precentageToAdd;
                             await Sleep(15)
